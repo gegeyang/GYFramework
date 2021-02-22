@@ -43,19 +43,19 @@
     [self.httpSessionManager.requestSerializer setValue:@"0" forHTTPHeaderField:GYNETWORK_CACHED_TIME_KEY];
     return [self.httpSessionManager POST:URLString
                               parameters:params
+                                 headers:nil
                                 progress:nil
                                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                                     if (success) {
-                                         NSDictionary *dictInfo = [responseObject objectFromJSONData];
-                                         success(dictInfo);
-                                     }
-                                 }
-                                 failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                                     GYLog(@"%@", error.description);
-                                     if (failure) {
-                                         failure(error);
-                                     }
-                                 }];
+        if (success) {
+            NSDictionary *dictInfo = [responseObject objectFromJSONData];
+            success(dictInfo);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        GYLog(@"%@", error.description);
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
 - (nullable NSURLSessionDataTask *)POST:(NSString *)URLString
@@ -67,6 +67,7 @@
     [self.httpSessionManager.requestSerializer setValue:@"0" forHTTPHeaderField:GYNETWORK_CACHED_TIME_KEY];
     return [self.httpSessionManager POST:URLString
                               parameters:params
+                                 headers:nil
                constructingBodyWithBlock:block
                                 progress:nil
                                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -99,6 +100,7 @@
     [self.httpSessionManager.requestSerializer setValue:secondStr forHTTPHeaderField:GYNETWORK_CACHED_TIME_KEY];
     return [self.httpSessionManager GET:URLString
                              parameters:params
+                                headers:nil
                                progress:nil
                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                     if (success) {

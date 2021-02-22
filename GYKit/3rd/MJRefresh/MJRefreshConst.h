@@ -26,7 +26,11 @@
 // 文字颜色
 #define MJRefreshLabelTextColor MJRefreshColor(90, 90, 90)
 
+// 字体大小
+#define MJRefreshLabelFont [UIFont boldSystemFontOfSize:14]
+
 // 常量
+UIKIT_EXTERN const CGFloat MJRefreshLabelLeftInset;
 UIKIT_EXTERN const CGFloat MJRefreshHeaderHeight;
 UIKIT_EXTERN const CGFloat MJRefreshFooterHeight;
 UIKIT_EXTERN const CGFloat MJRefreshFastAnimationDuration;
@@ -39,8 +43,34 @@ UIKIT_EXTERN NSString *const MJRefreshKeyPathPanState;
 
 UIKIT_EXTERN NSString *const MJRefreshHeaderLastUpdatedTimeKey;
 
+UIKIT_EXTERN NSString *const MJRefreshHeaderIdleText;
+UIKIT_EXTERN NSString *const MJRefreshHeaderPullingText;
+UIKIT_EXTERN NSString *const MJRefreshHeaderRefreshingText;
+
+UIKIT_EXTERN NSString *const MJRefreshAutoFooterIdleText;
+UIKIT_EXTERN NSString *const MJRefreshAutoFooterRefreshingText;
+UIKIT_EXTERN NSString *const MJRefreshAutoFooterNoMoreDataText;
+
+UIKIT_EXTERN NSString *const MJRefreshBackFooterIdleText;
+UIKIT_EXTERN NSString *const MJRefreshBackFooterPullingText;
+UIKIT_EXTERN NSString *const MJRefreshBackFooterRefreshingText;
+UIKIT_EXTERN NSString *const MJRefreshBackFooterNoMoreDataText;
+
+UIKIT_EXTERN NSString *const MJRefreshHeaderLastTimeText;
+UIKIT_EXTERN NSString *const MJRefreshHeaderDateTodayText;
+UIKIT_EXTERN NSString *const MJRefreshHeaderNoneLastDateText;
+
 // 状态检查
 #define MJRefreshCheckState \
 MJRefreshState oldState = self.state; \
 if (state == oldState) return; \
 [super setState:state];
+
+// 异步主线程执行，不强持有Self
+#define MJRefreshDispatchAsyncOnMainQueue(x) \
+__weak typeof(self) weakSelf = self; \
+dispatch_async(dispatch_get_main_queue(), ^{ \
+typeof(weakSelf) self = weakSelf; \
+{x} \
+});
+
