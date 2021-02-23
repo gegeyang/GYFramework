@@ -8,7 +8,7 @@
 
 #import "FirstViewController.h"
 #import "GYViewController+GYNavBarExtend.h"
-#import "NewViewController.h"
+#import "MineCollectionViewController.h"
 #import "GYCoordinatingMediator.h"
 
 @interface FirstViewController ()
@@ -27,12 +27,12 @@
     
     UIButton *btn =  [UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
-    [btn setTitle:@"普通跳转" forState:UIControlStateNormal];
+    [btn setTitle:@"Collection List" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(20);
-        make.size.mas_equalTo(CGSizeMake(100, 40));
+        make.size.mas_equalTo(CGSizeMake(150, 30));
         make.top.equalTo(self.navigationBar.mas_bottom).offset(15);
     }];
     
@@ -61,15 +61,17 @@
 
 
 - (void)onClick:(UIButton *)sender {
-    NewViewController *new = [[NewViewController alloc] init];
-    [self.navigationController pushViewController:new animated:YES];
+    MineCollectionViewController *collectionVC = [[MineCollectionViewController alloc] init];
+    [self.navigationController pushViewController:collectionVC animated:YES];
 }
 
 - (void)onClick1:(UIButton *)sender {
-    [[GYCoordinatingMediator shareInstance] requestWithTag:GYCoordinatingControllerTagSecondPage params:nil];
+    [[GYCoordinatingMediator shareInstance] jumpWithTag:GYCoordinatingControllerTagSecondPage
+                                                    params:nil];
 }
 - (void)onClick2:(UIButton *)sender {
-    [[GYCoordinatingMediator shareInstance] requestWithTag:GYCoordinatingControllerTagNew params:nil];
+    [[GYCoordinatingMediator shareInstance] jumpWithTag:GYCoordinatingControllerTagCollectionPage
+                                                    params:nil];
 }
 
 - (void)didReceiveMemoryWarning {

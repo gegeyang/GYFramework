@@ -9,7 +9,7 @@
 #import "GYCoordinatingMediator.h"
 #import "GYTabbarViewController.h"
 #import "GYAppRootController.h"
-#import "NewViewController.h"
+#import "MineCollectionViewController.h"
 
 @interface GYCoordinatingMediator()
 
@@ -41,11 +41,11 @@
     _activeViewController = toViewController;
 }
 
-- (BOOL)requestWithTag:(NSInteger)tag
-                params:(NSDictionary *)params {
+- (BOOL)jumpWithTag:(NSInteger)tag
+             params:(NSDictionary *)params {
     switch (tag) {
-        case GYCoordinatingControllerTagNew:
-            [self.appRootController  pushViewController:[[NewViewController alloc] init] animated:YES];
+        case GYCoordinatingControllerTagCollectionPage:
+            [self.appRootController  pushViewController:[[MineCollectionViewController alloc] init] animated:YES];
             break;
         default:
             if (self.activeViewController != self.tabbarViewController) {

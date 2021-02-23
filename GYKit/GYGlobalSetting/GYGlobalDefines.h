@@ -76,6 +76,6 @@ typedef NS_ENUM(NSInteger, GYCoordinatingControllerTag) {
     GYCoordinatingControllerTagFirstPage,
     GYCoordinatingControllerTagSecondPage,
     GYCoordinatingControllerTagThirdPage,
-    GYCoordinatingControllerTagNew,
+    GYCoordinatingControllerTagCollectionPage,
 };
 

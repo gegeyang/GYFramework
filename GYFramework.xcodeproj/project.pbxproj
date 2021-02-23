@@ -26,7 +26,7 @@
 		3A5FDB1720C53420004ABC58 /* GYTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1620C53420004ABC58 /* GYTabbarView.m */; };
 		3A5FDB1E20C5364C004ABC58 /* UIColor+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1D20C5364C004ABC58 /* UIColor+GYExtend.m */; };
 		3A5FDB2420C53A5E004ABC58 /* UIFont+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB2320C53A5E004ABC58 /* UIFont+GYExtend.m */; };
-		3A98A8062148B63300B958B8 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8052148B63300B958B8 /* NewViewController.m */; };
+		3A98A8062148B63300B958B8 /* MineCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8052148B63300B958B8 /* MineCollectionViewController.m */; };
 		3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A81E2148C17300B958B8 /* GYAPIClient.m */; };
 		3A98A8442148E74C00B958B8 /* UIScrollView+GYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8432148E74C00B958B8 /* UIScrollView+GYRefresh.m */; };
 		3A98A8472148E79F00B958B8 /* GYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8462148E79F00B958B8 /* GYRefreshHeader.m */; };
@@ -164,8 +164,8 @@
 		3A5FDB1D20C5364C004ABC58 /* UIColor+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GYExtend.m"; sourceTree = "<group>"; };
 		3A5FDB2220C53A5E004ABC58 /* UIFont+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+GYExtend.h"; sourceTree = "<group>"; };
 		3A5FDB2320C53A5E004ABC58 /* UIFont+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GYExtend.m"; sourceTree = "<group>"; };
-		3A98A8042148B63300B958B8 /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
-		3A98A8052148B63300B958B8 /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		3A98A8042148B63300B958B8 /* MineCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCollectionViewController.h; sourceTree = "<group>"; };
+		3A98A8052148B63300B958B8 /* MineCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCollectionViewController.m; sourceTree = "<group>"; };
 		3A98A81D2148C17300B958B8 /* GYAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAPIClient.h; sourceTree = "<group>"; };
 		3A98A81E2148C17300B958B8 /* GYAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAPIClient.m; sourceTree = "<group>"; };
 		3A98A8202148C20900B958B8 /* GYMultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMultipartFormData.h; sourceTree = "<group>"; };
@@ -334,20 +334,13 @@
 		3A24016020C0E02C00DE9044 /* GYFramework */ = {
 			isa = PBXGroup;
 			children = (
-				3A24016720C0E02C00DE9044 /* Main.storyboard */,
+				47AC6A2425E49D4800C1E9C4 /* Controller */,
 				3A24016A20C0E02D00DE9044 /* Assets.xcassets */,
-				3A24016C20C0E02D00DE9044 /* LaunchScreen.storyboard */,
-				3A24016F20C0E02D00DE9044 /* Info.plist */,
-				3A24017020C0E02D00DE9044 /* main.m */,
 				3A5FDB0A20C5287C004ABC58 /* GY-PrefixHeader.pch */,
-				3AACFA1B20F0EA64009E9125 /* FirstViewController.h */,
-				3AACFA1C20F0EA64009E9125 /* FirstViewController.m */,
-				3AACFA1E20F0EA6F009E9125 /* SecondViewController.h */,
-				3AACFA1F20F0EA6F009E9125 /* SecondViewController.m */,
-				4765849825E3AA7F00080052 /* ThirdViewController.h */,
-				4765849925E3AA7F00080052 /* ThirdViewController.m */,
-				3A98A8042148B63300B958B8 /* NewViewController.h */,
-				3A98A8052148B63300B958B8 /* NewViewController.m */,
+				3A24016F20C0E02D00DE9044 /* Info.plist */,
+				3A24016C20C0E02D00DE9044 /* LaunchScreen.storyboard */,
+				3A24017020C0E02D00DE9044 /* main.m */,
+				3A24016720C0E02C00DE9044 /* Main.storyboard */,
 			);
 			path = GYFramework;
 			sourceTree = "<group>";
@@ -389,16 +382,16 @@
 		3A24019420C0E24000DE9044 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				3A24019520C0E26400DE9044 /* GYWindow.h */,
-				3A24019620C0E26400DE9044 /* GYWindow.m */,
 				3A24016120C0E02C00DE9044 /* GYAppDelegate.h */,
 				3A24016220C0E02C00DE9044 /* GYAppDelegate.m */,
-				3A24019820C0E5D900DE9044 /* GYCoordinatingMediator.h */,
-				3A24019920C0E5D900DE9044 /* GYCoordinatingMediator.m */,
 				3A24019B20C0E67400DE9044 /* GYAppRootController.h */,
 				3A24019C20C0E67400DE9044 /* GYAppRootController.m */,
+				3A24019820C0E5D900DE9044 /* GYCoordinatingMediator.h */,
+				3A24019920C0E5D900DE9044 /* GYCoordinatingMediator.m */,
 				3A2401AB20C0EC7800DE9044 /* GYTabbarViewController.h */,
 				3A2401AC20C0EC7800DE9044 /* GYTabbarViewController.m */,
+				3A24019520C0E26400DE9044 /* GYWindow.h */,
+				3A24019620C0E26400DE9044 /* GYWindow.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -668,6 +661,21 @@
 			path = GYList;
 			sourceTree = "<group>";
 		};
+		47AC6A2425E49D4800C1E9C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AACFA1B20F0EA64009E9125 /* FirstViewController.h */,
+				3AACFA1C20F0EA64009E9125 /* FirstViewController.m */,
+				3A98A8042148B63300B958B8 /* MineCollectionViewController.h */,
+				3A98A8052148B63300B958B8 /* MineCollectionViewController.m */,
+				3AACFA1E20F0EA6F009E9125 /* SecondViewController.h */,
+				3AACFA1F20F0EA6F009E9125 /* SecondViewController.m */,
+				4765849825E3AA7F00080052 /* ThirdViewController.h */,
+				4765849925E3AA7F00080052 /* ThirdViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -843,7 +851,7 @@
 				4743D9B92578D04A0084B971 /* NSArray+MASAdditions.m in Sources */,
 				4743D9BF2578D04A0084B971 /* MASViewConstraint.m in Sources */,
 				3AACFA2020F0EA6F009E9125 /* SecondViewController.m in Sources */,
-				3A98A8062148B63300B958B8 /* NewViewController.m in Sources */,
+				3A98A8062148B63300B958B8 /* MineCollectionViewController.m in Sources */,
 				3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */,
 				4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */,
 				4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */,

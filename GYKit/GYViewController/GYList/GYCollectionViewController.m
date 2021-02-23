@@ -40,11 +40,6 @@
                      atIndex:0];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self.view addSubview:self.collectionView];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (self.dataSource && [self.dataSource dataNeedReload]) {

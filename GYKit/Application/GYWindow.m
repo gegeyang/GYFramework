@@ -11,10 +11,10 @@
 @implementation GYWindow
 
 - (void)sendEvent:(UIEvent *)event {
-    NSSet *arrTouch = [event allTouches];
-    UITouch *touch = arrTouch.allObjects.firstObject;
-    CGPoint position = [touch locationInView:self];
-    NSLog(@"当前位置 x : %f - y : %f", position.x, position.y);
+    //可在设置当前点击位置
+//    NSSet *arrTouch = [event allTouches];
+//    UITouch *touch = arrTouch.allObjects.firstObject;
+//    CGPoint position = [touch locationInView:self];
     [super sendEvent:event];
 }
 

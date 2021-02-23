@@ -22,7 +22,7 @@
 + (GYCoordinatingMediator *)shareInstance;
 - (void)didPushViewController:(GYViewController *)aViewController;
 - (void)popToViewController:(GYViewController *)toViewController;
-- (BOOL)requestWithTag:(NSInteger)tag
-                params:(NSDictionary *)params;
+- (BOOL)jumpWithTag:(NSInteger)tag
+             params:(NSDictionary *)params;
 
 @end
