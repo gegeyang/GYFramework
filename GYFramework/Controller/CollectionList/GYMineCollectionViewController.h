@@ -1,5 +1,5 @@
 //
-//  MineCollectionViewController.h
+//  GYMineCollectionViewController.h
 //  GYFramework
 //
 //  Created by GeYang on 2018/9/12.
@@ -8,7 +8,7 @@
 
 #import "GYCollectionViewController.h"
 
-@interface MineCollectionViewController : GYCollectionViewController
+@interface GYMineCollectionViewController : GYCollectionViewController
 
 @end
 

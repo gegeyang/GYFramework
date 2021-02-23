@@ -1,12 +1,12 @@
 //
-//  MineCollectionViewController.m
+//  GYMineCollectionViewController.m
 //  GYFramework
 //
 //  Created by GeYang on 2018/9/12.
 //  Copyright © 2018年 GeYang. All rights reserved.
 //
 
-#import "MineCollectionViewController.h"
+#import "GYMineCollectionViewController.h"
 #import "GYViewController+GYNavBarExtend.h"
 #import "GYCollectionViewController+GYListViewDelegate.h"
 #import "GYMineItemCell.h"
@@ -15,13 +15,13 @@
 
 static NSString *const kGYMineItemCellReuserIdentifier = @"kGYMineItemCellReuserIdentifier";
 
-@interface MineCollectionViewController ()
+@interface GYMineCollectionViewController ()
 
 @property (nonatomic, strong) GYMineDataModel *dataModel;
 
 @end
 
-@implementation MineCollectionViewController
+@implementation GYMineCollectionViewController
 
 - (void)loadView {
     [super loadView];

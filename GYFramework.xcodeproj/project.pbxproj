@@ -26,7 +26,7 @@
 		3A5FDB1720C53420004ABC58 /* GYTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1620C53420004ABC58 /* GYTabbarView.m */; };
 		3A5FDB1E20C5364C004ABC58 /* UIColor+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1D20C5364C004ABC58 /* UIColor+GYExtend.m */; };
 		3A5FDB2420C53A5E004ABC58 /* UIFont+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB2320C53A5E004ABC58 /* UIFont+GYExtend.m */; };
-		3A98A8062148B63300B958B8 /* MineCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8052148B63300B958B8 /* MineCollectionViewController.m */; };
+		3A98A8062148B63300B958B8 /* GYMineCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8052148B63300B958B8 /* GYMineCollectionViewController.m */; };
 		3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A81E2148C17300B958B8 /* GYAPIClient.m */; };
 		3A98A8442148E74C00B958B8 /* UIScrollView+GYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8432148E74C00B958B8 /* UIScrollView+GYRefresh.m */; };
 		3A98A8472148E79F00B958B8 /* GYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8462148E79F00B958B8 /* GYRefreshHeader.m */; };
@@ -173,8 +173,8 @@
 		3A5FDB1D20C5364C004ABC58 /* UIColor+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GYExtend.m"; sourceTree = "<group>"; };
 		3A5FDB2220C53A5E004ABC58 /* UIFont+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+GYExtend.h"; sourceTree = "<group>"; };
 		3A5FDB2320C53A5E004ABC58 /* UIFont+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GYExtend.m"; sourceTree = "<group>"; };
-		3A98A8042148B63300B958B8 /* MineCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineCollectionViewController.h; sourceTree = "<group>"; };
-		3A98A8052148B63300B958B8 /* MineCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineCollectionViewController.m; sourceTree = "<group>"; };
+		3A98A8042148B63300B958B8 /* GYMineCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineCollectionViewController.h; sourceTree = "<group>"; };
+		3A98A8052148B63300B958B8 /* GYMineCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineCollectionViewController.m; sourceTree = "<group>"; };
 		3A98A81D2148C17300B958B8 /* GYAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAPIClient.h; sourceTree = "<group>"; };
 		3A98A81E2148C17300B958B8 /* GYAPIClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAPIClient.m; sourceTree = "<group>"; };
 		3A98A8202148C20900B958B8 /* GYMultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMultipartFormData.h; sourceTree = "<group>"; };
@@ -586,8 +586,8 @@
 		47173C0325E4F11D002F9758 /* CollectionList */ = {
 			isa = PBXGroup;
 			children = (
-				3A98A8042148B63300B958B8 /* MineCollectionViewController.h */,
-				3A98A8052148B63300B958B8 /* MineCollectionViewController.m */,
+				3A98A8042148B63300B958B8 /* GYMineCollectionViewController.h */,
+				3A98A8052148B63300B958B8 /* GYMineCollectionViewController.m */,
 				47173C1525E4FA52002F9758 /* GYMineInfo.h */,
 				47173C1625E4FA52002F9758 /* GYMineInfo.m */,
 				47173C1B25E4FA5B002F9758 /* GYMineInfoObject.h */,
@@ -923,7 +923,7 @@
 				4743D9B92578D04A0084B971 /* NSArray+MASAdditions.m in Sources */,
 				4743D9BF2578D04A0084B971 /* MASViewConstraint.m in Sources */,
 				3AACFA2020F0EA6F009E9125 /* SecondViewController.m in Sources */,
-				3A98A8062148B63300B958B8 /* MineCollectionViewController.m in Sources */,
+				3A98A8062148B63300B958B8 /* GYMineCollectionViewController.m in Sources */,
 				3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */,
 				4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */,
 				47173C1E25E4FCBC002F9758 /* NSString+GYExtend.m in Sources */,

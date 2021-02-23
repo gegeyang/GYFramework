@@ -8,7 +8,7 @@
 
 #import "FirstViewController.h"
 #import "GYViewController+GYNavBarExtend.h"
-#import "MineCollectionViewController.h"
+#import "GYMineCollectionViewController.h"
 #import "GYCoordinatingMediator.h"
 
 @interface FirstViewController ()
@@ -61,7 +61,7 @@
 
 
 - (void)onClick:(UIButton *)sender {
-    MineCollectionViewController *collectionVC = [[MineCollectionViewController alloc] init];
+    GYMineCollectionViewController *collectionVC = [[GYMineCollectionViewController alloc] init];
     [self.navigationController pushViewController:collectionVC animated:YES];
 }
 
