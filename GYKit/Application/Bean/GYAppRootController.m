@@ -8,9 +8,11 @@
 
 #import "GYAppRootController.h"
 #import "GYViewControllerTransition.h"
-#import "GYViewControllerTransition.h"
+#import "GYCoordinatingMediator.h"
 
-@interface GYAppRootController () <UINavigationControllerDelegate>
+@interface GYAppRootController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate> {
+    BOOL _allowFullPopGesture;  //支持全屏侧滑返回
+}
 
 @end
 
@@ -20,6 +22,39 @@
     [super viewDidLoad];
     self.navigationBarHidden = YES;
     self.delegate = self;
+    _allowFullPopGesture = NO;
+    if (_allowFullPopGesture) {
+        /**
+         系统侧滑 UIScreenEdgePanGestureRecognizer类型 替换为 UIPanGestureRecognizer类型
+         */
+        SEL handelTransition = NSSelectorFromString(@"handleNavigationTransition:");
+        UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate
+                                                                              action:handelTransition];
+        pan.delegate = self;
+        [self.view addGestureRecognizer:pan];
+        //禁用系统默认返回方式
+        self.interactivePopGestureRecognizer.enabled = NO;
+    } else {
+        self.interactivePopGestureRecognizer.delegate = self;
+        self.interactivePopGestureRecognizer.enabled = YES;
+    }
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    //非根控制器 和 WJVCPushNormalMode类型的页面
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+    if (_allowFullPopGesture) {
+        GYViewController *activeViewController = [GYCoordinatingMediator shareInstance].activeViewController;
+        if (self.childViewControllers.count > 1
+            && activeViewController.handleNavigationTransitionEnabled) {
+            return YES;
+        }
+    } else {
+        if (self.childViewControllers.count > 1) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {

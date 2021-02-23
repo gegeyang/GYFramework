@@ -799,9 +799,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				3A24015D20C0E02C00DE9044 /* GYFramework */,
 				3A24017520C0E02E00DE9044 /* GYFrameworkTests */,
 				3A24018020C0E02E00DE9044 /* GYFrameworkUITests */,
-				3A24015D20C0E02C00DE9044 /* GYFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -1102,6 +1102,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D59E9P2MUY;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
@@ -1121,6 +1122,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D59E9P2MUY;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";

@@ -149,6 +149,14 @@
 
 @end
 
+@implementation GYViewController(HandleNavigationTransitionExtend)
+
+- (BOOL)handleNavigationTransitionEnabled {
+    return YES;
+}
+
+@end
+
 @implementation GYViewController(NavigationExtend)
 
 - (UIButton *)gy_navigation_leftBtnAtIndex:(NSInteger)index {
