@@ -46,6 +46,8 @@
 		3AACFA3420F2FBCA009E9125 /* GYBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA3320F2FBCA009E9125 /* GYBorderView.m */; };
 		3AE67C6120F5F41E004E2746 /* GYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE67C6020F5F41E004E2746 /* GYCollectionViewController.m */; };
 		3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE67C6420F5FE07004E2746 /* GYHandler.m */; };
+		47173A2E25E4A59F002F9758 /* UIImage+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */; };
+		47173A3D25E4ABE6002F9758 /* UIImage+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
 		4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -207,6 +209,9 @@
 		3AE67C6020F5F41E004E2746 /* GYCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCollectionViewController.m; sourceTree = "<group>"; };
 		3AE67C6320F5FE07004E2746 /* GYHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYHandler.h; sourceTree = "<group>"; };
 		3AE67C6420F5FE07004E2746 /* GYHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYHandler.m; sourceTree = "<group>"; };
+		47173A2C25E4A59F002F9758 /* UIImage+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GYExtend.h"; sourceTree = "<group>"; };
+		47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GYExtend.m"; sourceTree = "<group>"; };
+		47173A3625E4ABAE002F9758 /* GYTagAppearanceObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYTagAppearanceObject.h; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4743D9692578C1950084B971 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4743D98D2578CD780084B971 /* UIButton+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYExtend.h"; sourceTree = "<group>"; };
@@ -366,6 +371,7 @@
 		3A24019320C0E06800DE9044 /* GYKit */ = {
 			isa = PBXGroup;
 			children = (
+				47173A3525E4AB86002F9758 /* BeanObject */,
 				3A5FDB0920C52789004ABC58 /* GYKit.h */,
 				3A98A81C2148C13E00B958B8 /* 3rdWrapper */,
 				3A98A8072148C0E400B958B8 /* 3rd */,
@@ -382,16 +388,9 @@
 		3A24019420C0E24000DE9044 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				47173A2225E4A22F002F9758 /* Bean */,
 				3A24016120C0E02C00DE9044 /* GYAppDelegate.h */,
 				3A24016220C0E02C00DE9044 /* GYAppDelegate.m */,
-				3A24019B20C0E67400DE9044 /* GYAppRootController.h */,
-				3A24019C20C0E67400DE9044 /* GYAppRootController.m */,
-				3A24019820C0E5D900DE9044 /* GYCoordinatingMediator.h */,
-				3A24019920C0E5D900DE9044 /* GYCoordinatingMediator.m */,
-				3A2401AB20C0EC7800DE9044 /* GYTabbarViewController.h */,
-				3A2401AC20C0EC7800DE9044 /* GYTabbarViewController.m */,
-				3A24019520C0E26400DE9044 /* GYWindow.h */,
-				3A24019620C0E26400DE9044 /* GYWindow.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -399,6 +398,7 @@
 		3A24019E20C0E74500DE9044 /* GYViewController */ = {
 			isa = PBXGroup;
 			children = (
+				47173A2325E4A29D002F9758 /* GYTabbar */,
 				47AC6A1D25E49C3E00C1E9C4 /* GYList */,
 				3A2401A520C0E8C600DE9044 /* GYViewController.h */,
 				3A2401A620C0E8C600DE9044 /* GYViewController.m */,
@@ -425,6 +425,8 @@
 				3A98A85C2149033A00B958B8 /* NSError+GYExtend.m */,
 				4743D98D2578CD780084B971 /* UIButton+GYExtend.h */,
 				4743D98E2578CD780084B971 /* UIButton+GYExtend.m */,
+				47173A2C25E4A59F002F9758 /* UIImage+GYExtend.h */,
+				47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */,
 			);
 			path = GYCategory;
 			sourceTree = "<group>";
@@ -527,6 +529,36 @@
 				3AE67C6420F5FE07004E2746 /* GYHandler.m */,
 			);
 			path = GYHandler;
+			sourceTree = "<group>";
+		};
+		47173A2225E4A22F002F9758 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				3A24019B20C0E67400DE9044 /* GYAppRootController.h */,
+				3A24019C20C0E67400DE9044 /* GYAppRootController.m */,
+				3A24019820C0E5D900DE9044 /* GYCoordinatingMediator.h */,
+				3A24019920C0E5D900DE9044 /* GYCoordinatingMediator.m */,
+				3A24019520C0E26400DE9044 /* GYWindow.h */,
+				3A24019620C0E26400DE9044 /* GYWindow.m */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		47173A2325E4A29D002F9758 /* GYTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				3A2401AB20C0EC7800DE9044 /* GYTabbarViewController.h */,
+				3A2401AC20C0EC7800DE9044 /* GYTabbarViewController.m */,
+			);
+			path = GYTabbar;
+			sourceTree = "<group>";
+		};
+		47173A3525E4AB86002F9758 /* BeanObject */ = {
+			isa = PBXGroup;
+			children = (
+				47173A3625E4ABAE002F9758 /* GYTagAppearanceObject.h */,
+			);
+			path = BeanObject;
 			sourceTree = "<group>";
 		};
 		4743D9952578D04A0084B971 /* Masonry */ = {
@@ -872,6 +904,7 @@
 				3A39B90820F745ED0004CA6A /* GYViewController+GYNavBarExtend.m in Sources */,
 				3A5FDB1220C52BE9004ABC58 /* GYGlobalConst.m in Sources */,
 				3A5FDB0820C52269004ABC58 /* UIView+GYPosition.m in Sources */,
+				47173A3D25E4ABE6002F9758 /* UIImage+GYExtend.m in Sources */,
 				3A98A8442148E74C00B958B8 /* UIScrollView+GYRefresh.m in Sources */,
 				4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				3AE67C6120F5F41E004E2746 /* GYCollectionViewController.m in Sources */,
@@ -901,6 +934,7 @@
 				4799457E25E3D2C900D0050A /* SVIndefiniteAnimatedView.m in Sources */,
 				4799459525E3D2DB00D0050A /* AFURLResponseSerialization.m in Sources */,
 				4799457625E3D2C900D0050A /* SVRadialGradientLayer.m in Sources */,
+				47173A2E25E4A59F002F9758 /* UIImage+GYExtend.m in Sources */,
 				4799456325E3D28D00D0050A /* MJRefreshBackFooter.m in Sources */,
 				4799455925E3D28D00D0050A /* UIScrollView+MJExtension.m in Sources */,
 				4799459F25E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */,

@@ -19,3 +19,4 @@
 #import "GYTabbarViewController.h"
 #import "GYCoordinatingMediator.h"
 #import "Masonry.h"
+#import "UIImage+GYExtend.h"

@@ -27,14 +27,19 @@ typedef NS_ENUM(NSInteger, GYDrawLineType) {
 
 - (UIView *)gy_viewWithTag:(NSInteger)tag
                  recursive:(BOOL)recursive;
+- (void)gy_removeAllSubviews;
 
+/**
+ 对指定的view设置边框线。
+ type：指定边的枚举
+ color：线条颜色
+ lineThickness：线条宽度
+ */
 - (void)gy_drawBorderWithLineType:(GYDrawLineType)type;
 - (void)gy_drawBorderWithColor:(UIColor *)color
                       lineType:(GYDrawLineType)type;
 - (void)gy_drawBorderWithColor:(UIColor *)color
                       lineType:(GYDrawLineType)type
                  lineThickness:(CGFloat)lineThickness;
-
-- (void)gy_removeAllSubviews;
 
 @end

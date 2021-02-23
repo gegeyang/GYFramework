@@ -70,6 +70,9 @@
         make.height.mas_equalTo(toolBarHeight);
     }];
     [self updateItemInfos:self.arrItemInfo];
+    
+    //设置tabbar上圆点
+    [self.itemInfo2.barItem setBadgeValue:46];
 }
 
 - (void)viewContentInsetDidChanged {
