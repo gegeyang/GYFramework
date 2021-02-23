@@ -44,7 +44,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _ignoreTopInset = 0;
-        _titleImageSpacing = GYKIT_GENERAL_BASE_FONTSIZE;
+        _titleImageSpacing = GYKIT_GENERAL_SPACING4;
         _imageSize = CGSizeMake(80, 80);
         self.imageView = [[UIImageView alloc] init];
         self.imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -75,48 +75,6 @@
         [self setupFixedContraints];
     }
     return self;
-}
-
-- (NSMutableArray *)arrConstraints {
-    if (!_arrConstraints) {
-        _arrConstraints = [NSMutableArray array];
-    }
-    return _arrConstraints;
-}
-
-- (NSMutableDictionary *)dictImage {
-    if (!_dictImage) {
-        _dictImage = [NSMutableDictionary dictionary];
-    }
-    return _dictImage;
-}
-
-- (NSMutableDictionary *)dictTitle {
-    if (!_dictTitle) {
-        _dictTitle = [NSMutableDictionary dictionary];
-    }
-    return _dictTitle;
-}
-
-- (NSMutableDictionary *)dictInfo {
-    if (!_dictInfo) {
-        _dictInfo = [NSMutableDictionary dictionary];
-    }
-    return _dictInfo;
-}
-
-- (NSMutableDictionary *)dictRetryEnable {
-    if (!_dictRetryEnable) {
-        _dictRetryEnable = [NSMutableDictionary dictionary];
-    }
-    return _dictRetryEnable;
-}
-
-- (NSMutableDictionary *)dictActionEnable {
-    if (!_dictActionEnable) {
-        _dictActionEnable = [NSMutableDictionary dictionary];
-    }
-    return _dictActionEnable;
 }
 
 - (void)setFetchStatus:(GYFetchStatus)status {
@@ -165,9 +123,11 @@
     UIImage *imageEmpty = [UIImage imageNamed:@"common_fetch_empty"];
     UIImage *imageNetWorkError = [UIImage imageNamed:@"common_fetch_failed"];
     
+    //请求成功，返回失败
     [self setErrorImage:imageFailed
               forStatus:GYFetchOtherFailed];
     
+    //为空
     [self setErrorImage:imageEmpty
               forStatus:GYFetchEmpty];
     [self setErrorTitle:NSLocalizedString(@"没有相关内容", nil)
@@ -175,6 +135,7 @@
     [self setErrorInfo:NSLocalizedString(@"", nil)
              forStatus:GYFetchEmpty];
     
+    //网络连接失败
     [self setErrorTitle:NSLocalizedString(@"无法联接到网络", nil)
               forStatus:GYFetchNoInternetFailed];
     [self setErrorInfo:NSLocalizedString(@"请检查网络设置", nil)
@@ -184,6 +145,7 @@
     [self setErrorRetryEnable:YES
                     forStatus:GYFetchNoInternetFailed];
     
+    //网络超时
     [self setErrorTitle:NSLocalizedString(@"网络连接超时", nil)
               forStatus:GYFetchTimeOutFailed];
     [self setErrorInfo:NSLocalizedString(@"请检查网络设置", nil)
@@ -193,6 +155,7 @@
     [self setErrorRetryEnable:YES
                     forStatus:GYFetchTimeOutFailed];
     
+    //接口请求失败
     [self setErrorImage:imageFailed
               forStatus:GYFetchFailed];
     [self setErrorTitle:NSLocalizedString(@"数据加载失败", nil)
@@ -510,5 +473,48 @@
                                 scrollView.gy_width - insets.left - insets.right,
                                 scrollView.gy_height - insets.top - insets.bottom);
     }
+}
+
+#pragma mark - getter and setter
+- (NSMutableArray *)arrConstraints {
+    if (!_arrConstraints) {
+        _arrConstraints = [NSMutableArray array];
+    }
+    return _arrConstraints;
+}
+
+- (NSMutableDictionary *)dictImage {
+    if (!_dictImage) {
+        _dictImage = [NSMutableDictionary dictionary];
+    }
+    return _dictImage;
+}
+
+- (NSMutableDictionary *)dictTitle {
+    if (!_dictTitle) {
+        _dictTitle = [NSMutableDictionary dictionary];
+    }
+    return _dictTitle;
+}
+
+- (NSMutableDictionary *)dictInfo {
+    if (!_dictInfo) {
+        _dictInfo = [NSMutableDictionary dictionary];
+    }
+    return _dictInfo;
+}
+
+- (NSMutableDictionary *)dictRetryEnable {
+    if (!_dictRetryEnable) {
+        _dictRetryEnable = [NSMutableDictionary dictionary];
+    }
+    return _dictRetryEnable;
+}
+
+- (NSMutableDictionary *)dictActionEnable {
+    if (!_dictActionEnable) {
+        _dictActionEnable = [NSMutableDictionary dictionary];
+    }
+    return _dictActionEnable;
 }
 @end

@@ -17,4 +17,16 @@
 @property (nonatomic, strong) UICollectionViewFlowLayout *collectionLayout;
 @property (nonatomic, strong) id <GYListViewDataSource> dataSource;
 
+- (instancetype)initWithFlowLayout:(UICollectionViewFlowLayout *)flowlayout;
+
+@end
+
+@interface GYCollectionViewController (RefreshExtend)
+
+- (void)gy_refresh_addDefaultRefreshHeader;
+- (void)gy_refresh_addRefreshHeader:(void(^)(void))refreshingBlock;
+
+- (void)gy_refresh_addDefaultRefreshFooter;
+- (void)gy_refresh_addRefreshFooter:(void(^)(void))refreshingBlock;
+
 @end

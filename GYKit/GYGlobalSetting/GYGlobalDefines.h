@@ -67,6 +67,7 @@
 
 /*基础图片*/
 #define GYKIT_IMAGE_BACK_GRAY               [UIImage imageNamed:@"common_gary_back"]
+#define GYKIT_IMAGE_BACK_WHITE              [UIImage imageNamed:@"common_back_white"]
 
 
 typedef void(^GYVoidBlock)(void);

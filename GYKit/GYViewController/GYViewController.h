@@ -49,8 +49,6 @@ typedef NS_OPTIONS(NSInteger, GYAutoAdjust) {
 
 @interface GYViewController(NavigationExtend)
 
-@property (nonatomic, readonly) CGFloat navigationBarHeight;
-
 - (UIButton *)gy_navigation_leftBtnAtIndex:(NSInteger)index;
 - (UIButton *)gy_navigation_rightBtnAtIndex:(NSInteger)index;
 

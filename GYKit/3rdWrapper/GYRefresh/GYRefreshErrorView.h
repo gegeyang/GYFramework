@@ -11,10 +11,10 @@
 typedef NS_ENUM(NSInteger, GYFetchStatus) {
     GYFetchNone,
     GYFetchEmpty,
-    GYFetchFailed,
-    GYFetchTimeOutFailed,
-    GYFetchNoInternetFailed,
-    GYFetchOtherFailed,
+    GYFetchFailed,  //接口请求失败
+    GYFetchTimeOutFailed,    //超时
+    GYFetchNoInternetFailed, //无网络连接
+    GYFetchOtherFailed, //接口请求成功，返回失败
 };
 
 @interface GYRefreshErrorView : UIView

@@ -12,8 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (GYExtend)
 
+/**
+ 计算按钮宽度
+ */
 - (CGFloat)gy_navigationWidth:(CGFloat)maxWidth;
 
+/**
+ 计算按钮宽度，支持添加间距
+ */
 - (CGFloat)gy_contentWidth:(CGFloat)maxWidth
                    spacing:(CGFloat)spacing;
 @end

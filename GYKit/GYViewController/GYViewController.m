@@ -151,10 +151,6 @@
 
 @implementation GYViewController(NavigationExtend)
 
-- (CGFloat)navigationBarHeight {
-    return GYKIT_NAVIGATIONBAR_HEIGHT + self.safeAreaInsets.top;
-}
-
 - (UIButton *)gy_navigation_leftBtnAtIndex:(NSInteger)index {
     if (index < 0 || index >= _navigationLeftBtns.count) {
         return nil;
@@ -172,7 +168,7 @@
 - (void)gy_navigation_initLeftBackBtn:(void(^)(void))backBlock {
     self.wj_base_backBlock = backBlock;
     UIButton *btn = [[UIButton alloc] init];
-    [btn setImage:GYKIT_IMAGE_BACK_GRAY
+    [btn setImage:GYKIT_IMAGE_BACK_WHITE
          forState:UIControlStateNormal];
     [btn setTitle:@"返回"
          forState:UIControlStateNormal];
@@ -199,7 +195,7 @@
     btn.contentEdgeInsets = UIEdgeInsetsMake(0, GYKIT_GENERAL_H_MARGIN, 0, 0);
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, GYKIT_GENERAL_SPACING1, 0, 0);
     btn.titleLabel.font = [UIFont gy_CNFontSizeS1];
-    [btn setTitleColor:[UIColor gy_color3]
+    [btn setTitleColor:[UIColor whiteColor]
               forState:UIControlStateNormal];
     if (!_navigationLeftBtns) {
         _navigationLeftBtns = [NSMutableArray array];
@@ -228,7 +224,7 @@
     btn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, GYKIT_GENERAL_H_MARGIN);
     btn.titleEdgeInsets = UIEdgeInsetsMake(0, GYKIT_GENERAL_SPACING1, 0, 0);
     btn.titleLabel.font = [UIFont gy_CNFontSizeS1];
-    [btn setTitleColor:[UIColor gy_color3]
+    [btn setTitleColor:[UIColor whiteColor]
               forState:UIControlStateNormal];
     if (!_navigationRightBtns) {
         _navigationRightBtns = [NSMutableArray array];
@@ -257,7 +253,7 @@
 - (void)gy_navigation_checkAndCreateTitleLabel {
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
-        _titleLabel.textColor = [UIColor gy_color3];
+        _titleLabel.textColor = [UIColor whiteColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         [self.navigationBar addSubview:_titleLabel];
         self.navigationBarHidden = NO;

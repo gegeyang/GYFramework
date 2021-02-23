@@ -406,17 +406,13 @@
 		3A24019E20C0E74500DE9044 /* GYViewController */ = {
 			isa = PBXGroup;
 			children = (
+				47AC6A1D25E49C3E00C1E9C4 /* GYList */,
 				3A2401A520C0E8C600DE9044 /* GYViewController.h */,
 				3A2401A620C0E8C600DE9044 /* GYViewController.m */,
 				3A39B90620F745ED0004CA6A /* GYViewController+GYNavBarExtend.h */,
 				3A39B90720F745ED0004CA6A /* GYViewController+GYNavBarExtend.m */,
 				3A39B90320F73CEF0004CA6A /* GYViewControllerTransition.h */,
 				3A39B90420F73CEF0004CA6A /* GYViewControllerTransition.m */,
-				3AE67C5F20F5F41E004E2746 /* GYCollectionViewController.h */,
-				3AE67C6020F5F41E004E2746 /* GYCollectionViewController.m */,
-				3A98A8522148FB9300B958B8 /* GYCollectionViewController+GYListViewDelegate.h */,
-				3A98A8532148FB9300B958B8 /* GYCollectionViewController+GYListViewDelegate.m */,
-				3A98A8252148E5C700B958B8 /* GYListViewDataSource.h */,
 			);
 			path = GYViewController;
 			sourceTree = "<group>";
@@ -536,11 +532,6 @@
 			children = (
 				3AE67C6320F5FE07004E2746 /* GYHandler.h */,
 				3AE67C6420F5FE07004E2746 /* GYHandler.m */,
-				3A98A84F2148F4F900B958B8 /* GYLoadStatusObject.h */,
-				3A98A8502148F4F900B958B8 /* GYLoadStatusObject.m */,
-				3A98A84B2148F2E800B958B8 /* GYFetchListModel.h */,
-				3A98A84C2148F2E800B958B8 /* GYFetchListModel.m */,
-				3A98A84E2148F39900B958B8 /* GYListViewDelegate.h */,
 			);
 			path = GYHandler;
 			sourceTree = "<group>";
@@ -549,30 +540,30 @@
 			isa = PBXGroup;
 			children = (
 				4743D9962578D04A0084B971 /* MASCompositeConstraint.h */,
-				4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				4743D9A42578D04A0084B971 /* MASCompositeConstraint.m */,
+				4743D9A22578D04A0084B971 /* MASConstraint.h */,
+				4743D9AB2578D04A0084B971 /* MASConstraint.m */,
 				4743D9982578D04A0084B971 /* MASConstraint+Private.h */,
-				4743D9992578D04A0084B971 /* MASLayoutConstraint.h */,
-				4743D99A2578D04A0084B971 /* NSArray+MASShorthandAdditions.h */,
 				4743D99B2578D04A0084B971 /* MASConstraintMaker.h */,
-				4743D99C2578D04A0084B971 /* View+MASAdditions.h */,
-				4743D99D2578D04A0084B971 /* NSArray+MASAdditions.h */,
+				4743D9A52578D04A0084B971 /* MASConstraintMaker.m */,
+				4743D9992578D04A0084B971 /* MASLayoutConstraint.h */,
+				4743D9A62578D04A0084B971 /* MASLayoutConstraint.m */,
+				4743D9AA2578D04A0084B971 /* Masonry.h */,
 				4743D99E2578D04A0084B971 /* MASUtilities.h */,
 				4743D99F2578D04A0084B971 /* MASViewAttribute.h */,
-				4743D9A02578D04A0084B971 /* ViewController+MASAdditions.m */,
+				4743D9AE2578D04A0084B971 /* MASViewAttribute.m */,
 				4743D9A12578D04A0084B971 /* MASViewConstraint.h */,
-				4743D9A22578D04A0084B971 /* MASConstraint.h */,
-				4743D9A32578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				4743D9A42578D04A0084B971 /* MASCompositeConstraint.m */,
-				4743D9A52578D04A0084B971 /* MASConstraintMaker.m */,
-				4743D9A62578D04A0084B971 /* MASLayoutConstraint.m */,
+				4743D9AD2578D04A0084B971 /* MASViewConstraint.m */,
+				4743D99D2578D04A0084B971 /* NSArray+MASAdditions.h */,
 				4743D9A72578D04A0084B971 /* NSArray+MASAdditions.m */,
+				4743D99A2578D04A0084B971 /* NSArray+MASShorthandAdditions.h */,
+				4743D9A32578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				4743D99C2578D04A0084B971 /* View+MASAdditions.h */,
 				4743D9A82578D04A0084B971 /* View+MASAdditions.m */,
 				4743D9A92578D04A0084B971 /* View+MASShorthandAdditions.h */,
-				4743D9AA2578D04A0084B971 /* Masonry.h */,
-				4743D9AB2578D04A0084B971 /* MASConstraint.m */,
 				4743D9AC2578D04A0084B971 /* ViewController+MASAdditions.h */,
-				4743D9AD2578D04A0084B971 /* MASViewConstraint.m */,
-				4743D9AE2578D04A0084B971 /* MASViewAttribute.m */,
+				4743D9A02578D04A0084B971 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -589,19 +580,19 @@
 		4799453B25E3D28D00D0050A /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */,
-				4799453D25E3D28D00D0050A /* MJRefreshConst.m */,
-				4799453E25E3D28D00D0050A /* MJRefreshConfig.m */,
-				4799453F25E3D28D00D0050A /* UIScrollView+MJExtension.h */,
-				4799454025E3D28D00D0050A /* NSBundle+MJRefresh.h */,
-				4799454125E3D28D00D0050A /* UIView+MJExtension.h */,
-				4799454225E3D28D00D0050A /* UIScrollView+MJExtension.m */,
-				4799454325E3D28D00D0050A /* MJRefreshConfig.h */,
-				4799454425E3D28D00D0050A /* MJRefreshConst.h */,
-				4799454525E3D28D00D0050A /* UIScrollView+MJRefresh.h */,
-				4799454625E3D28D00D0050A /* NSBundle+MJRefresh.m */,
-				4799454725E3D28D00D0050A /* UIView+MJExtension.m */,
 				4799454825E3D28D00D0050A /* Base */,
+				4799454325E3D28D00D0050A /* MJRefreshConfig.h */,
+				4799453E25E3D28D00D0050A /* MJRefreshConfig.m */,
+				4799454425E3D28D00D0050A /* MJRefreshConst.h */,
+				4799453D25E3D28D00D0050A /* MJRefreshConst.m */,
+				4799454025E3D28D00D0050A /* NSBundle+MJRefresh.h */,
+				4799454625E3D28D00D0050A /* NSBundle+MJRefresh.m */,
+				4799453F25E3D28D00D0050A /* UIScrollView+MJExtension.h */,
+				4799454225E3D28D00D0050A /* UIScrollView+MJExtension.m */,
+				4799454525E3D28D00D0050A /* UIScrollView+MJRefresh.h */,
+				4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */,
+				4799454125E3D28D00D0050A /* UIView+MJExtension.h */,
+				4799454725E3D28D00D0050A /* UIView+MJExtension.m */,
 			);
 			path = MJRefresh;
 			sourceTree = "<group>";
@@ -609,16 +600,16 @@
 		4799454825E3D28D00D0050A /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4799454925E3D28D00D0050A /* MJRefreshFooter.m */,
-				4799454A25E3D28D00D0050A /* MJRefreshComponent.h */,
-				4799454B25E3D28D00D0050A /* MJRefreshHeader.m */,
 				4799454C25E3D28D00D0050A /* MJRefreshAutoFooter.h */,
-				4799454D25E3D28D00D0050A /* MJRefreshBackFooter.m */,
 				4799454E25E3D28D00D0050A /* MJRefreshAutoFooter.m */,
-				4799454F25E3D28D00D0050A /* MJRefreshHeader.h */,
+				4799455225E3D28D00D0050A /* MJRefreshBackFooter.h */,
+				4799454D25E3D28D00D0050A /* MJRefreshBackFooter.m */,
+				4799454A25E3D28D00D0050A /* MJRefreshComponent.h */,
 				4799455025E3D28D00D0050A /* MJRefreshComponent.m */,
 				4799455125E3D28D00D0050A /* MJRefreshFooter.h */,
-				4799455225E3D28D00D0050A /* MJRefreshBackFooter.h */,
+				4799454925E3D28D00D0050A /* MJRefreshFooter.m */,
+				4799454F25E3D28D00D0050A /* MJRefreshHeader.h */,
+				4799454B25E3D28D00D0050A /* MJRefreshHeader.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -626,15 +617,15 @@
 		4799456C25E3D2C900D0050A /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				4799456D25E3D2C900D0050A /* SVRadialGradientLayer.m */,
 				4799456E25E3D2C900D0050A /* SVIndefiniteAnimatedView.h */,
-				4799456F25E3D2C900D0050A /* SVProgressHUD.h */,
-				4799457025E3D2C900D0050A /* SVProgressAnimatedView.m */,
-				4799457125E3D2C900D0050A /* SVProgressHUD.xcassets */,
-				4799457225E3D2C900D0050A /* SVRadialGradientLayer.h */,
-				4799457325E3D2C900D0050A /* SVProgressHUD.m */,
 				4799457425E3D2C900D0050A /* SVIndefiniteAnimatedView.m */,
 				4799457525E3D2C900D0050A /* SVProgressAnimatedView.h */,
+				4799457025E3D2C900D0050A /* SVProgressAnimatedView.m */,
+				4799456F25E3D2C900D0050A /* SVProgressHUD.h */,
+				4799457325E3D2C900D0050A /* SVProgressHUD.m */,
+				4799457125E3D2C900D0050A /* SVProgressHUD.xcassets */,
+				4799457225E3D2C900D0050A /* SVRadialGradientLayer.h */,
+				4799456D25E3D2C900D0050A /* SVRadialGradientLayer.m */,
 			);
 			path = SVProgressHUD;
 			sourceTree = "<group>";
@@ -642,22 +633,39 @@
 		4799458625E3D2DB00D0050A /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				4799458725E3D2DB00D0050A /* AFSecurityPolicy.h */,
-				4799458825E3D2DB00D0050A /* AFNetworkReachabilityManager.h */,
-				4799458925E3D2DB00D0050A /* AFURLSessionManager.h */,
-				4799458A25E3D2DB00D0050A /* AFURLRequestSerialization.h */,
-				4799458B25E3D2DB00D0050A /* AFURLResponseSerialization.m */,
-				4799458C25E3D2DB00D0050A /* AFHTTPSessionManager.m */,
-				4799458D25E3D2DB00D0050A /* AFURLResponseSerialization.h */,
-				4799458E25E3D2DB00D0050A /* AFURLSessionManager.m */,
-				4799458F25E3D2DB00D0050A /* AFURLRequestSerialization.m */,
-				4799459025E3D2DB00D0050A /* AFNetworking.h */,
-				4799459125E3D2DB00D0050A /* AFNetworkReachabilityManager.m */,
-				4799459225E3D2DB00D0050A /* AFSecurityPolicy.m */,
 				4799459325E3D2DB00D0050A /* AFCompatibilityMacros.h */,
 				4799459425E3D2DB00D0050A /* AFHTTPSessionManager.h */,
+				4799458C25E3D2DB00D0050A /* AFHTTPSessionManager.m */,
+				4799459025E3D2DB00D0050A /* AFNetworking.h */,
+				4799458825E3D2DB00D0050A /* AFNetworkReachabilityManager.h */,
+				4799459125E3D2DB00D0050A /* AFNetworkReachabilityManager.m */,
+				4799458725E3D2DB00D0050A /* AFSecurityPolicy.h */,
+				4799459225E3D2DB00D0050A /* AFSecurityPolicy.m */,
+				4799458A25E3D2DB00D0050A /* AFURLRequestSerialization.h */,
+				4799458F25E3D2DB00D0050A /* AFURLRequestSerialization.m */,
+				4799458D25E3D2DB00D0050A /* AFURLResponseSerialization.h */,
+				4799458B25E3D2DB00D0050A /* AFURLResponseSerialization.m */,
+				4799458925E3D2DB00D0050A /* AFURLSessionManager.h */,
+				4799458E25E3D2DB00D0050A /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		47AC6A1D25E49C3E00C1E9C4 /* GYList */ = {
+			isa = PBXGroup;
+			children = (
+				3AE67C5F20F5F41E004E2746 /* GYCollectionViewController.h */,
+				3AE67C6020F5F41E004E2746 /* GYCollectionViewController.m */,
+				3A98A8522148FB9300B958B8 /* GYCollectionViewController+GYListViewDelegate.h */,
+				3A98A8532148FB9300B958B8 /* GYCollectionViewController+GYListViewDelegate.m */,
+				3A98A84B2148F2E800B958B8 /* GYFetchListModel.h */,
+				3A98A84C2148F2E800B958B8 /* GYFetchListModel.m */,
+				3A98A8252148E5C700B958B8 /* GYListViewDataSource.h */,
+				3A98A84E2148F39900B958B8 /* GYListViewDelegate.h */,
+				3A98A84F2148F4F900B958B8 /* GYLoadStatusObject.h */,
+				3A98A8502148F4F900B958B8 /* GYLoadStatusObject.m */,
+			);
+			path = GYList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

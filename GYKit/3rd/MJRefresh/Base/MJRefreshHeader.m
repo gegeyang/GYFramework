@@ -156,6 +156,7 @@
 
 - (void)updateContentInsets:(UIEdgeInsets)insets {
     [super updateContentInsets:insets];
+    //除以正在刷新的状态中 更改它的inset。
     if ((self.scrollView.panGestureRecognizer.state != UIGestureRecognizerStateCancelled) && (self.state == MJRefreshStateRefreshing)) {
         CGFloat top = self.scrollViewOriginalInset.top + self.mj_h;
         // 增加滚动区域top
