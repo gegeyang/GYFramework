@@ -18,6 +18,7 @@
 
 + (GYRefreshFooter *)refreshFooterWithRefreshBlock:(MJRefreshComponentRefreshingBlock)refreshingBlock {
     GYRefreshFooter *refreshFooter = [[GYRefreshFooter alloc] init];
+    refreshFooter.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
     if (refreshFooter) {
         refreshFooter.refreshingBlock = refreshingBlock;
     }

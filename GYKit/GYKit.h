@@ -20,3 +20,4 @@
 #import "GYCoordinatingMediator.h"
 #import "Masonry.h"
 #import "UIImage+GYExtend.h"
+#import "NSDictionary+GYExtend.h"

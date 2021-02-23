@@ -48,6 +48,13 @@
 		3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE67C6420F5FE07004E2746 /* GYHandler.m */; };
 		47173A2E25E4A59F002F9758 /* UIImage+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */; };
 		47173A3D25E4ABE6002F9758 /* UIImage+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */; };
+		47173C0625E4F15E002F9758 /* GYMineDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C0525E4F15E002F9758 /* GYMineDataModel.m */; };
+		47173C0725E4F15E002F9758 /* GYMineDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C0525E4F15E002F9758 /* GYMineDataModel.m */; };
+		47173C1025E4F194002F9758 /* GYMineItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C0F25E4F194002F9758 /* GYMineItemCell.m */; };
+		47173C1125E4F194002F9758 /* GYMineItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C0F25E4F194002F9758 /* GYMineItemCell.m */; };
+		47173C1725E4FA52002F9758 /* GYMineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1625E4FA52002F9758 /* GYMineInfo.m */; };
+		47173C1E25E4FCBC002F9758 /* NSString+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */; };
+		47173C2725E4FCE0002F9758 /* NSDictionary+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
 		4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -212,6 +219,17 @@
 		47173A2C25E4A59F002F9758 /* UIImage+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GYExtend.h"; sourceTree = "<group>"; };
 		47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GYExtend.m"; sourceTree = "<group>"; };
 		47173A3625E4ABAE002F9758 /* GYTagAppearanceObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYTagAppearanceObject.h; sourceTree = "<group>"; };
+		47173C0425E4F15E002F9758 /* GYMineDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineDataModel.h; sourceTree = "<group>"; };
+		47173C0525E4F15E002F9758 /* GYMineDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineDataModel.m; sourceTree = "<group>"; };
+		47173C0E25E4F194002F9758 /* GYMineItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineItemCell.h; sourceTree = "<group>"; };
+		47173C0F25E4F194002F9758 /* GYMineItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineItemCell.m; sourceTree = "<group>"; };
+		47173C1525E4FA52002F9758 /* GYMineInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineInfo.h; sourceTree = "<group>"; };
+		47173C1625E4FA52002F9758 /* GYMineInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineInfo.m; sourceTree = "<group>"; };
+		47173C1B25E4FA5B002F9758 /* GYMineInfoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineInfoObject.h; sourceTree = "<group>"; };
+		47173C1C25E4FCBC002F9758 /* NSString+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GYExtend.h"; sourceTree = "<group>"; };
+		47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GYExtend.m"; sourceTree = "<group>"; };
+		47173C2525E4FCE0002F9758 /* NSDictionary+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+GYExtend.h"; sourceTree = "<group>"; };
+		47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+GYExtend.m"; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4743D9692578C1950084B971 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4743D98D2578CD780084B971 /* UIButton+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYExtend.h"; sourceTree = "<group>"; };
@@ -427,6 +445,10 @@
 				4743D98E2578CD780084B971 /* UIButton+GYExtend.m */,
 				47173A2C25E4A59F002F9758 /* UIImage+GYExtend.h */,
 				47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */,
+				47173C1C25E4FCBC002F9758 /* NSString+GYExtend.h */,
+				47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */,
+				47173C2525E4FCE0002F9758 /* NSDictionary+GYExtend.h */,
+				47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */,
 			);
 			path = GYCategory;
 			sourceTree = "<group>";
@@ -559,6 +581,22 @@
 				47173A3625E4ABAE002F9758 /* GYTagAppearanceObject.h */,
 			);
 			path = BeanObject;
+			sourceTree = "<group>";
+		};
+		47173C0325E4F11D002F9758 /* CollectionList */ = {
+			isa = PBXGroup;
+			children = (
+				3A98A8042148B63300B958B8 /* MineCollectionViewController.h */,
+				3A98A8052148B63300B958B8 /* MineCollectionViewController.m */,
+				47173C1525E4FA52002F9758 /* GYMineInfo.h */,
+				47173C1625E4FA52002F9758 /* GYMineInfo.m */,
+				47173C1B25E4FA5B002F9758 /* GYMineInfoObject.h */,
+				47173C0E25E4F194002F9758 /* GYMineItemCell.h */,
+				47173C0F25E4F194002F9758 /* GYMineItemCell.m */,
+				47173C0425E4F15E002F9758 /* GYMineDataModel.h */,
+				47173C0525E4F15E002F9758 /* GYMineDataModel.m */,
+			);
+			path = CollectionList;
 			sourceTree = "<group>";
 		};
 		4743D9952578D04A0084B971 /* Masonry */ = {
@@ -696,10 +734,9 @@
 		47AC6A2425E49D4800C1E9C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				47173C0325E4F11D002F9758 /* CollectionList */,
 				3AACFA1B20F0EA64009E9125 /* FirstViewController.h */,
 				3AACFA1C20F0EA64009E9125 /* FirstViewController.m */,
-				3A98A8042148B63300B958B8 /* MineCollectionViewController.h */,
-				3A98A8052148B63300B958B8 /* MineCollectionViewController.m */,
 				3AACFA1E20F0EA6F009E9125 /* SecondViewController.h */,
 				3AACFA1F20F0EA6F009E9125 /* SecondViewController.m */,
 				4765849825E3AA7F00080052 /* ThirdViewController.h */,
@@ -848,6 +885,7 @@
 				4799459E25E3D2DB00D0050A /* AFNetworkReachabilityManager.m in Sources */,
 				3A39B90520F73CEF0004CA6A /* GYViewControllerTransition.m in Sources */,
 				4743D9C12578D04A0084B971 /* MASViewAttribute.m in Sources */,
+				47173C1025E4F194002F9758 /* GYMineItemCell.m in Sources */,
 				3A98A8572148FCF500B958B8 /* GYRefreshErrorView.m in Sources */,
 				4799456825E3D28D00D0050A /* MJRefreshComponent.m in Sources */,
 				4799457725E3D2C900D0050A /* SVRadialGradientLayer.m in Sources */,
@@ -861,7 +899,9 @@
 				4799457D25E3D2C900D0050A /* SVProgressHUD.m in Sources */,
 				3A98A8472148E79F00B958B8 /* GYRefreshHeader.m in Sources */,
 				4799459625E3D2DB00D0050A /* AFURLResponseSerialization.m in Sources */,
+				47173C2725E4FCE0002F9758 /* NSDictionary+GYExtend.m in Sources */,
 				3AACFA3120F2F732009E9125 /* UIView+GYExtend.m in Sources */,
+				47173C0625E4F15E002F9758 /* GYMineDataModel.m in Sources */,
 				3AACFA1D20F0EA64009E9125 /* FirstViewController.m in Sources */,
 				4799455825E3D28D00D0050A /* MJRefreshConfig.m in Sources */,
 				4799459825E3D2DB00D0050A /* AFHTTPSessionManager.m in Sources */,
@@ -886,6 +926,7 @@
 				3A98A8062148B63300B958B8 /* MineCollectionViewController.m in Sources */,
 				3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */,
 				4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */,
+				47173C1E25E4FCBC002F9758 /* NSString+GYExtend.m in Sources */,
 				4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */,
 				4799456625E3D28D00D0050A /* MJRefreshAutoFooter.m in Sources */,
 				4743D9B12578D04A0084B971 /* ViewController+MASAdditions.m in Sources */,
@@ -898,6 +939,7 @@
 				4799455C25E3D28D00D0050A /* NSBundle+MJRefresh.m in Sources */,
 				3AACFA3420F2FBCA009E9125 /* GYBorderView.m in Sources */,
 				4743D9B52578D04A0084B971 /* MASConstraintMaker.m in Sources */,
+				47173C1725E4FA52002F9758 /* GYMineInfo.m in Sources */,
 				3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */,
 				3A98A8512148F4F900B958B8 /* GYLoadStatusObject.m in Sources */,
 				479945A025E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */,
@@ -932,11 +974,13 @@
 				4799455525E3D28D00D0050A /* MJRefreshConst.m in Sources */,
 				4799456725E3D28D00D0050A /* MJRefreshComponent.m in Sources */,
 				4799457E25E3D2C900D0050A /* SVIndefiniteAnimatedView.m in Sources */,
+				47173C0725E4F15E002F9758 /* GYMineDataModel.m in Sources */,
 				4799459525E3D2DB00D0050A /* AFURLResponseSerialization.m in Sources */,
 				4799457625E3D2C900D0050A /* SVRadialGradientLayer.m in Sources */,
 				47173A2E25E4A59F002F9758 /* UIImage+GYExtend.m in Sources */,
 				4799456325E3D28D00D0050A /* MJRefreshBackFooter.m in Sources */,
 				4799455925E3D28D00D0050A /* UIScrollView+MJExtension.m in Sources */,
+				47173C1125E4F194002F9758 /* GYMineItemCell.m in Sources */,
 				4799459F25E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */,
 				4799456525E3D28D00D0050A /* MJRefreshAutoFooter.m in Sources */,
 			);
