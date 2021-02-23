@@ -51,6 +51,9 @@
                                withFixedSpacing:0
                                     leadSpacing:0
                                     tailSpacing:0];
+        [_itemList mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.bottom.mas_equalTo(0);
+        }];
     } else if (_itemList.count >= 1) {
         UIView *item = _itemList.firstObject;
         [item mas_makeConstraints:^(MASConstraintMaker *make) {

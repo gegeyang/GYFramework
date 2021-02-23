@@ -55,7 +55,7 @@
 #define GYKIT_APP_TABBAR_FONT_SIZE              11 
 
 /* 状态栏默认样式 */
-#define GYKIT_STATUSBAR_STYLE               UIStatusBarStyleDefault
+#define GYKIT_STATUSBAR_STYLE               UIStatusBarStyleLightContent
 
 /* 底部线的厚度 */
 #define GYKIT_LINE_THICKNESS            (1.0 / [UIScreen mainScreen].scale)
