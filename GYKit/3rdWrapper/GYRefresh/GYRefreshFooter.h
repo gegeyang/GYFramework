@@ -6,9 +6,9 @@
 //  Copyright © 2018年 GeYang. All rights reserved.
 //
 
-#import "MJRefreshFooter.h"
+#import "MJRefreshBackFooter.h"
 
-@interface GYRefreshFooter : MJRefreshFooter
+@interface GYRefreshFooter : MJRefreshBackFooter
 
 + (GYRefreshFooter *)refreshFooterWithRefreshBlock:(MJRefreshComponentRefreshingBlock)refreshingBlock;
 

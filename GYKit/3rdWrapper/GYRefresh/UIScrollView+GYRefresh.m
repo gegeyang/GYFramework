@@ -7,6 +7,7 @@
 //
 
 #import "UIScrollView+GYRefresh.h"
+#import "UIScrollView+MJRefresh.h"
 
 @implementation UIScrollView (GYRefresh)
 

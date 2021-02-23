@@ -22,6 +22,7 @@
             @{@"title" : @"F"},
             @{@"title" : @"G"},
             @{@"title" : @"H"},
+            @{@"title" : @"I"},
             @{@"title" : @"J"},
             @{@"title" : @"K"},
             @{@"title" : @"L"},
@@ -43,7 +44,13 @@
         if (self.currentPageIndex == 1) {
             [self.arrFetchResult removeAllObjects];
         }
-        NSArray *currentIndexList = [list subarrayWithRange:NSMakeRange((self.currentPageIndex - 1) * 5, 4)];
+        NSArray *currentIndexList = @[];
+        NSInteger rangeLen = 10;
+        NSInteger rangeLoc = (self.currentPageIndex - 1) * rangeLen;
+        if (rangeLoc + rangeLen > list.count) {
+            rangeLen = list.count - rangeLoc;
+        }
+        currentIndexList = [list subarrayWithRange:NSMakeRange(rangeLoc, rangeLen)];
         for (NSDictionary *subItem in currentIndexList) {
             GYMineInfo *info = [GYMineInfo infoWithDictionary:subItem];
             if (info) {

@@ -137,7 +137,7 @@
 
 - (void)gy_refresh_addRefreshFooter:(void(^)(void))refreshingBlock {
     self.collectionView.gy_refreshFooter = [GYRefreshFooter refreshFooterWithRefreshBlock:refreshingBlock];
-//    self.collectionView.gy_refreshFooter.hidden = YES;
+    self.collectionView.gy_refreshFooter.hidden = YES;
 }
 
 @end

@@ -34,7 +34,7 @@ static NSString *const kGYMineItemCellReuserIdentifier = @"kGYMineItemCellReuser
     self.dataSource = self.dataModel;
     [self.collectionView registerClass:[GYMineItemCell class]
             forCellWithReuseIdentifier:kGYMineItemCellReuserIdentifier];
-//    [self gy_refresh_addDefaultRefreshHeader];
+    [self gy_refresh_addDefaultRefreshHeader];
     [self gy_refresh_addDefaultRefreshFooter];
 }
 
