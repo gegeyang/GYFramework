@@ -6,8 +6,8 @@
 //  Copyright © 2018年 GeYang. All rights reserved.
 //
 
-#import "GYViewController.h"
+#import "GYCollectionViewController.h"
 
-@interface FirstViewController : GYViewController
+@interface FirstViewController : GYCollectionViewController
 
 @end

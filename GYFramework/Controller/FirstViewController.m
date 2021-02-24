@@ -10,12 +10,26 @@
 #import "GYViewController+GYNavBarExtend.h"
 #import "GYMineCollectionViewController.h"
 #import "GYCoordinatingMediator.h"
+#import "FirstCollectionViewCell.h"
 
-@interface FirstViewController ()
+static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
+
+@interface FirstViewController () {
+    NSArray *_actionArray;
+}
 
 @end
 
 @implementation FirstViewController
+- (instancetype)init {
+    if (self = [super init]) {
+        _actionArray = @[
+            @"Collection List",
+            @"Controller嵌套联动"
+        ];
+    }
+    return self;
+}
 
 - (void)loadView {
     [super loadView];
@@ -24,54 +38,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    UIButton *btn =  [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
-    [btn setTitle:@"Collection List" forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.size.mas_equalTo(CGSizeMake(150, 30));
-        make.top.equalTo(self.navigationBar.mas_bottom).offset(15);
-    }];
-    
-    UIButton *btn1 =  [UIButton buttonWithType:UIButtonTypeCustom];
-    btn1.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
-    [btn1 setTitle:@"tabbar跳转" forState:UIControlStateNormal];
-    [btn1 addTarget:self action:@selector(onClick1:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn1];
-    [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.size.mas_equalTo(CGSizeMake(100, 40));
-        make.top.equalTo(btn.mas_bottom).offset(15);
-    }];
-    
-    UIButton *btn2 =  [UIButton buttonWithType:UIButtonTypeCustom];
-    btn2.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.3];
-    [btn2 setTitle:@"协议跳转" forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(onClick2:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn2];
-    [btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(20);
-        make.size.mas_equalTo(CGSizeMake(100, 40));
-        make.top.equalTo(btn1.mas_bottom).offset(15);
-    }];
+    [self.collectionView registerClass:[FirstCollectionViewCell class]
+            forCellWithReuseIdentifier:kUICollectionViewCellReuseIdentifier];
+    [self.collectionView reloadData];
 }
 
-
-- (void)onClick:(UIButton *)sender {
-    GYMineCollectionViewController *collectionVC = [[GYMineCollectionViewController alloc] init];
-    [self.navigationController pushViewController:collectionVC animated:YES];
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
 }
 
-- (void)onClick1:(UIButton *)sender {
-    [[GYCoordinatingMediator shareInstance] jumpWithTag:GYCoordinatingControllerTagSecondPage
-                                                    params:nil];
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _actionArray.count;
 }
-- (void)onClick2:(UIButton *)sender {
-    [[GYCoordinatingMediator shareInstance] jumpWithTag:GYCoordinatingControllerTagCollectionPage
-                                                    params:nil];
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    FirstCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kUICollectionViewCellReuseIdentifier forIndexPath:indexPath];
+    [cell updateCellInfo:[_actionArray objectAtIndex:indexPath.row]];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(collectionView.gy_width, 40);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return GYKIT_GENERAL_SPACING1;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case 0:{
+            GYMineCollectionViewController *collectionVC = [[GYMineCollectionViewController alloc] init];
+            [self.navigationController pushViewController:collectionVC animated:YES];
+        }
+            break;
+        case 1: {
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
