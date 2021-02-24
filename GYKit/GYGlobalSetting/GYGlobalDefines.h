@@ -79,3 +79,11 @@ typedef NS_ENUM(NSInteger, GYCoordinatingControllerTag) {
     GYCoordinatingControllerTagCollectionPage,
 };
 
+static inline UIEdgeInsets GYJoinEdgeInsets(UIEdgeInsets edgeInsets1, UIEdgeInsets edgeInsets2) {
+    UIEdgeInsets joinResult = edgeInsets1;
+    joinResult.top += edgeInsets2.top;
+    joinResult.bottom += edgeInsets2.bottom;
+    joinResult.left += edgeInsets2.left;
+    joinResult.right += edgeInsets2.right;
+    return joinResult;
+}

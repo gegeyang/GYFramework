@@ -8,7 +8,10 @@
 
 #import "GYCollectionViewController.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface GYMineCollectionViewController : GYCollectionViewController
 
-@end
+- (instancetype)initWithTitle:(NSString * _Nullable)title;
 
+@end
+NS_ASSUME_NONNULL_END

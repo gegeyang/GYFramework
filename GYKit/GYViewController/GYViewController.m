@@ -129,6 +129,11 @@
     }
 }
 
+- (void)setContentInsetsFromParent:(UIEdgeInsets)contentInsetsFromParent {
+    _contentInsetsFromParent = contentInsetsFromParent;
+    [self viewContentInsetDidChanged];
+}
+
 - (UIView *)navigationBar {
     if (!_navigationBar) {
         _navigationBar = [[UIView alloc] init];

@@ -20,7 +20,6 @@
 		3A2401A720C0E8C600DE9044 /* GYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2401A620C0E8C600DE9044 /* GYViewController.m */; };
 		3A2401AD20C0EC7800DE9044 /* GYTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2401AC20C0EC7800DE9044 /* GYTabbarViewController.m */; };
 		3A39B90520F73CEF0004CA6A /* GYViewControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A39B90420F73CEF0004CA6A /* GYViewControllerTransition.m */; };
-		3A39B90820F745ED0004CA6A /* GYViewController+GYNavBarExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A39B90720F745ED0004CA6A /* GYViewController+GYNavBarExtend.m */; };
 		3A5FDB0820C52269004ABC58 /* UIView+GYPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB0720C52269004ABC58 /* UIView+GYPosition.m */; };
 		3A5FDB1220C52BE9004ABC58 /* GYGlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1120C52BE9004ABC58 /* GYGlobalConst.m */; };
 		3A5FDB1720C53420004ABC58 /* GYTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1620C53420004ABC58 /* GYTabbarView.m */; };
@@ -113,6 +112,8 @@
 		4799459F25E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799459225E3D2DB00D0050A /* AFSecurityPolicy.m */; };
 		479945A025E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799459225E3D2DB00D0050A /* AFSecurityPolicy.m */; };
 		47B9337B25E5FFC900C942E5 /* FirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9337A25E5FFC900C942E5 /* FirstCollectionViewCell.m */; };
+		47B933BC25E63D4600C942E5 /* GYScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */; };
+		47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,8 +160,6 @@
 		3A2401AC20C0EC7800DE9044 /* GYTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYTabbarViewController.m; sourceTree = "<group>"; };
 		3A39B90320F73CEF0004CA6A /* GYViewControllerTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYViewControllerTransition.h; sourceTree = "<group>"; };
 		3A39B90420F73CEF0004CA6A /* GYViewControllerTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYViewControllerTransition.m; sourceTree = "<group>"; };
-		3A39B90620F745ED0004CA6A /* GYViewController+GYNavBarExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYViewController+GYNavBarExtend.h"; sourceTree = "<group>"; };
-		3A39B90720F745ED0004CA6A /* GYViewController+GYNavBarExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GYViewController+GYNavBarExtend.m"; sourceTree = "<group>"; };
 		3A5FDB0620C52269004ABC58 /* UIView+GYPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GYPosition.h"; sourceTree = "<group>"; };
 		3A5FDB0720C52269004ABC58 /* UIView+GYPosition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GYPosition.m"; sourceTree = "<group>"; };
 		3A5FDB0920C52789004ABC58 /* GYKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYKit.h; sourceTree = "<group>"; };
@@ -309,6 +308,10 @@
 		4799459425E3D2DB00D0050A /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		47B9337925E5FFC900C942E5 /* FirstCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstCollectionViewCell.h; sourceTree = "<group>"; };
 		47B9337A25E5FFC900C942E5 /* FirstCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstCollectionViewCell.m; sourceTree = "<group>"; };
+		47B933BA25E63D4600C942E5 /* GYScrollPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYScrollPageViewController.h; sourceTree = "<group>"; };
+		47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYScrollPageViewController.m; sourceTree = "<group>"; };
+		47B933C425E6484B00C942E5 /* GYMineScrollPageRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineScrollPageRootController.h; sourceTree = "<group>"; };
+		47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineScrollPageRootController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,14 +422,13 @@
 		3A24019E20C0E74500DE9044 /* GYViewController */ = {
 			isa = PBXGroup;
 			children = (
+				47B933B925E63D1700C942E5 /* Bean */,
 				47173A2325E4A29D002F9758 /* GYTabbar */,
 				47AC6A1D25E49C3E00C1E9C4 /* GYList */,
 				3A2401A520C0E8C600DE9044 /* GYViewController.h */,
 				3A2401A620C0E8C600DE9044 /* GYViewController.m */,
-				3A39B90620F745ED0004CA6A /* GYViewController+GYNavBarExtend.h */,
-				3A39B90720F745ED0004CA6A /* GYViewController+GYNavBarExtend.m */,
-				3A39B90320F73CEF0004CA6A /* GYViewControllerTransition.h */,
-				3A39B90420F73CEF0004CA6A /* GYViewControllerTransition.m */,
+				47B933BA25E63D4600C942E5 /* GYScrollPageViewController.h */,
+				47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */,
 			);
 			path = GYViewController;
 			sourceTree = "<group>";
@@ -737,6 +739,7 @@
 		47AC6A2425E49D4800C1E9C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				47B933C325E6482D00C942E5 /* ScrollPageView */,
 				47173C0325E4F11D002F9758 /* CollectionList */,
 				3AACFA1B20F0EA64009E9125 /* FirstViewController.h */,
 				3AACFA1C20F0EA64009E9125 /* FirstViewController.m */,
@@ -748,6 +751,24 @@
 				4765849925E3AA7F00080052 /* ThirdViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		47B933B925E63D1700C942E5 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				3A39B90320F73CEF0004CA6A /* GYViewControllerTransition.h */,
+				3A39B90420F73CEF0004CA6A /* GYViewControllerTransition.m */,
+			);
+			path = Bean;
+			sourceTree = "<group>";
+		};
+		47B933C325E6482D00C942E5 /* ScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				47B933C425E6484B00C942E5 /* GYMineScrollPageRootController.h */,
+				47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */,
+			);
+			path = ScrollPageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -949,11 +970,12 @@
 				3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */,
 				3A98A8512148F4F900B958B8 /* GYLoadStatusObject.m in Sources */,
 				479945A025E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */,
-				3A39B90820F745ED0004CA6A /* GYViewController+GYNavBarExtend.m in Sources */,
 				3A5FDB1220C52BE9004ABC58 /* GYGlobalConst.m in Sources */,
 				3A5FDB0820C52269004ABC58 /* UIView+GYPosition.m in Sources */,
 				47173A3D25E4ABE6002F9758 /* UIImage+GYExtend.m in Sources */,
+				47B933BC25E63D4600C942E5 /* GYScrollPageViewController.m in Sources */,
 				3A98A8442148E74C00B958B8 /* UIScrollView+GYRefresh.m in Sources */,
+				47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */,
 				4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				3AE67C6120F5F41E004E2746 /* GYCollectionViewController.m in Sources */,
 				3AACFA2520F0F0B7009E9125 /* GYTabbarItemInfo.m in Sources */,

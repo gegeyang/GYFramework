@@ -739,16 +739,6 @@ static void _JKArrayRemoveObjectAtIndex(JKArray *array, NSUInteger objectIndex) 
   return(count);
 }
 
-- (void)getObjects:(id *)objectsPtr range:(NSRange)range
-{
-  NSParameterAssert((objects != NULL) && (count <= capacity));
-  if((objectsPtr     == NULL)  && (NSMaxRange(range) > 0UL))   { [NSException raise:NSRangeException format:@"*** -[%@ %@]: pointer to objects array is NULL but range length is %lu", NSStringFromClass([self class]), NSStringFromSelector(_cmd), (unsigned long)NSMaxRange(range)];        }
-  if((range.location >  count) || (NSMaxRange(range) > count)) { [NSException raise:NSRangeException format:@"*** -[%@ %@]: index (%lu) beyond bounds (%lu)",                          NSStringFromClass([self class]), NSStringFromSelector(_cmd), (unsigned long)NSMaxRange(range), (unsigned long)count]; }
-#ifndef __clang_analyzer__
-  memcpy(objectsPtr, objects + range.location, range.length * sizeof(id));
-#endif
-}
-
 - (id)objectAtIndex:(NSUInteger)objectIndex
 {
   if(objectIndex >= count) { [NSException raise:NSRangeException format:@"*** -[%@ %@]: index (%lu) beyond bounds (%lu)", NSStringFromClass([self class]), NSStringFromSelector(_cmd), (unsigned long)objectIndex, (unsigned long)count]; }
@@ -1033,20 +1023,6 @@ static JKHashTableEntry *_JKDictionaryHashTableEntryForKey(JKDictionary *diction
   NSParameterAssert((entry != NULL) && (count <= capacity));
   JKHashTableEntry *entryForKey = _JKDictionaryHashTableEntryForKey(self, aKey);
   return((entryForKey != NULL) ? entryForKey->object : NULL);
-}
-
-- (void)getObjects:(id *)objects andKeys:(id *)keys
-{
-  NSParameterAssert((entry != NULL) && (count <= capacity));
-  NSUInteger atEntry = 0UL; NSUInteger arrayIdx = 0UL;
-  for(atEntry = 0UL; atEntry < capacity; atEntry++) {
-    if(JK_EXPECT_T(entry[atEntry].key != NULL)) {
-      NSCParameterAssert((entry[atEntry].object != NULL) && (arrayIdx < count));
-      if(JK_EXPECT_T(keys    != NULL)) { keys[arrayIdx]    = entry[atEntry].key;    }
-      if(JK_EXPECT_T(objects != NULL)) { objects[arrayIdx] = entry[atEntry].object; }
-      arrayIdx++;
-    }
-  }
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len

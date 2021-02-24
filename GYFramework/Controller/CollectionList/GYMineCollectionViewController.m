@@ -7,7 +7,6 @@
 //
 
 #import "GYMineCollectionViewController.h"
-#import "GYViewController+GYNavBarExtend.h"
 #import "GYCollectionViewController+GYListViewDelegate.h"
 #import "GYMineItemCell.h"
 #import "GYMineDataModel.h"
@@ -18,15 +17,24 @@ static NSString *const kGYMineItemCellReuserIdentifier = @"kGYMineItemCellReuser
 @interface GYMineCollectionViewController ()
 
 @property (nonatomic, strong) GYMineDataModel *dataModel;
+@property (nonatomic, copy) NSString *naviTitle;
 
 @end
 
 @implementation GYMineCollectionViewController
+- (instancetype)initWithTitle:(NSString *)title {
+    if (self = [super init]) {
+        _naviTitle = title;
+    }
+    return self;
+}
 
 - (void)loadView {
     [super loadView];
-    [self gy_navigation_initTitle:@"Collection List"];
-    [self gy_navigation_initLeftBackBtn:nil];
+    if (_naviTitle && _naviTitle.length > 0) {
+        [self gy_navigation_initTitle:_naviTitle];
+        [self gy_navigation_initLeftBackBtn:nil];
+    }
 }
 
 - (void)viewDidLoad {

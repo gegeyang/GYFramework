@@ -27,7 +27,6 @@ typedef NS_OPTIONS(NSInteger, GYAutoAdjust) {
 @property (nonatomic, strong, readonly) UILabel *titleLabel;
 @property (nonatomic, readonly) UIEdgeInsets safeAreaInsets;
 @property (nonatomic, assign) UIEdgeInsets contentInsetsFromParent;
-@property (nonatomic, assign) UIEdgeInsets contentInsetsFromSelf;
 
 - (void)forceRefresh:(BOOL)ignoreIsRefresh;
 - (void)switchToParams:(NSDictionary *)params;

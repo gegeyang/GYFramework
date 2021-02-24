@@ -7,10 +7,10 @@
 //
 
 #import "FirstViewController.h"
-#import "GYViewController+GYNavBarExtend.h"
 #import "GYMineCollectionViewController.h"
 #import "GYCoordinatingMediator.h"
 #import "FirstCollectionViewCell.h"
+#import "GYMineScrollPageRootController.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
@@ -66,14 +66,16 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *title = [_actionArray objectAtIndex:indexPath.row];
     switch (indexPath.row) {
         case 0:{
-            GYMineCollectionViewController *collectionVC = [[GYMineCollectionViewController alloc] init];
+            GYMineCollectionViewController *collectionVC = [[GYMineCollectionViewController alloc] initWithTitle:title];
             [self.navigationController pushViewController:collectionVC animated:YES];
         }
             break;
         case 1: {
-            
+            GYMineScrollPageRootController *rootVC = [[GYMineScrollPageRootController alloc] initWithTitle:title];
+            [self.navigationController pushViewController:rootVC animated:YES];
         }
             break;
         default:
