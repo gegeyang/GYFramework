@@ -45,7 +45,7 @@
             [self.arrFetchResult removeAllObjects];
         }
         NSArray *currentIndexList = @[];
-        NSInteger rangeLen = 10;
+        NSInteger rangeLen = 20;
         NSInteger rangeLoc = (self.currentPageIndex - 1) * rangeLen;
         if (rangeLoc + rangeLen > list.count) {
             rangeLen = list.count - rangeLoc;
