@@ -56,6 +56,14 @@
     self.frame = frame;
 }
 
+- (void)setGy_centerX:(CGFloat)gy_centerX {
+    self.center = CGPointMake(gy_centerX, self.center.y);
+}
+
+- (CGFloat)gy_centerX {
+    return self.center.x;
+}
+
 - (CGFloat)gy_width {
     return self.frame.size.width;
 }

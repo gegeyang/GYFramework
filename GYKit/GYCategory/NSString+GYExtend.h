@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (GYExtend)
 
+- (CGSize)gy_calcSizeWithFont:(UIFont *)font
+            constrainedToSize:(CGSize)size;
+
 @end
 
 NS_ASSUME_NONNULL_END

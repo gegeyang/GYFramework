@@ -114,6 +114,7 @@
 		47B9337B25E5FFC900C942E5 /* FirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9337A25E5FFC900C942E5 /* FirstCollectionViewCell.m */; };
 		47B933BC25E63D4600C942E5 /* GYScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */; };
 		47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */; };
+		47B933CF25E6506C00C942E5 /* GYSegmentSliderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -312,6 +313,8 @@
 		47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYScrollPageViewController.m; sourceTree = "<group>"; };
 		47B933C425E6484B00C942E5 /* GYMineScrollPageRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYMineScrollPageRootController.h; sourceTree = "<group>"; };
 		47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineScrollPageRootController.m; sourceTree = "<group>"; };
+		47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYSegmentSliderBar.h; sourceTree = "<group>"; };
+		47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYSegmentSliderBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +532,8 @@
 				3AACFA2220F0EAFF009E9125 /* GYTabbar */,
 				3AACFA3220F2FBCA009E9125 /* GYBorderView.h */,
 				3AACFA3320F2FBCA009E9125 /* GYBorderView.m */,
+				47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */,
+				47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */,
 				3A98A8582149018800B958B8 /* UIView+GYFetchDataView.h */,
 				3A98A8592149018800B958B8 /* UIView+GYFetchDataView.m */,
 			);
@@ -940,6 +945,7 @@
 				4743D9B32578D04A0084B971 /* MASCompositeConstraint.m in Sources */,
 				4743D9BD2578D04A0084B971 /* MASConstraint.m in Sources */,
 				3A5FDB2420C53A5E004ABC58 /* UIFont+GYExtend.m in Sources */,
+				47B933CF25E6506C00C942E5 /* GYSegmentSliderBar.m in Sources */,
 				3A24016320C0E02C00DE9044 /* GYAppDelegate.m in Sources */,
 				3A98A84D2148F2E800B958B8 /* GYFetchListModel.m in Sources */,
 				4799455A25E3D28D00D0050A /* UIScrollView+MJExtension.m in Sources */,
