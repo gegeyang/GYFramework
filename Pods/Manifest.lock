@@ -1,0 +1,28 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_gyframework (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `flutter_gyframework/.ios/Flutter/engine`)
+  - flutter_gyframework (from `flutter_gyframework/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `flutter_gyframework/.ios/Flutter/FlutterPluginRegistrant`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: flutter_gyframework/.ios/Flutter/engine
+  flutter_gyframework:
+    :path: flutter_gyframework/.ios/Flutter
+  FlutterPluginRegistrant:
+    :path: flutter_gyframework/.ios/Flutter/FlutterPluginRegistrant
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_gyframework: 87d6c2f5f4c99a0c6cdcac8cf5f7e50cf75a0c7f
+  FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
+
+PODFILE CHECKSUM: f55ee020c66bc52d06fd256038a2819b466e3d5b
+
+COCOAPODS: 1.10.1

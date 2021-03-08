@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0811D9FC11043FF5E9AF9B1B /* libPods-GYFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */; };
 		3A24016320C0E02C00DE9044 /* GYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A24016220C0E02C00DE9044 /* GYAppDelegate.m */; };
 		3A24016920C0E02C00DE9044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016720C0E02C00DE9044 /* Main.storyboard */; };
 		3A24016B20C0E02D00DE9044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016A20C0E02D00DE9044 /* Assets.xcassets */; };
@@ -135,6 +136,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GYFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A24015E20C0E02C00DE9044 /* GYFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A24016120C0E02C00DE9044 /* GYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAppDelegate.h; sourceTree = "<group>"; };
 		3A24016220C0E02C00DE9044 /* GYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAppDelegate.m; sourceTree = "<group>"; };
@@ -315,6 +317,8 @@
 		47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineScrollPageRootController.m; sourceTree = "<group>"; };
 		47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYSegmentSliderBar.h; sourceTree = "<group>"; };
 		47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYSegmentSliderBar.m; sourceTree = "<group>"; };
+		66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.release.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.release.xcconfig"; sourceTree = "<group>"; };
+		A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.debug.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +326,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0811D9FC11043FF5E9AF9B1B /* libPods-GYFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +355,8 @@
 				3A24017920C0E02E00DE9044 /* GYFrameworkTests */,
 				3A24018420C0E02E00DE9044 /* GYFrameworkUITests */,
 				3A24015F20C0E02C00DE9044 /* Products */,
+				462ADB00B03D80CB0FEE2289 /* Pods */,
+				F339ABAECF9D0AC9087677CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -561,6 +568,15 @@
 				3AE67C6420F5FE07004E2746 /* GYHandler.m */,
 			);
 			path = GYHandler;
+			sourceTree = "<group>";
+		};
+		462ADB00B03D80CB0FEE2289 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */,
+				66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		47173A2225E4A22F002F9758 /* Bean */ = {
@@ -776,6 +792,14 @@
 			path = ScrollPageView;
 			sourceTree = "<group>";
 		};
+		F339ABAECF9D0AC9087677CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -783,9 +807,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A24018A20C0E02E00DE9044 /* Build configuration list for PBXNativeTarget "GYFramework" */;
 			buildPhases = (
+				476316CE25F5D248009E232B /* ShellScript */,
+				B934F291B03B49A5D72A4C6C /* [CP] Check Pods Manifest.lock */,
+				40725D1B01BF48C5BC0673BC /* [CP-User] Run Flutter Build flutter_gyframework Script */,
 				3A24015A20C0E02C00DE9044 /* Sources */,
 				3A24015B20C0E02C00DE9044 /* Frameworks */,
 				3A24015C20C0E02C00DE9044 /* Resources */,
+				7611C2D29D973BCF76C3B186 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -902,6 +930,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40725D1B01BF48C5BC0673BC /* [CP-User] Run Flutter Build flutter_gyframework Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/./flutter_gyframework/.metadata",
+				"${SRCROOT}/flutter_gyframework/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/flutter_gyframework/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build flutter_gyframework Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		476316CE25F5D248009E232B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
+		};
+		7611C2D29D973BCF76C3B186 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B934F291B03B49A5D72A4C6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GYFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A24015A20C0E02C00DE9044 /* Sources */ = {
@@ -1177,10 +1280,12 @@
 		};
 		3A24018B20C0E02E00DE9044 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D59E9P2MUY;
+				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
@@ -1197,10 +1302,12 @@
 		};
 		3A24018C20C0E02E00DE9044 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D59E9P2MUY;
+				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";

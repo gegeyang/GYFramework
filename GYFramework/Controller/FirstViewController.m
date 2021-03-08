@@ -11,12 +11,15 @@
 #import "GYCoordinatingMediator.h"
 #import "FirstCollectionViewCell.h"
 #import "GYMineScrollPageRootController.h"
+#import <Flutter/Flutter.h>
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
 @interface FirstViewController () {
     NSArray *_actionArray;
 }
+
+@property (nonatomic, strong) FlutterViewController *flutterVC;
 
 @end
 
@@ -25,7 +28,8 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
     if (self = [super init]) {
         _actionArray = @[
             @"Collection List",
-            @"Controller嵌套联动"
+            @"Controller嵌套联动",
+            @"Flutter页面"
         ];
     }
     return self;
@@ -76,6 +80,12 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
         case 1: {
             GYMineScrollPageRootController *rootVC = [[GYMineScrollPageRootController alloc] initWithTitle:title];
             [self.navigationController pushViewController:rootVC animated:YES];
+        }
+            break;
+        case 2: {
+            self.flutterVC = [[FlutterViewController alloc] initWithProject:nil initialRoute:@"flutter" nibName:nil bundle:nil];
+            [self.navigationController pushViewController:self.flutterVC
+                                                 animated:YES];
         }
             break;
         default:
