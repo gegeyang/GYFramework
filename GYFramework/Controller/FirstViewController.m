@@ -83,9 +83,24 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
         }
             break;
         case 2: {
-            self.flutterVC = [[FlutterViewController alloc] initWithProject:nil initialRoute:@"flutter" nibName:nil bundle:nil];
+            self.flutterVC = [[FlutterViewController alloc] initWithProject:nil initialRoute:@"Flutter页面" nibName:nil bundle:nil];
             [self.navigationController pushViewController:self.flutterVC
                                                  animated:YES];
+            //创建通信频道
+            FlutterMethodChannel *nativeChannel = [FlutterMethodChannel methodChannelWithName:@"EachOtherChannel" binaryMessenger:(id)self.flutterVC.binaryMessenger];
+            __weak typeof(self) weakself = self;
+            //接收flutter回调的消息
+            [nativeChannel setMethodCallHandler:^(FlutterMethodCall * _Nonnull call, FlutterResult  _Nonnull result) {
+                __strong typeof(weakself) strongself = weakself;
+                if ([call.method isEqualToString:@"exit"]) {
+                    [strongself.navigationController popViewControllerAnimated:YES];
+                }
+            }];
+            //给flutter发送消息
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [nativeChannel invokeMethod:@"invokeFlutterMethod"
+                                  arguments:@{@"title" : @"1213456"}];
+            });
         }
             break;
         default:
