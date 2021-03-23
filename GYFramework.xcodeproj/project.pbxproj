@@ -69,6 +69,9 @@
 		4743D9C12578D04A0084B971 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AE2578D04A0084B971 /* MASViewAttribute.m */; };
 		4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4765849925E3AA7F00080052 /* ThirdViewController.m */; };
 		47808CA426098CEF003C4787 /* GYCustomCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CA326098CEF003C4787 /* GYCustomCameraController.m */; };
+		47808CAC26098E3B003C4787 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47808CAB26098E3B003C4787 /* AVFoundation.framework */; };
+		47808CB926099414003C4787 /* GYCameraShootButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CB826099414003C4787 /* GYCameraShootButton.m */; };
+		47808CC2260994C3003C4787 /* GYTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CC1260994C3003C4787 /* GYTimerTool.m */; };
 		4799455325E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455525E3D28D00D0050A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453D25E3D28D00D0050A /* MJRefreshConst.m */; };
@@ -267,6 +270,11 @@
 		4765849925E3AA7F00080052 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		47808CA226098CEF003C4787 /* GYCustomCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYCustomCameraController.h; sourceTree = "<group>"; };
 		47808CA326098CEF003C4787 /* GYCustomCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCustomCameraController.m; sourceTree = "<group>"; };
+		47808CAB26098E3B003C4787 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		47808CB726099414003C4787 /* GYCameraShootButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYCameraShootButton.h; sourceTree = "<group>"; };
+		47808CB826099414003C4787 /* GYCameraShootButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCameraShootButton.m; sourceTree = "<group>"; };
+		47808CC0260994C3003C4787 /* GYTimerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYTimerTool.h; sourceTree = "<group>"; };
+		47808CC1260994C3003C4787 /* GYTimerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYTimerTool.m; sourceTree = "<group>"; };
 		4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		4799453D25E3D28D00D0050A /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		4799453E25E3D28D00D0050A /* MJRefreshConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
@@ -329,6 +337,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47808CAC26098E3B003C4787 /* AVFoundation.framework in Frameworks */,
 				0811D9FC11043FF5E9AF9B1B /* libPods-GYFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +579,8 @@
 			children = (
 				3AE67C6320F5FE07004E2746 /* GYHandler.h */,
 				3AE67C6420F5FE07004E2746 /* GYHandler.m */,
+				47808CC0260994C3003C4787 /* GYTimerTool.h */,
+				47808CC1260994C3003C4787 /* GYTimerTool.m */,
 			);
 			path = GYHandler;
 			sourceTree = "<group>";
@@ -673,10 +684,20 @@
 		47808CA126098CC3003C4787 /* GYCustomCamera */ = {
 			isa = PBXGroup;
 			children = (
+				47808CB6260993F7003C4787 /* View */,
 				47808CA226098CEF003C4787 /* GYCustomCameraController.h */,
 				47808CA326098CEF003C4787 /* GYCustomCameraController.m */,
 			);
 			path = GYCustomCamera;
+			sourceTree = "<group>";
+		};
+		47808CB6260993F7003C4787 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				47808CB726099414003C4787 /* GYCameraShootButton.h */,
+				47808CB826099414003C4787 /* GYCameraShootButton.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4799453B25E3D28D00D0050A /* MJRefresh */ = {
@@ -808,6 +829,7 @@
 		F339ABAECF9D0AC9087677CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47808CAB26098E3B003C4787 /* AVFoundation.framework */,
 				00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */,
 			);
 			name = Frameworks;
@@ -1031,6 +1053,7 @@
 				3A5FDB1720C53420004ABC58 /* GYTabbarView.m in Sources */,
 				4799459E25E3D2DB00D0050A /* AFNetworkReachabilityManager.m in Sources */,
 				3A39B90520F73CEF0004CA6A /* GYViewControllerTransition.m in Sources */,
+				47808CC2260994C3003C4787 /* GYTimerTool.m in Sources */,
 				4743D9C12578D04A0084B971 /* MASViewAttribute.m in Sources */,
 				47173C1025E4F194002F9758 /* GYMineItemCell.m in Sources */,
 				3A98A8572148FCF500B958B8 /* GYRefreshErrorView.m in Sources */,
@@ -1056,6 +1079,7 @@
 				4799455E25E3D28D00D0050A /* UIView+MJExtension.m in Sources */,
 				4799457F25E3D2C900D0050A /* SVIndefiniteAnimatedView.m in Sources */,
 				3A2401AD20C0EC7800DE9044 /* GYTabbarViewController.m in Sources */,
+				47808CB926099414003C4787 /* GYCameraShootButton.m in Sources */,
 				3A98A8542148FB9300B958B8 /* GYCollectionViewController+GYListViewDelegate.m in Sources */,
 				3A98A85D2149033A00B958B8 /* NSError+GYExtend.m in Sources */,
 				4799455625E3D28D00D0050A /* MJRefreshConst.m in Sources */,
@@ -1304,6 +1328,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
 				INFOPLIST_FILE = GYFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1326,6 +1351,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
 				INFOPLIST_FILE = GYFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
