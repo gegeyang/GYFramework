@@ -17,10 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)gy_showStaticHUD:(NSString *)title;
 - (void)gy_showStaticHUD:(NSString *)title
-         completionBlock:(void(^)(void))completionBlock;
+         completionBlock:(void(^_Nullable)(void))completionBlock;
 - (void)gy_showStaticHUD:(NSString *)title
                 duration:(CGFloat)duration
-         completionBlock:(void(^)(void))completionBlock;
+         completionBlock:(void(^_Nullable)(void))completionBlock;
 
 /**
  进度HUD
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  隐藏HUD
  */
 - (void)gy_hideHUD;
-- (void)gy_hideHUDWithCompletion:(void(^)(void))completionBlock;
+- (void)gy_hideHUDWithCompletion:(void(^_Nullable)(void))completionBlock;
 
 @end
 

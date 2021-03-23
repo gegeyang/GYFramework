@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "GYCameraShootButton.h"
 #import "UIImage+CustomCameraExtend.h"
+#import "GYCMMotionManager.h"
 
 @interface GYCustomCameraController () <UIGestureRecognizerDelegate> {
     /**取景框比例 */
@@ -64,7 +65,10 @@
 - (void)initializeMotionManger {
     self.deviceOrientation = UIDeviceOrientationPortrait;
     __weak typeof(self) weakself = self;
-    
+    [[GYCMMotionManager sharedManager] startAccelerometerUpdatesWithHandler:^(UIDeviceOrientation orientation) {
+        __strong typeof(weakself) strongself = weakself;
+        [strongself deviceRotate:orientation];
+    }];
 }
 
 #pragma mark - 初始化相机
@@ -121,6 +125,55 @@
         make.top.equalTo(self.flashButton.mas_bottom).offset(GYKIT_GENERAL_SPACING4);
     }];
     [self.view addGestureRecognizer:self.pinchGesture];
+}
+
+#pragma mark - implementaction
+- (void)deviceRotate:(UIDeviceOrientation)orientation {
+    if (_deviceOrientation == orientation) {
+        return;
+    }
+    _deviceOrientation = orientation;
+    CGFloat oldAngle = [self getAngelByOrientation:UIDeviceOrientationPortrait];
+    CGFloat angle = -oldAngle + [self getAngelByOrientation:_deviceOrientation];
+    while (angle < 0) {
+        angle += M_PI * 2;
+    }
+    while (angle > 2 * M_PI) {
+        angle -= M_PI * 2;
+    }
+    if (UIDeviceOrientationIsPortrait(orientation)) {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.switchButton.transform = CGAffineTransformIdentity;
+            self.cancelButton.transform = CGAffineTransformIdentity;
+            self.flashButton.transform = CGAffineTransformIdentity;
+            self.photoButton.transform = CGAffineTransformIdentity;
+        }];
+    } else {
+        [UIView animateWithDuration:0.3 animations:^{
+            self.switchButton.transform = CGAffineTransformMakeRotation(angle);
+            self.cancelButton.transform = CGAffineTransformMakeRotation(angle);
+            self.flashButton.transform = CGAffineTransformMakeRotation(angle);
+            self.photoButton.transform = CGAffineTransformMakeRotation(angle);
+        }];
+    }
+    [self deviceOrientationDidChanged:(CGFloat)angle];
+}
+
+- (CGFloat)getAngelByOrientation:(UIDeviceOrientation)aOrientation {
+    switch (aOrientation) {
+        case UIDeviceOrientationLandscapeLeft:
+            return M_PI_2;
+        case UIDeviceOrientationLandscapeRight:
+            return 3 * M_PI_2;
+        case UIDeviceOrientationPortraitUpsideDown:
+            return M_PI;
+        default:
+            return 0;
+    }
+}
+
+- (void)deviceOrientationDidChanged:(CGFloat)angle {
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -229,38 +282,35 @@
 
 #pragma mark - 拍照
 - (void)shutterPhoto:(UIView *)sender {
-//    sender.userInteractionEnabled = NO;
-//    AVCaptureConnection * videoConnection = [self.imageOutPut connectionWithMediaType:AVMediaTypeVideo];
-//    if (videoConnection ==  nil) {
-//        sender.userInteractionEnabled = YES;
-//        return;
-//    }
-//    __weak typeof(self) weakself = self;
-//    [self.imageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection
-//                                                  completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-//        __strong typeof(weakself) strongself = weakself;
-//        if (imageDataSampleBuffer == nil || error) {
-//            sender.userInteractionEnabled = YES;
-//            [strongself.view gy_showStaticHUD:@"拍摄失败"];
-//            return;
-//        }
-//        [strongself.captureSession stopRunning];
-//        NSData *imageData =  [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-//        //未带水印
-//        UIImage *originalImage = [UIImage imageWithData:imageData];
-//        UIImage *fixOriginalImage = [UIImage gy_image_commonFixOrientation:originalImage
-//                                                               orientation:strongself.orientation];
-//        if (originalImage == nil || fixOriginalImage == nil) {
-//            [strongself.view gy_showStaticHUD:@"拍摄失败"];
-//            sender.userInteractionEnabled = YES;
-//            [strongself.captureSession startRunning];
-//            return;
-//        }
-//        [strongself shutterOriginImage:fixOriginalImage];
-//        if (strongself.finishBlock) {
-//            strongself.finishBlock(fixOriginalImage);
-//        }
-//    }];
+    sender.userInteractionEnabled = NO;
+    AVCaptureConnection * videoConnection = [self.imageOutPut connectionWithMediaType:AVMediaTypeVideo];
+    if (videoConnection ==  nil) {
+        sender.userInteractionEnabled = YES;
+        return;
+    }
+    __weak typeof(self) weakself = self;
+    [self.imageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection
+                                                  completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        __strong typeof(weakself) strongself = weakself;
+        if (imageDataSampleBuffer == nil || error) {
+            sender.userInteractionEnabled = YES;
+            [strongself.view gy_showStaticHUD:@"拍摄失败"];
+            return;
+        }
+        [strongself.captureSession stopRunning];
+        NSData *imageData =  [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+        //未带水印
+        UIImage *originalImage = [UIImage imageWithData:imageData];
+        UIImage *fixOriginalImage = [UIImage gy_image_commonFixOrientation:originalImage
+                                                               orientation:strongself.deviceOrientation];
+        if (originalImage == nil || fixOriginalImage == nil) {
+            [strongself.view gy_showStaticHUD:@"拍摄失败"];
+            sender.userInteractionEnabled = YES;
+            [strongself.captureSession startRunning];
+            return;
+        }
+        
+    }];
 }
 
 #pragma mark - 闪光灯

@@ -74,6 +74,11 @@
 		47808CC2260994C3003C4787 /* GYTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CC1260994C3003C4787 /* GYTimerTool.m */; };
 		47808F8E2609CEE6003C4787 /* UIView+GYHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F8D2609CEE6003C4787 /* UIView+GYHUD.m */; };
 		47808F952609D0CD003C4787 /* UIImage+CustomCameraExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */; };
+		47808F9E2609D2A1003C4787 /* GYCMMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F9D2609D2A1003C4787 /* GYCMMotionManager.m */; };
+		47808FA42609D3DD003C4787 /* GYViewController+MediaPickerExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FA32609D3DD003C4787 /* GYViewController+MediaPickerExtend.m */; };
+		47808FAA2609D4AF003C4787 /* NSObject+GYPrivacyExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FA92609D4AF003C4787 /* NSObject+GYPrivacyExtend.m */; };
+		47808FB02609D5E4003C4787 /* NSObject+GYAlertExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FAF2609D5E4003C4787 /* NSObject+GYAlertExtend.m */; };
+		47808FB62609D8A8003C4787 /* GYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FB52609D8A8003C4787 /* GYAlertController.m */; };
 		4799455325E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455525E3D28D00D0050A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453D25E3D28D00D0050A /* MJRefreshConst.m */; };
@@ -281,6 +286,16 @@
 		47808F8D2609CEE6003C4787 /* UIView+GYHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GYHUD.m"; sourceTree = "<group>"; };
 		47808F932609D0CD003C4787 /* UIImage+CustomCameraExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CustomCameraExtend.h"; sourceTree = "<group>"; };
 		47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CustomCameraExtend.m"; sourceTree = "<group>"; };
+		47808F9C2609D2A1003C4787 /* GYCMMotionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYCMMotionManager.h; sourceTree = "<group>"; };
+		47808F9D2609D2A1003C4787 /* GYCMMotionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCMMotionManager.m; sourceTree = "<group>"; };
+		47808FA22609D3DD003C4787 /* GYViewController+MediaPickerExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYViewController+MediaPickerExtend.h"; sourceTree = "<group>"; };
+		47808FA32609D3DD003C4787 /* GYViewController+MediaPickerExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GYViewController+MediaPickerExtend.m"; sourceTree = "<group>"; };
+		47808FA82609D4AF003C4787 /* NSObject+GYPrivacyExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+GYPrivacyExtend.h"; sourceTree = "<group>"; };
+		47808FA92609D4AF003C4787 /* NSObject+GYPrivacyExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GYPrivacyExtend.m"; sourceTree = "<group>"; };
+		47808FAE2609D5E4003C4787 /* NSObject+GYAlertExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+GYAlertExtend.h"; sourceTree = "<group>"; };
+		47808FAF2609D5E4003C4787 /* NSObject+GYAlertExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GYAlertExtend.m"; sourceTree = "<group>"; };
+		47808FB42609D8A8003C4787 /* GYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlertController.h; sourceTree = "<group>"; };
+		47808FB52609D8A8003C4787 /* GYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlertController.m; sourceTree = "<group>"; };
 		4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		4799453D25E3D28D00D0050A /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		4799453E25E3D28D00D0050A /* MJRefreshConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
@@ -458,6 +473,8 @@
 				3A2401A620C0E8C600DE9044 /* GYViewController.m */,
 				47B933BA25E63D4600C942E5 /* GYScrollPageViewController.h */,
 				47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */,
+				47808FB42609D8A8003C4787 /* GYAlertController.h */,
+				47808FB52609D8A8003C4787 /* GYAlertController.m */,
 			);
 			path = GYViewController;
 			sourceTree = "<group>";
@@ -483,6 +500,12 @@
 				47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */,
 				47173C2525E4FCE0002F9758 /* NSDictionary+GYExtend.h */,
 				47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */,
+				47808FA22609D3DD003C4787 /* GYViewController+MediaPickerExtend.h */,
+				47808FA32609D3DD003C4787 /* GYViewController+MediaPickerExtend.m */,
+				47808FA82609D4AF003C4787 /* NSObject+GYPrivacyExtend.h */,
+				47808FA92609D4AF003C4787 /* NSObject+GYPrivacyExtend.m */,
+				47808FAE2609D5E4003C4787 /* NSObject+GYAlertExtend.h */,
+				47808FAF2609D5E4003C4787 /* NSObject+GYAlertExtend.m */,
 			);
 			path = GYCategory;
 			sourceTree = "<group>";
@@ -714,6 +737,8 @@
 			children = (
 				47808F932609D0CD003C4787 /* UIImage+CustomCameraExtend.h */,
 				47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */,
+				47808F9C2609D2A1003C4787 /* GYCMMotionManager.h */,
+				47808F9D2609D2A1003C4787 /* GYCMMotionManager.m */,
 			);
 			path = Bean;
 			sourceTree = "<group>";
@@ -1079,6 +1104,7 @@
 				4799457725E3D2C900D0050A /* SVRadialGradientLayer.m in Sources */,
 				3A98A85A2149018800B958B8 /* UIView+GYFetchDataView.m in Sources */,
 				47808CA426098CEF003C4787 /* GYCustomCameraController.m in Sources */,
+				47808FA42609D3DD003C4787 /* GYViewController+MediaPickerExtend.m in Sources */,
 				4743D9B72578D04A0084B971 /* MASLayoutConstraint.m in Sources */,
 				3AACFA2E20F0F283009E9125 /* GYBadgeView.m in Sources */,
 				3A24019A20C0E5D900DE9044 /* GYCoordinatingMediator.m in Sources */,
@@ -1131,12 +1157,14 @@
 				3A98A84A2148EC4200B958B8 /* GYRefreshFooter.m in Sources */,
 				3A24019D20C0E67400DE9044 /* GYAppRootController.m in Sources */,
 				4799455C25E3D28D00D0050A /* NSBundle+MJRefresh.m in Sources */,
+				47808FAA2609D4AF003C4787 /* NSObject+GYPrivacyExtend.m in Sources */,
 				3AACFA3420F2FBCA009E9125 /* GYBorderView.m in Sources */,
 				4743D9B52578D04A0084B971 /* MASConstraintMaker.m in Sources */,
 				47173C1725E4FA52002F9758 /* GYMineInfo.m in Sources */,
 				3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */,
 				3A98A8512148F4F900B958B8 /* GYLoadStatusObject.m in Sources */,
 				479945A025E3D2DB00D0050A /* AFSecurityPolicy.m in Sources */,
+				47808F9E2609D2A1003C4787 /* GYCMMotionManager.m in Sources */,
 				3A5FDB1220C52BE9004ABC58 /* GYGlobalConst.m in Sources */,
 				3A5FDB0820C52269004ABC58 /* UIView+GYPosition.m in Sources */,
 				47173A3D25E4ABE6002F9758 /* UIImage+GYExtend.m in Sources */,
@@ -1145,7 +1173,9 @@
 				47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */,
 				4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				3AE67C6120F5F41E004E2746 /* GYCollectionViewController.m in Sources */,
+				47808FB02609D5E4003C4787 /* NSObject+GYAlertExtend.m in Sources */,
 				3AACFA2520F0F0B7009E9125 /* GYTabbarItemInfo.m in Sources */,
+				47808FB62609D8A8003C4787 /* GYAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
