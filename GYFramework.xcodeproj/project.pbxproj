@@ -68,6 +68,7 @@
 		4743D9BF2578D04A0084B971 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AD2578D04A0084B971 /* MASViewConstraint.m */; };
 		4743D9C12578D04A0084B971 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AE2578D04A0084B971 /* MASViewAttribute.m */; };
 		4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4765849925E3AA7F00080052 /* ThirdViewController.m */; };
+		47808CA426098CEF003C4787 /* GYCustomCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CA326098CEF003C4787 /* GYCustomCameraController.m */; };
 		4799455325E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455525E3D28D00D0050A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453D25E3D28D00D0050A /* MJRefreshConst.m */; };
@@ -264,6 +265,8 @@
 		4743D9AE2578D04A0084B971 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		4765849825E3AA7F00080052 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		4765849925E3AA7F00080052 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		47808CA226098CEF003C4787 /* GYCustomCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYCustomCameraController.h; sourceTree = "<group>"; };
+		47808CA326098CEF003C4787 /* GYCustomCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCustomCameraController.m; sourceTree = "<group>"; };
 		4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		4799453D25E3D28D00D0050A /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		4799453E25E3D28D00D0050A /* MJRefreshConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
@@ -405,6 +408,7 @@
 		3A24019320C0E06800DE9044 /* GYKit */ = {
 			isa = PBXGroup;
 			children = (
+				47808CA126098CC3003C4787 /* GYCustomCamera */,
 				47173A3525E4AB86002F9758 /* BeanObject */,
 				3A5FDB0920C52789004ABC58 /* GYKit.h */,
 				3A98A81C2148C13E00B958B8 /* 3rdWrapper */,
@@ -664,6 +668,15 @@
 				3AACFA2420F0F0B7009E9125 /* GYTabbarItemInfo.m */,
 			);
 			path = Bean;
+			sourceTree = "<group>";
+		};
+		47808CA126098CC3003C4787 /* GYCustomCamera */ = {
+			isa = PBXGroup;
+			children = (
+				47808CA226098CEF003C4787 /* GYCustomCameraController.h */,
+				47808CA326098CEF003C4787 /* GYCustomCameraController.m */,
+			);
+			path = GYCustomCamera;
 			sourceTree = "<group>";
 		};
 		4799453B25E3D28D00D0050A /* MJRefresh */ = {
@@ -1024,6 +1037,7 @@
 				4799456825E3D28D00D0050A /* MJRefreshComponent.m in Sources */,
 				4799457725E3D2C900D0050A /* SVRadialGradientLayer.m in Sources */,
 				3A98A85A2149018800B958B8 /* UIView+GYFetchDataView.m in Sources */,
+				47808CA426098CEF003C4787 /* GYCustomCameraController.m in Sources */,
 				4743D9B72578D04A0084B971 /* MASLayoutConstraint.m in Sources */,
 				3AACFA2E20F0F283009E9125 /* GYBadgeView.m in Sources */,
 				3A24019A20C0E5D900DE9044 /* GYCoordinatingMediator.m in Sources */,

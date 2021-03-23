@@ -12,6 +12,7 @@
 #import "FirstCollectionViewCell.h"
 #import "GYMineScrollPageRootController.h"
 #import <Flutter/Flutter.h>
+#import "GYCustomCameraController.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
@@ -29,7 +30,8 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
         _actionArray = @[
             @"Collection List",
             @"Controller嵌套联动",
-            @"Flutter页面"
+            @"Flutter页面",
+            @"自定义相机"
         ];
     }
     return self;
@@ -62,7 +64,7 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(collectionView.gy_width, 40);
+    return CGSizeMake(collectionView.gy_width, 50);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
@@ -83,7 +85,12 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
         }
             break;
         case 2: {
-            self.flutterVC = [[FlutterViewController alloc] initWithProject:nil initialRoute:@"Flutter页面" nibName:nil bundle:nil];
+            /**
+             initialRoute：标志需要展示flutter哪个页面
+             */
+            self.flutterVC = [[FlutterViewController alloc] initWithProject:nil
+                                                               initialRoute:@"Flutter Page1"
+                                                                    nibName:nil bundle:nil];
             [self.navigationController pushViewController:self.flutterVC
                                                  animated:YES];
             //创建通信频道
@@ -101,6 +108,12 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
                 [nativeChannel invokeMethod:@"invokeFlutterMethod"
                                   arguments:@{@"title" : @"1213456"}];
             });
+        }
+            break;
+        case 3: {
+            GYCustomCameraController *cameraVC  = [[GYCustomCameraController alloc] init];
+            [self.navigationController pushViewController:cameraVC
+                                                 animated:YES];
         }
             break;
         default:

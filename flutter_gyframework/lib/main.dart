@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_gyframework/Page/root_page.dart';
 import 'dart:ui';
+
+import 'Page/page_one.dart';
 
 /**
  * 接收原生传来的路由名：可以根据routename指定显示的页面
@@ -25,7 +26,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: RootPage(nativePageRouteName: widget.nativePageRouteName),
+      home: (widget.nativePageRouteName == 'Flutter Page1') ? RootPage(nativePageRouteName: widget.nativePageRouteName) : PageOne(),
     );
   }
 }
