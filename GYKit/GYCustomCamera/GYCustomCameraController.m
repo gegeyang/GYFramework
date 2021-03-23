@@ -9,6 +9,7 @@
 #import "GYCustomCameraController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "GYCameraShootButton.h"
+#import "UIImage+CustomCameraExtend.h"
 
 @interface GYCustomCameraController () <UIGestureRecognizerDelegate> {
     /**取景框比例 */
@@ -25,6 +26,11 @@
 @property (nonatomic, strong) AVCaptureDevice *captureDevice;
 /**相机拍摄时的预览图层*/
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
+/**输出*/
+@property (nonatomic, strong) AVCaptureStillImageOutput *imageOutPut;
+
+/**设备的拍摄方向*/
+@property (nonatomic, assign) UIDeviceOrientation deviceOrientation;
 
 /**设置焦距的捏合手势*/
 @property (nonatomic, strong) UIPinchGestureRecognizer *pinchGesture;
@@ -52,6 +58,13 @@
     [_photoButton mas_updateConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(-bottomMargin);
     }];
+}
+
+#pragma mark - 初始化传感器
+- (void)initializeMotionManger {
+    self.deviceOrientation = UIDeviceOrientationPortrait;
+    __weak typeof(self) weakself = self;
+    
 }
 
 #pragma mark - 初始化相机
@@ -216,7 +229,38 @@
 
 #pragma mark - 拍照
 - (void)shutterPhoto:(UIView *)sender {
-    
+//    sender.userInteractionEnabled = NO;
+//    AVCaptureConnection * videoConnection = [self.imageOutPut connectionWithMediaType:AVMediaTypeVideo];
+//    if (videoConnection ==  nil) {
+//        sender.userInteractionEnabled = YES;
+//        return;
+//    }
+//    __weak typeof(self) weakself = self;
+//    [self.imageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection
+//                                                  completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+//        __strong typeof(weakself) strongself = weakself;
+//        if (imageDataSampleBuffer == nil || error) {
+//            sender.userInteractionEnabled = YES;
+//            [strongself.view gy_showStaticHUD:@"拍摄失败"];
+//            return;
+//        }
+//        [strongself.captureSession stopRunning];
+//        NSData *imageData =  [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+//        //未带水印
+//        UIImage *originalImage = [UIImage imageWithData:imageData];
+//        UIImage *fixOriginalImage = [UIImage gy_image_commonFixOrientation:originalImage
+//                                                               orientation:strongself.orientation];
+//        if (originalImage == nil || fixOriginalImage == nil) {
+//            [strongself.view gy_showStaticHUD:@"拍摄失败"];
+//            sender.userInteractionEnabled = YES;
+//            [strongself.captureSession startRunning];
+//            return;
+//        }
+//        [strongself shutterOriginImage:fixOriginalImage];
+//        if (strongself.finishBlock) {
+//            strongself.finishBlock(fixOriginalImage);
+//        }
+//    }];
 }
 
 #pragma mark - 闪光灯
@@ -287,6 +331,13 @@
         }
     }
     return _cameraInput;
+}
+
+- (AVCaptureStillImageOutput *)imageOutPut {
+    if (!_imageOutPut) {
+        _imageOutPut = [[AVCaptureStillImageOutput alloc] init];
+    }
+    return _imageOutPut;
 }
 
 - (AVCaptureVideoPreviewLayer *)captureVideoPreviewLayer {

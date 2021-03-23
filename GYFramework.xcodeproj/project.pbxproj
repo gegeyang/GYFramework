@@ -72,6 +72,8 @@
 		47808CAC26098E3B003C4787 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47808CAB26098E3B003C4787 /* AVFoundation.framework */; };
 		47808CB926099414003C4787 /* GYCameraShootButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CB826099414003C4787 /* GYCameraShootButton.m */; };
 		47808CC2260994C3003C4787 /* GYTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CC1260994C3003C4787 /* GYTimerTool.m */; };
+		47808F8E2609CEE6003C4787 /* UIView+GYHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F8D2609CEE6003C4787 /* UIView+GYHUD.m */; };
+		47808F952609D0CD003C4787 /* UIImage+CustomCameraExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */; };
 		4799455325E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455525E3D28D00D0050A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453D25E3D28D00D0050A /* MJRefreshConst.m */; };
@@ -275,6 +277,10 @@
 		47808CB826099414003C4787 /* GYCameraShootButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCameraShootButton.m; sourceTree = "<group>"; };
 		47808CC0260994C3003C4787 /* GYTimerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYTimerTool.h; sourceTree = "<group>"; };
 		47808CC1260994C3003C4787 /* GYTimerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYTimerTool.m; sourceTree = "<group>"; };
+		47808F8C2609CEE6003C4787 /* UIView+GYHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GYHUD.h"; sourceTree = "<group>"; };
+		47808F8D2609CEE6003C4787 /* UIView+GYHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GYHUD.m"; sourceTree = "<group>"; };
+		47808F932609D0CD003C4787 /* UIImage+CustomCameraExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CustomCameraExtend.h"; sourceTree = "<group>"; };
+		47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CustomCameraExtend.m"; sourceTree = "<group>"; };
 		4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		4799453D25E3D28D00D0050A /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		4799453E25E3D28D00D0050A /* MJRefreshConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
@@ -556,6 +562,8 @@
 				47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */,
 				3A98A8582149018800B958B8 /* UIView+GYFetchDataView.h */,
 				3A98A8592149018800B958B8 /* UIView+GYFetchDataView.m */,
+				47808F8C2609CEE6003C4787 /* UIView+GYHUD.h */,
+				47808F8D2609CEE6003C4787 /* UIView+GYHUD.m */,
 			);
 			path = GYView;
 			sourceTree = "<group>";
@@ -684,6 +692,7 @@
 		47808CA126098CC3003C4787 /* GYCustomCamera */ = {
 			isa = PBXGroup;
 			children = (
+				47808F922609D0AD003C4787 /* Bean */,
 				47808CB6260993F7003C4787 /* View */,
 				47808CA226098CEF003C4787 /* GYCustomCameraController.h */,
 				47808CA326098CEF003C4787 /* GYCustomCameraController.m */,
@@ -698,6 +707,15 @@
 				47808CB826099414003C4787 /* GYCameraShootButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		47808F922609D0AD003C4787 /* Bean */ = {
+			isa = PBXGroup;
+			children = (
+				47808F932609D0CD003C4787 /* UIImage+CustomCameraExtend.h */,
+				47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */,
+			);
+			path = Bean;
 			sourceTree = "<group>";
 		};
 		4799453B25E3D28D00D0050A /* MJRefresh */ = {
@@ -1064,6 +1082,8 @@
 				4743D9B72578D04A0084B971 /* MASLayoutConstraint.m in Sources */,
 				3AACFA2E20F0F283009E9125 /* GYBadgeView.m in Sources */,
 				3A24019A20C0E5D900DE9044 /* GYCoordinatingMediator.m in Sources */,
+				47808F8E2609CEE6003C4787 /* UIView+GYHUD.m in Sources */,
+				47808F952609D0CD003C4787 /* UIImage+CustomCameraExtend.m in Sources */,
 				3A24017120C0E02D00DE9044 /* main.m in Sources */,
 				3A2401A720C0E8C600DE9044 /* GYViewController.m in Sources */,
 				3A5FDB1E20C5364C004ABC58 /* UIColor+GYExtend.m in Sources */,
