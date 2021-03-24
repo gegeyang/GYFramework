@@ -11,6 +11,7 @@
 #import "GYCameraShootButton.h"
 #import "UIImage+CustomCameraExtend.h"
 #import "GYCMMotionManager.h"
+#import "GYViewController+MediaPickerExtend.h"
 
 @interface GYCustomCameraController () <UIGestureRecognizerDelegate> {
     /**取景框比例 */
@@ -45,6 +46,25 @@
 @end
 
 @implementation GYCustomCameraController
+- (instancetype)init {
+    if (self = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(applicationDidEnterBackground:)
+                                                     name:UIApplicationDidEnterBackgroundNotification
+                                                   object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(applicationDidBecomeActive:)
+                                                     name:UIApplicationDidBecomeActiveNotification
+                                                   object:nil];
+    }
+    return self;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self initializeMotionManger];
+    [self.captureSession startRunning];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,12 +73,22 @@
     [self initializeUI];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.captureSession stopRunning];
+    [[GYCMMotionManager sharedManager].motionManager stopAccelerometerUpdates];
+}
+
 - (void)viewContentInsetDidChanged  {
     [super viewContentInsetDidChanged];
     const CGFloat bottomMargin = self.safeAreaInsets.bottom + GYKIT_TABBAR_HEIGHT;
     [_photoButton mas_updateConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(-bottomMargin);
     }];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - 初始化传感器
@@ -73,8 +103,13 @@
 
 #pragma mark - 初始化相机
 - (void)initializeCamera {
+    //加入输入设备
     if ([self.captureSession canAddInput:self.cameraInput]) {
         [self.captureSession addInput:self.cameraInput];
+    }
+    //加入输出设备
+    if ([self.captureSession canAddOutput:self.imageOutPut]) {
+        [self.captureSession addOutput:self.imageOutPut];
     }
     [self.view.layer addSublayer:self.captureVideoPreviewLayer];
     [self.captureSession startRunning];
@@ -127,7 +162,21 @@
     [self.view addGestureRecognizer:self.pinchGesture];
 }
 
+#pragma mark - Overwrite
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self.captureSession stopRunning];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self reset];
+}
+
 #pragma mark - implementaction
+- (void)reset {
+    [self.captureSession startRunning];
+    self.photoButton.userInteractionEnabled = YES;
+}
+
 - (void)deviceRotate:(UIDeviceOrientation)orientation {
     if (_deviceOrientation == orientation) {
         return;
@@ -192,6 +241,27 @@
     CGPoint cameraPoint = [self.captureVideoPreviewLayer captureDevicePointOfInterestForPoint:point];
     [self focusAtPoint:cameraPoint
             touchPoint:point];
+}
+
+- (void)setupCaptureSessionPreset:(AVCaptureDevice *)captureDevice {
+    _captureScale = 1.0;
+    if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset3840x2160]
+        && [captureDevice supportsAVCaptureSessionPreset:AVCaptureSessionPreset3840x2160]) {
+        _captureScale = 3840 / 2160.0;
+        _captureSession.sessionPreset = AVCaptureSessionPreset3840x2160;
+    } else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1920x1080]
+               && [captureDevice supportsAVCaptureSessionPreset:AVCaptureSessionPreset1920x1080]) {
+        _captureScale = 1920 / 1080.0;
+        _captureSession.sessionPreset = AVCaptureSessionPreset1920x1080;
+    } else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]
+               && [captureDevice supportsAVCaptureSessionPreset:AVCaptureSessionPreset1280x720]) {
+        _captureScale = 1280 / 720.0;
+        _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+    } else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset640x480]
+               && [captureDevice supportsAVCaptureSessionPreset:AVCaptureSessionPreset640x480]) {
+        _captureScale = 640 / 480.0;
+        _captureSession.sessionPreset = AVCaptureSessionPreset640x480;
+    }
 }
 
 #pragma mark - 获取指定摄像头
@@ -289,6 +359,7 @@
         return;
     }
     __weak typeof(self) weakself = self;
+    [self.view gy_showProgressHUD:nil];
     [self.imageOutPut captureStillImageAsynchronouslyFromConnection:videoConnection
                                                   completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         __strong typeof(weakself) strongself = weakself;
@@ -299,7 +370,6 @@
         }
         [strongself.captureSession stopRunning];
         NSData *imageData =  [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-        //未带水印
         UIImage *originalImage = [UIImage imageWithData:imageData];
         UIImage *fixOriginalImage = [UIImage gy_image_commonFixOrientation:originalImage
                                                                orientation:strongself.deviceOrientation];
@@ -309,18 +379,77 @@
             [strongself.captureSession startRunning];
             return;
         }
-        
+        [strongself gy_imagesave_saveImage:fixOriginalImage
+                             resultHandler:^(PHAsset * _Nonnull asset) {
+            [strongself.view gy_hideHUD];
+            [strongself.captureSession startRunning];
+        }];
     }];
 }
 
 #pragma mark - 闪光灯
 - (void)onClickFlash:(UIButton *)sender {
-    
+    NSError *error = nil;
+    [self.captureDevice lockForConfiguration:&error];
+    if (!error && [self.captureDevice hasFlash]) {
+        if (sender.isSelected) {
+            if([self.captureDevice isFlashModeSupported:AVCaptureFlashModeOff]) {
+                [self.captureDevice setFlashMode:AVCaptureFlashModeOff];
+                sender.selected = NO;
+            }
+        } else {
+            if([self.captureDevice isFlashModeSupported:AVCaptureFlashModeOn]) {
+                [self.captureDevice setFlashMode:AVCaptureFlashModeOn];
+                sender.selected = YES;
+            }
+        }
+    } else {
+        GYLog(@"闪光灯操作失败");
+    }
+    [self.captureDevice unlockForConfiguration];
 }
 
 #pragma mark - 前后置切换
 - (void)onClickSwitch:(UIButton *)sender {
-    
+    NSUInteger cameraCount = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo].count;
+    if (cameraCount <= 1) {
+        return;
+    }
+    NSError *error = nil;
+    [self.captureDevice lockForConfiguration:&error];
+    if (error) {
+        return;
+    }
+    AVCaptureDevicePosition currentPosition = [self.cameraInput device].position;
+    //添加转场动画
+    CATransition *animation = [CATransition animation];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.duration = 0.5;
+    animation.type = @"oglFlip";
+    AVCaptureDevice *newCamera = nil;
+    if (currentPosition == AVCaptureDevicePositionBack) {
+        newCamera = [self getCameraCaptureDeviceWithPosition:AVCaptureDevicePositionFront];
+        animation.subtype = kCATransitionFromRight;
+    } else {
+        newCamera = [self getCameraCaptureDeviceWithPosition:AVCaptureDevicePositionBack];
+        animation.subtype = kCATransitionFromLeft;
+    }
+    [self.captureVideoPreviewLayer addAnimation:animation forKey:nil];
+    [self setupCaptureSessionPreset:newCamera];
+    [self.captureDevice lockForConfiguration:&error];
+    AVCaptureDeviceInput *newCameraInput = [AVCaptureDeviceInput deviceInputWithDevice:newCamera error:nil];
+    if (newCameraInput) {
+        [self.captureSession beginConfiguration];
+        [self.captureSession removeInput:self.cameraInput];
+        if ([self.captureSession canAddInput:newCameraInput]) {
+            [self.captureSession addInput:newCameraInput];
+            self.cameraInput = newCameraInput;
+        } else {
+            [self.captureSession addInput:self.cameraInput];
+        }
+        [self.captureSession commitConfiguration];
+    }
+    [self.captureDevice unlockForConfiguration];
 }
 
 #pragma mark - 返回
@@ -343,19 +472,6 @@
     if (!_captureSession) {
         _captureSession = [[AVCaptureSession alloc] init];
         _captureScale = 1.0;
-        if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset3840x2160]) {
-            _captureScale = 3840 / 2160.0;
-            _captureSession.sessionPreset = AVCaptureSessionPreset3840x2160;
-        } else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1920x1080]) {
-            _captureScale = 1920 / 1080.0;
-            _captureSession.sessionPreset = AVCaptureSessionPreset1920x1080;
-        } else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
-            _captureScale = 1280 / 720.0;
-            _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
-        } else if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset640x480]) {
-            _captureScale = 640 / 480.0;
-            _captureSession.sessionPreset = AVCaptureSessionPreset640x480;
-        }
     }
     return _captureSession;
 }
@@ -363,6 +479,7 @@
 - (AVCaptureDevice *)captureDevice {
     if (!_captureDevice) {
         _captureDevice = [self getCameraCaptureDeviceWithPosition:AVCaptureDevicePositionBack];
+        [self setupCaptureSessionPreset:_captureDevice];
     }
     return _captureDevice;
 }

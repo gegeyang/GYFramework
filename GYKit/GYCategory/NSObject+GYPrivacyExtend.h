@@ -24,6 +24,16 @@ typedef NS_ENUM(NSInteger, GYAppPref) {
 
 @interface NSObject (GYPrivacyExtend)
 
+/**
+ 检查相册权限
+ */
+- (void)gy_privacy_checkAndOpenPhotoLibWithCompletion:(void(^)(void))completion;
+
+/**
+ 检查相机权限
+ */
+- (void)gy_privacy_checkAndOpenCameraWithCompletion:(void(^)(void))completion;
+
 @end
 
 NS_ASSUME_NONNULL_END

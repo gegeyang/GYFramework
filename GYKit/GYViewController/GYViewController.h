@@ -38,6 +38,9 @@ typedef NS_OPTIONS(NSInteger, GYAutoAdjust) {
 
 - (GYVCPushAnimationMode)preferredPushAnimationMode; // Defaults to GYVCPushNormalMode
 
+- (void)onApplicationWillResignActive:(NSNotificationCenter *)notify;
+- (void)onApplicationDidBecomeActive:(NSNotification *)notify;
+
 @end
 
 @interface GYViewController(HandleNavigationTransitionExtend)

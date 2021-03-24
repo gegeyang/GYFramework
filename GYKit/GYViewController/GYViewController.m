@@ -20,9 +20,6 @@
 @property (nonatomic, copy) void(^wj_base_backBlock)(void);
 @property (nonatomic, copy) void(^wj_base_closeBlock)(void);
 
-- (void)onApplicationWillResignActive:(NSNotification *)notify;
-- (void)onApplicationDidBecomeActive:(NSNotification *)notify;
-
 @end
 
 @implementation GYViewController

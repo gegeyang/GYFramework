@@ -7,10 +7,20 @@
 //
 
 #import "GYViewController.h"
+#import <AssetsLibrary/ALAssetsLibrary.h>
+#import <Photos/PHAsset.h>
+#import "NSObject+GYPrivacyExtend.h"
+#import <Photos/PHAssetChangeRequest.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GYViewController (MediaPickerExtend)
+
+/**
+ 保存图片，并返回当前这张图片
+ */
+- (void)gy_imagesave_saveImage:(UIImage *)image
+                 resultHandler:(void (^ __nullable)(PHAsset *asset))resultHandler;
 
 @end
 

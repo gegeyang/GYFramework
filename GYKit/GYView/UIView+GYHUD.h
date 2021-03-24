@@ -25,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  进度HUD
  */
-- (void)gy_showProgressHUD:(NSString *)title;
-- (void)gy_showProgressHUD:(NSString *)title
+- (void)gy_showProgressHUD:(NSString * _Nullable)title;
+- (void)gy_showProgressHUD:(NSString * _Nullable)title
       allowUserInteraction:(BOOL)allowUserInteraction;
 
 /**

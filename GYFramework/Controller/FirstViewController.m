@@ -13,6 +13,7 @@
 #import "GYMineScrollPageRootController.h"
 #import <Flutter/Flutter.h>
 #import "GYCustomCameraController.h"
+#import "NSObject+GYPrivacyExtend.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
@@ -111,9 +112,11 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
         }
             break;
         case 3: {
-            GYCustomCameraController *cameraVC  = [[GYCustomCameraController alloc] init];
-            [self.navigationController pushViewController:cameraVC
-                                                 animated:YES];
+            [self gy_privacy_checkAndOpenCameraWithCompletion:^{
+                GYCustomCameraController *cameraVC  = [[GYCustomCameraController alloc] init];
+                [self.navigationController pushViewController:cameraVC
+                                                     animated:YES];
+            }];
         }
             break;
         default:

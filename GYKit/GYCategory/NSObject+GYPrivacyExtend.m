@@ -34,7 +34,7 @@
 }
 
 #pragma mark - 相册
-- (void)wj_privacy_checkAndOpenPhotoLibWithCompletion:(void(^)(void))completion {
+- (void)gy_privacy_checkAndOpenPhotoLibWithCompletion:(void(^)(void))completion {
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
         dispatch_async(dispatch_get_main_queue(), ^{
             switch (status) {
