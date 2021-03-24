@@ -127,6 +127,7 @@
 		47B933BC25E63D4600C942E5 /* GYScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */; };
 		47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */; };
 		47B933CF25E6506C00C942E5 /* GYSegmentSliderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */; };
+		47F0DFA2260B2466005DFD5D /* GYVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +350,8 @@
 		47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineScrollPageRootController.m; sourceTree = "<group>"; };
 		47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYSegmentSliderBar.h; sourceTree = "<group>"; };
 		47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYSegmentSliderBar.m; sourceTree = "<group>"; };
+		47F0DFA0260B2466005DFD5D /* GYVideoPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYVideoPreviewController.h; sourceTree = "<group>"; };
+		47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYVideoPreviewController.m; sourceTree = "<group>"; };
 		66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.release.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.release.xcconfig"; sourceTree = "<group>"; };
 		A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.debug.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -719,6 +722,8 @@
 				47808CB6260993F7003C4787 /* View */,
 				47808CA226098CEF003C4787 /* GYCustomCameraController.h */,
 				47808CA326098CEF003C4787 /* GYCustomCameraController.m */,
+				47F0DFA0260B2466005DFD5D /* GYVideoPreviewController.h */,
+				47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */,
 			);
 			path = GYCustomCamera;
 			sourceTree = "<group>";
@@ -1123,6 +1128,7 @@
 				4799455825E3D28D00D0050A /* MJRefreshConfig.m in Sources */,
 				4799459825E3D2DB00D0050A /* AFHTTPSessionManager.m in Sources */,
 				4799455E25E3D28D00D0050A /* UIView+MJExtension.m in Sources */,
+				47F0DFA2260B2466005DFD5D /* GYVideoPreviewController.m in Sources */,
 				4799457F25E3D2C900D0050A /* SVIndefiniteAnimatedView.m in Sources */,
 				3A2401AD20C0EC7800DE9044 /* GYTabbarViewController.m in Sources */,
 				47808CB926099414003C4787 /* GYCameraShootButton.m in Sources */,
