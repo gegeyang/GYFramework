@@ -22,3 +22,4 @@
 #import "UIImage+GYExtend.h"
 #import "NSDictionary+GYExtend.h"
 #import "UIView+GYHUD.h"
+#import "NSDate+GYExtend.h"

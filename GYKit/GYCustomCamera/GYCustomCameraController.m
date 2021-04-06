@@ -33,7 +33,6 @@
 
 /**设备的拍摄方向*/
 @property (nonatomic, assign) UIDeviceOrientation deviceOrientation;
-
 /**设置焦距的捏合手势*/
 @property (nonatomic, strong) UIPinchGestureRecognizer *pinchGesture;
 @property (nonatomic, strong) GYCameraShootButton *photoButton;
