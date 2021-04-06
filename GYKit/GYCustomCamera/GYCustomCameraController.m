@@ -404,8 +404,8 @@
             [strongself.captureSession startRunning];
             return;
         }
-        [strongself gy_imagesave_saveImage:fixOriginalImage
-                             resultHandler:^(PHAsset * _Nonnull asset) {
+        [strongself gy_saveWithImage:fixOriginalImage
+                       resultHandler:^(PHAsset * _Nonnull asset) {
             [strongself.view gy_hideHUD];
             [strongself.captureSession startRunning];
         }];
@@ -527,8 +527,22 @@
         __strong typeof(weakself) strongself = weakself;
         [strongself.navigationController dismissViewControllerAnimated:NO
                                                             completion:nil];
-    } finishBlock:^{
+    } finishBlock:^(UIView * _Nonnull currentView) {
         __strong typeof(weakself) strongself = weakself;
+        [strongself saveVideoToLocalWithPath:videoPath
+                                 currentView:currentView];
+    }];
+}
+
+#pragma mark - 保存视频
+- (void)saveVideoToLocalWithPath:(NSString *)videoPath
+                     currentView:(UIView *)currentView {
+    __weak typeof(self) weakself = self;
+    [currentView gy_showProgressHUD:@"保存中..."];
+    [self gy_saveWithVideo:videoPath
+             resultHandler:^(PHAsset * _Nonnull asset) {
+        __strong typeof(weakself) strongself = weakself;
+        [currentView gy_hideHUD];
         [strongself.navigationController dismissViewControllerAnimated:NO
                                                             completion:nil];
     }];

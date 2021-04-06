@@ -17,10 +17,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GYViewController (MediaPickerExtend)
 
 /**
- 保存图片，并返回当前这张图片
+ 保存图片
  */
-- (void)gy_imagesave_saveImage:(UIImage *)image
-                 resultHandler:(void (^ __nullable)(PHAsset *asset))resultHandler;
+- (void)gy_saveWithImage:(UIImage *)image
+           resultHandler:(void (^ __nullable)(PHAsset *asset))resultHandler;
+
+/**
+ 保存视频
+ */
+- (void)gy_saveWithVideo:(NSString *)localPath
+           resultHandler:(void (^)(PHAsset *asset))resultHandler;
 
 @end
 

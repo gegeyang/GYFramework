@@ -146,7 +146,7 @@
 
 - (void)onClickConfirm:(UIButton *)sender {
     if (self.onClickFinish) {
-        self.onClickFinish();
+        self.onClickFinish(self.view);
     }
 }
 
@@ -229,7 +229,7 @@
 - (void)gy_videoplayer_openUrl:(NSURL *)url
                    allowRepeat:(BOOL)allowRepeat
                    cancelBlock:(void(^ _Nullable )(void))cancelBlock
-                   finishBlock:(void(^ _Nullable )(void))finishBlock {
+                   finishBlock:(void(^ _Nullable )(UIView *currentView))finishBlock {
     GYVideoPreviewController *controller = [[GYVideoPreviewController alloc] initWithVideoUrl:url
                                                                                   allowRepeat:allowRepeat];
     controller.onClickCancel = cancelBlock;
