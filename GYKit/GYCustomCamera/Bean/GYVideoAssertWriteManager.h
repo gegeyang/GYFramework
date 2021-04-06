@@ -12,7 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GYVideoAssertWriteManager : NSObject
-
+/**视频名称*/
+@property (nonatomic, readonly) NSString *videoName;
 @property (nonatomic, readonly) AVAssetWriterStatus writerStatus;
 
 - (instancetype)initWithInputOrientation:(UIDeviceOrientation)orientation;

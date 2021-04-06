@@ -26,7 +26,7 @@
 /**封面路径*/
 @property (nonatomic, readonly) NSString *videoCoverImagePath;
 /**视频名称*/
-@property (nonatomic, readonly) NSString *videoName;
+@property (nonatomic, copy) NSString *videoName;
 @property (nonatomic, strong) AVAssetWriter *assetWriter;
 @property (nonatomic, strong) AVAssetWriterInput *assetWriterVideoInput;
 @property (nonatomic, strong) AVAssetWriterInput *assetWriterAudioInput;
@@ -37,7 +37,7 @@
 - (instancetype)initWithInputOrientation:(UIDeviceOrientation)orientation {
     if (self = [super init]) {
         _orientation = orientation;
-        _videoName = [NSString stringWithFormat:@"%@", [[NSDate date] gy_formatString:@"yyyy_MM_dd HH:mm:ss"]];
+        _videoName = [NSString stringWithFormat:@"%@", [[NSDate date] gy_formatString:@"yyyy_MM_dd_HH_mm_ss"]];
         _videoInputPath = [GYSandboxHelper gy_videoCache_inputPath:_videoName];
         _videoSavePath = [GYSandboxHelper gy_videoCache_savePath:_videoName];
         _videoCoverImagePath = [GYSandboxHelper gy_videoCache_coverImagePath:_videoName];

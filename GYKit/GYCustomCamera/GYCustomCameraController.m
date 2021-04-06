@@ -12,8 +12,14 @@
 #import "UIImage+CustomCameraExtend.h"
 #import "GYCMMotionManager.h"
 #import "GYViewController+MediaPickerExtend.h"
+#import "GYVideoAssertWriteManager.h"
+#import "GYVideoPreviewController.h"
+#import "GYSandboxHelper.h"
 
-@interface GYCustomCameraController () <UIGestureRecognizerDelegate> {
+@interface GYCustomCameraController () <UIGestureRecognizerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate> {
+    /**是否正在录制*/
+    BOOL _isCapturing;
+    BOOL _supportVideo;
     /**取景框比例 */
     CGFloat _captureScale;
     /**焦距 */
@@ -31,6 +37,16 @@
 /**输出*/
 @property (nonatomic, strong) AVCaptureStillImageOutput *imageOutPut;
 
+/**写入音视频*/
+@property (nonatomic, strong) GYVideoAssertWriteManager *writerManager;
+/**音频输入*/
+@property (nonatomic, strong) AVCaptureDeviceInput *audioInput;
+/**音频输出*/
+@property (nonatomic, strong) AVCaptureAudioDataOutput *audioDataOutPut;
+/**视频输出*/
+@property (nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutPut;
+@property (nonatomic, strong) dispatch_queue_t captureQueue;
+
 /**设备的拍摄方向*/
 @property (nonatomic, assign) UIDeviceOrientation deviceOrientation;
 /**设置焦距的捏合手势*/
@@ -45,8 +61,9 @@
 @end
 
 @implementation GYCustomCameraController
-- (instancetype)init {
+- (instancetype)initWithSupportVideo:(BOOL)supportVideo {
     if (self = [super init]) {
+        _supportVideo = supportVideo;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(applicationDidEnterBackground:)
                                                      name:UIApplicationDidEnterBackgroundNotification
@@ -106,7 +123,16 @@
     if ([self.captureSession canAddInput:self.cameraInput]) {
         [self.captureSession addInput:self.cameraInput];
     }
+    if ([self.captureSession canAddInput:self.audioInput]) {
+        [self.captureSession addInput:self.audioInput];
+    }
+    if ([self.captureSession canAddOutput:self.videoDataOutPut]) {
+        [self.captureSession addOutput:self.videoDataOutPut];
+    }
     //加入输出设备
+    if ([self.captureSession canAddOutput:self.audioDataOutPut]) {
+        [self.captureSession addOutput:self.audioDataOutPut];
+    }
     if ([self.captureSession canAddOutput:self.imageOutPut]) {
         [self.captureSession addOutput:self.imageOutPut];
     }
@@ -458,12 +484,78 @@
 
 #pragma mark - 视频开始录制
 - (void)startVideoRecord {
-    
+    _tipsLabel.hidden = YES;
+    [[GYCMMotionManager sharedManager] stopAccelerometerUpdates];
+    self.writerManager = [[GYVideoAssertWriteManager alloc] initWithInputOrientation:self.deviceOrientation];
+    _isCapturing = YES;
 }
 
 #pragma mark - 视频停止录制
 - (void)stopVideoRecord {
-    
+    if (!_isCapturing) {
+        return;
+    }
+    _tipsLabel.hidden = _supportVideo ? NO : YES;
+    _isCapturing = NO;
+    if (self.writerManager && self.writerManager.writerStatus == AVAssetWriterStatusWriting) {
+        [self.view gy_showProgressHUD:nil];
+        __weak typeof(self) weakself = self;
+        [self.writerManager finishWrittingWithCompletionHandler:^(BOOL isSuccess) {
+            __strong typeof(weakself) strongself = weakself;
+            if (isSuccess) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [strongself.view gy_hideHUD];
+                    if (strongself.finishVideoShoot) {
+                        strongself.finishVideoShoot(strongself.writerManager.videoName);
+                    }
+                    [strongself previewVideo:strongself.writerManager.videoName];
+                });
+            }
+        }];
+    }
+    [self initializeMotionManger];
+    [self reset];
+}
+
+#pragma mark - 视频预览
+- (void)previewVideo:(NSString *)videoName {
+    NSString *videoPath = [GYSandboxHelper gy_videoCache_savePath:videoName];
+    __weak typeof(self) weakself = self;
+    [self gy_videoplayer_openUrl:[NSURL fileURLWithPath:videoPath]
+                     allowRepeat:YES
+                     cancelBlock:^{
+        __strong typeof(weakself) strongself = weakself;
+        [strongself.navigationController dismissViewControllerAnimated:NO
+                                                            completion:nil];
+    } finishBlock:^{
+        __strong typeof(weakself) strongself = weakself;
+        [strongself.navigationController dismissViewControllerAnimated:NO
+                                                            completion:nil];
+    }];
+}
+
+#pragma mark - AVCaptureVideoDataOutputSampleBufferDelegate And AVCaptureAudioDataOutputSampleBufferDelegate
+- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+    if (!_isCapturing) {
+        return;
+    }
+    __weak typeof(self) weakself = self;
+    if (connection == [self.videoDataOutPut connectionWithMediaType:AVMediaTypeVideo]) {
+        [self.writerManager appendSampleBuffer:sampleBuffer
+                                   ofMediaType:AVMediaTypeVideo
+                                       failure:^{
+            __strong typeof(weakself) strongself = weakself;
+            [strongself stopVideoRecord];
+        }];
+    }
+    if (connection == [self.audioDataOutPut connectionWithMediaType:AVMediaTypeAudio]) {
+        [self.writerManager appendSampleBuffer:sampleBuffer
+                                   ofMediaType:AVMediaTypeAudio
+                                       failure:^{
+            __strong typeof(weakself) strongself = weakself;
+            [strongself stopVideoRecord];
+        }];
+    }
 }
 
 #pragma mark - getter and setter
@@ -506,6 +598,40 @@
     return _imageOutPut;
 }
 
+- (AVCaptureDeviceInput *)audioInput {
+    if (!_audioInput) {
+        AVCaptureDevice *audioDevice = [AVCaptureDevice devicesWithMediaType:AVMediaTypeAudio].firstObject;
+        if (!audioDevice) {
+            GYLog(@"麦克风获取失败");
+            return nil;
+        }
+        NSError *error = nil;
+        _audioInput = [[AVCaptureDeviceInput alloc] initWithDevice:audioDevice error:&error];
+        if (error) {
+            GYLog(@"音频设备异常：%@", error.description);
+        }
+    }
+    return _audioInput;
+}
+
+- (AVCaptureVideoDataOutput *)videoDataOutPut {
+    if (!_videoDataOutPut) {
+        _videoDataOutPut = [[AVCaptureVideoDataOutput alloc] init];
+        [_videoDataOutPut setSampleBufferDelegate:self
+                                            queue:dispatch_get_main_queue()];
+    }
+    return _videoDataOutPut;
+}
+
+- (AVCaptureAudioDataOutput *)audioDataOutPut {
+    if (!_audioDataOutPut) {
+        _audioDataOutPut = [[AVCaptureAudioDataOutput alloc] init];
+        [_audioDataOutPut setSampleBufferDelegate:self
+                                            queue:dispatch_get_main_queue()];
+    }
+    return _audioDataOutPut;
+}
+
 - (AVCaptureVideoPreviewLayer *)captureVideoPreviewLayer {
     if (!_captureVideoPreviewLayer) {
         _captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
@@ -517,7 +643,7 @@
 
 - (GYCameraShootButton *)photoButton {
     if (!_photoButton) {
-        _photoButton = [[GYCameraShootButton alloc] init];
+        _photoButton = [[GYCameraShootButton alloc] initWithSupportVideo:_supportVideo];
         __weak typeof(self) weakself = self;
         _photoButton.finishTakePhoto = ^{
             __strong typeof(weakself) strongself = weakself;
@@ -594,7 +720,7 @@
         _tipsLabel.font = [UIFont gy_CNFontSizeS3];
         _tipsLabel.textColor = [UIColor whiteColor];
         _tipsLabel.text = @"轻触拍照，长按拍摄";
-        _tipsLabel.hidden = YES;
+        _tipsLabel.hidden = !_supportVideo;
     }
     return _tipsLabel;
 }
@@ -606,5 +732,4 @@
     }
     return _pinchGesture;
 }
-
 @end

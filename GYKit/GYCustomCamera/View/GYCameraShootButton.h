@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GYCameraShootButton : UIView
 
+- (instancetype)initWithSupportVideo:(BOOL)supportVideo;
+
 @property (nonatomic, assign) CGSize buttonSize;
-@property (nonatomic, assign) BOOL supportVideo;
 @property (nonatomic, copy) void(^finishTakePhoto)(void); //拍照
 @property (nonatomic, copy) void(^beginShootVideo)(void); //开始视频拍摄
 @property (nonatomic, copy) void(^finishShootVideo)(void); //结束视频拍摄

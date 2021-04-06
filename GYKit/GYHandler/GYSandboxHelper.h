@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  video基础目录
  */
-+ (NSString *)gy_videoCache_basePath;
++ (NSString *)gy_videoCache_basePath:(NSString *)videoName;
 /**
  video录制中写入路径
  */

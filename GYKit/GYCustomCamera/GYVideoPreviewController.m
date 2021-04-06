@@ -74,7 +74,7 @@
     [self.view addSubview:self.viewBtns];
     const CGFloat hMargin = 40;
     const CGFloat bottomMargin = self.safeAreaInsets.bottom + kGYKIT_TABBAR_ORIGIN_HEIGHT;
-    UIImage *image = [UIImage imageNamed:@"camera_transform"];
+    UIImage *image = [UIImage imageNamed:@"camera_back_black"];
     [_viewBtns mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(image.size);
         make.left.mas_equalTo(hMargin);
@@ -174,6 +174,10 @@
     }
 }
 
+- (UIModalPresentationStyle)modalPresentationStyle {
+    return UIModalPresentationFullScreen;
+}
+
 #pragma mark - getter and setter
 - (UIView *)viewBtns {
     if (!_viewBtns) {
@@ -230,10 +234,7 @@
                                                                                   allowRepeat:allowRepeat];
     controller.onClickCancel = cancelBlock;
     controller.onClickFinish = finishBlock;
-    GYAppRootController *appRootController = [[GYAppRootController alloc] initWithRootViewController:controller];
-    [self presentViewController:appRootController
-                       animated:YES
-                     completion:nil];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

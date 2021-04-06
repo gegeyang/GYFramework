@@ -59,9 +59,9 @@
 
 
 @implementation GYSandboxHelper (GYVideoCache)
-+ (NSString *)gy_videoCache_basePath {
++ (NSString *)gy_videoCache_basePath:(NSString *)videoName {
     NSString *basePath = [self libAppSupportPath];
-    basePath = [basePath stringByAppendingString:@"/video_cache"];
+    basePath = [basePath stringByAppendingFormat:@"/video_cache/%@", videoName];
     if (![self checkAndCreatePath:basePath]) {
         return nil;
     }
@@ -69,17 +69,17 @@
 }
 
 + (NSString *)gy_videoCache_inputPath:(NSString *)videoName {
-    NSString *floderPath = [[self gy_videoCache_basePath] stringByAppendingFormat:@"/%@", videoName];
+    NSString *floderPath = [self gy_videoCache_basePath:videoName];
     return [floderPath stringByAppendingString:@"/input.mp4"];
 }
 
 + (NSString *)gy_videoCache_savePath:(NSString *)videoName {
-    NSString *floderPath = [[self gy_videoCache_basePath] stringByAppendingFormat:@"/%@", videoName];
+    NSString *floderPath = [self gy_videoCache_basePath:videoName];
     return [floderPath stringByAppendingString:@"/save.mp4"];
 }
 
 + (NSString *)gy_videoCache_coverImagePath:(NSString *)videoName {
-    NSString *floderPath = [[self gy_videoCache_basePath] stringByAppendingFormat:@"/%@", videoName];
+    NSString *floderPath = [self gy_videoCache_basePath:videoName];
     return [floderPath stringByAppendingString:@"/cover_image.jpg"];
 }
 

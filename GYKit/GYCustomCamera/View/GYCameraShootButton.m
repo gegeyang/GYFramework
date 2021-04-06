@@ -20,7 +20,7 @@
 @interface GYCameraShootButton () {
     CGFloat _timeDuration;
 }
-
+@property (nonatomic, assign) BOOL supportVideo;
 @property (nonatomic, strong) CAShapeLayer *progressLayer;
 @property (nonatomic, strong) UIView *touchView;
 @property (nonatomic, strong) GYTimerTool *timerTool;
@@ -30,11 +30,17 @@
 
 @implementation GYCameraShootButton
 
-- (instancetype)init {
+- (instancetype)initWithSupportVideo:(BOOL)supportVideo {
     if (self = [super initWithFrame:CGRectMake(0, 0, CAMERA_BUTTON_WIDTH, CAMERA_BUTTON_WIDTH)]) {
+        self.supportVideo = supportVideo;
         self.layer.cornerRadius = CAMERA_BUTTON_WIDTH / 2.0;
         self.backgroundColor = [UIColor gy_color9];
         [self addSubview:self.touchView];
+        if (supportVideo) {
+            [self.touchView addGestureRecognizer:self.longPress];
+        } else {
+            [self.touchView removeGestureRecognizer:self.longPress];
+        }
     }
     return self;
 }
@@ -102,15 +108,6 @@
 #pragma mark - getter and setter
 - (CGSize)buttonSize {
     return CGSizeMake(CAMERA_BUTTON_WIDTH, CAMERA_BUTTON_WIDTH);
-}
-
-- (void)setSupportVideo:(BOOL)supportVideo {
-    _supportVideo = supportVideo;
-    if (supportVideo) {
-        [self.touchView addGestureRecognizer:self.longPress];
-    } else {
-        [self.touchView removeGestureRecognizer:self.longPress];
-    }
 }
 
 - (GYTimerTool *)timerTool {

@@ -113,7 +113,7 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
             break;
         case 3: {
             [self gy_privacy_checkAndOpenCameraWithCompletion:^{
-                GYCustomCameraController *cameraVC  = [[GYCustomCameraController alloc] init];
+                GYCustomCameraController *cameraVC  = [[GYCustomCameraController alloc] initWithSupportVideo:YES];
                 [self.navigationController pushViewController:cameraVC
                                                      animated:YES];
             }];
