@@ -13,6 +13,7 @@
 #import "GYMineScrollPageRootController.h"
 #import <Flutter/Flutter.h>
 #import "GYCustomCameraController.h"
+#import "GYWaterListController.h"
 #import "NSObject+GYPrivacyExtend.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
@@ -32,7 +33,8 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
             @"Collection List",
             @"Controller嵌套联动",
             @"Flutter页面",
-            @"自定义相机"
+            @"自定义相机",
+            @"瀑布流"
         ];
     }
     return self;
@@ -117,6 +119,11 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
                 [self.navigationController pushViewController:cameraVC
                                                      animated:YES];
             }];
+        }
+            break;
+        case 4: {
+            GYWaterListController *listVC = [[GYWaterListController alloc] init];
+            [self.navigationController pushViewController:listVC animated:YES];
         }
             break;
         default:
