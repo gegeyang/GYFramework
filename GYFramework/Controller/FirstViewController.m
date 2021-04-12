@@ -15,6 +15,8 @@
 #import "GYCustomCameraController.h"
 #import "GYWaterListController.h"
 #import "NSObject+GYPrivacyExtend.h"
+#import "GYGalleryViewController.h"
+#import "GYGalleryImageInfo.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
@@ -34,7 +36,8 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
             @"Controller嵌套联动",
             @"Flutter页面",
             @"自定义相机",
-            @"瀑布流"
+            @"瀑布流",
+            @"Gallery"
         ];
     }
     return self;
@@ -126,6 +129,11 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
             [self.navigationController pushViewController:listVC animated:YES];
         }
             break;
+        case 5: {
+            GYGalleryViewController *galleryVC = [[GYGalleryViewController alloc] initWithImageList:[self imageList]];
+            [self.navigationController pushViewController:galleryVC animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -133,6 +141,21 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - getter and setter
+- (NSArray *)imageList {
+    GYGalleryImageInfo *info1 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/057/866/603/000/1603866057/1603866057Psc6GH.jpg"}];
+    GYGalleryImageInfo *info2 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i.carimg.com/zf/0/110/056/588/000/1588056110/1588056110Ikh1kD.jpg"}];
+    GYGalleryImageInfo *info3 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/122/993/587/000/1587993122/1587993122SJNHIu.png"}];
+    GYGalleryImageInfo *info4 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i.carimg.com/zf/0/133/994/587/000/1587994133/1587994133HwD2Ay.jpg"}];
+    GYGalleryImageInfo *info5 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i.carimg.com/zf/0/194/994/587/000/1587994194/15879941947IHZ9G.jpg"}];
+    GYGalleryImageInfo *info6 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/068/995/587/000/1587995068/1587995068nquGLq.jpg"}];
+    GYGalleryImageInfo *info7 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/068/995/587/000/1587995068/15879950686NQ7IQ.jpg"}];
+    GYGalleryImageInfo *info8 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/068/995/587/000/1587995068/1587995068fgv2aE.jpg"}];
+    GYGalleryImageInfo *info9 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/128/995/587/000/1587995128/1587995128TNqJC2.jpg"}];
+    GYGalleryImageInfo *info10 = [GYGalleryImageInfo infoWithDictionary:@{@"cover" : @"https://i1.carimg.com/0/photo/0/128/995/587/000/1587995128/1587995128cNGUPL.jpg"}];
+    return @[info1, info2, info3, info4, info5, info6, info7, info8, info9, info10];
 }
 
 @end
