@@ -13,7 +13,7 @@
 
 @interface GYGalleryCollectionCell ()
 
-@property (nonatomic, strong) GYImageZoomingScrollView *scollView;
+@property (nonatomic, strong) GYImageZoomingScrollView *scrollView;
 @property (nonatomic, strong) UIImageView *currentImageview;
 @property (nonatomic, strong) UIImage *currentImage;
 
@@ -23,8 +23,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
-        [self addSubview:self.scollView];
-        [self.scollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self addSubview:self.scrollView];
+        [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.bottom.mas_equalTo(0);
         }];
     }
@@ -40,7 +40,7 @@
         case GYGalleryItemTypeImage: {
             id<GYGalleryImageObject> imageObject = (id)itemObject;
             _currentImage = imageObject.galleryImage ?: [UIImage imageNamed:@"common_image_failure"];
-            [self.scollView displayImage:_currentImage];
+            [self.scrollView displayImage:_currentImage];
         }
             break;
         case GYGalleryItemTypeUrl: {
@@ -53,7 +53,7 @@
                 failedImage = cachedImage;
             }
             _currentImage = placeImage;
-            [self.scollView displayImage:placeImage];
+            [self.scrollView displayImage:placeImage];
             __weak typeof(self) weakself = self;
             [self.currentImageview gy_setImageURLString:urlObject.galleryBigUrlString
                                  normalPlaceholderImage:placeImage
@@ -63,7 +63,7 @@
                 if (image) {
                     __strong typeof(weakself) strongself = weakself;
                     strongself.currentImage = image;
-                    [strongself.scollView displayImage:image];
+                    [strongself.scrollView displayImage:image];
                 }
             }];
         }
@@ -85,4 +85,12 @@
     }
     return _currentImageview;
 }
+
+- (GYImageZoomingScrollView *)scrollView {
+    if (!_scrollView) {
+        _scrollView = [[GYImageZoomingScrollView alloc] initWithFrame:self.bounds];
+    }
+    return _scrollView;
+}
+
 @end

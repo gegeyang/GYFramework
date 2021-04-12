@@ -27,6 +27,7 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
     if (self = [super init]) {
         self.imageList = imageList;
         self.dataSource = imageList;
+        self.selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     }
     return self;
 }
@@ -56,6 +57,11 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
     self.collectionView.allowsSelection = NO;
     [self.collectionView registerClass:[GYGalleryCollectionCell class]
             forCellWithReuseIdentifier:kGYGalleryCollectionCellReuseIdentifier];
+    [self.collectionView reloadData];
+    [self.collectionView scrollToItemAtIndexPath:self.selectedIndexPath
+                                atScrollPosition:UICollectionViewScrollPositionNone
+                                        animated:NO];
+    [self updateTitleInfo];
 }
 
 - (void)viewContentInsetDidChanged {
@@ -68,6 +74,37 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
 #pragma mark - implementaction
 - (void)onClickBack:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    const NSInteger oldSection = self.selectedIndexPath.section;
+    const NSInteger sectionCount = self.collectionView.numberOfSections;
+    const NSInteger rowCount = [self.collectionView numberOfItemsInSection:oldSection];
+    NSInteger newRow = roundf(scrollView.contentOffset.x / scrollView.gy_width);
+    NSInteger newSection = 0;
+    for (NSInteger sectionIndex = 0; sectionIndex < sectionCount; sectionIndex++) {
+        const NSInteger sectionItemCount = [self.collectionView numberOfItemsInSection:sectionIndex];
+        if (newRow >= sectionItemCount) {
+            newSection++;
+            newRow-=sectionItemCount;
+        } else {
+            break;
+        }
+    }
+    newSection = MAX(0, MIN(sectionCount - 1, newSection));
+    newRow = MAX(0, MIN(rowCount - 1, newRow));
+    self.selectedIndexPath = [NSIndexPath indexPathForRow:newRow
+                                                inSection:newSection];
+    [self updateTitleInfo];
+}
+
+- (void)updateTitleInfo {
+    NSString *strPageNumber = [NSString stringWithFormat:@"%@ / %@",
+                               @(self.selectedIndexPath.row + 1),
+                               @([self.dataSource numberOfDatasInSection:0])];
+    self.pageNumberLabel.text = strPageNumber;
+    self.viewNavigationBar.hidden = NO;
 }
 
 #pragma mark - UICollectionViewDataSource and UICollectionViewDelegateFlowLayout
@@ -88,6 +125,10 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
             break;
     }
     return nil;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return collectionView.bounds.size;
 }
 
 #pragma mark - getter and setter

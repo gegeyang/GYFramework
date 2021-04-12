@@ -42,7 +42,7 @@
     self.zoomScale = 1;
     self.contentSize = CGSizeMake(0, 0);
     // Set image
-    [self.imageView setImage:image];
+    self.imageView.image = image;
     self.imageView.hidden = NO;
     // Setup photo frame
     CGRect photoImageViewFrame;
@@ -150,5 +150,13 @@
 }
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view atScale:(CGFloat)scale {
+}
+
+#pragma mark - getter and setter
+- (UIImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] init];
+    }
+    return _imageView;
 }
 @end

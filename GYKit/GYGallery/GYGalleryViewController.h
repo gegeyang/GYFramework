@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithImageList:(NSArray<id<GYGalleryItemObject>>*)imageList;
 
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END
