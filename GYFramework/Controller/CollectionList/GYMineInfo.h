@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GYMineInfo : NSObject <GYMineInfoObject>
+@interface GYMineInfo : NSObject <GYMineInfoObject, NSCoding, NSCopying>
 
 + (instancetype)infoWithDictionary:(NSDictionary *)dict;
 

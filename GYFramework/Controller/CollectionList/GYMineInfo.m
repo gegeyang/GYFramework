@@ -30,4 +30,24 @@
     return self;
 }
 
+#pragma mark - NSCoding
+- (void)encodeWithCoder:(NSCoder *)coder {
+    [coder encodeObject:_infoTitle
+                 forKey:@"infoTitle"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    if (self = [super init]) {
+        _infoTitle = [coder decodeObjectForKey:@"infoTitle"];
+    }
+    return self;
+}
+
+#pragma mark - NSCopying
+- (instancetype)copyWithZone:(NSZone *)zone {
+    GYMineInfo *info = [[[self class] allocWithZone:zone] init];
+    info.infoTitle = self.infoTitle;
+    return info;
+}
+
 @end
