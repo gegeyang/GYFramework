@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GYWaterListCell : UICollectionViewCell
 
+- (void)updateCellInfo:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

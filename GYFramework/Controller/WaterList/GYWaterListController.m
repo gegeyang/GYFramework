@@ -51,6 +51,7 @@ static NSString *const kGYWaterListCellReuseIdentifier = @"kGYWaterListCellReuse
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GYWaterListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kGYWaterListCellReuseIdentifier
                                                                       forIndexPath:indexPath];
+    [cell updateCellInfo:indexPath];
     return cell;
 }
 
@@ -80,9 +81,9 @@ static NSString *const kGYWaterListCellReuseIdentifier = @"kGYWaterListCellReuse
                         layout:(UICollectionViewLayout *)collectionViewLayout
         insetForSectionAtIndex:(NSInteger)section {
     if (section == 0) {
-        return UIEdgeInsetsMake(GYKIT_GENERAL_H_MARGIN, GYKIT_GENERAL_H_MARGIN, GYKIT_GENERAL_H_MARGIN, GYKIT_GENERAL_H_MARGIN);
+        return UIEdgeInsetsMake(GYKIT_GENERAL_H_MARGIN, GYKIT_GENERAL_H_MARGIN, 0, GYKIT_GENERAL_H_MARGIN);
     }
-    return UIEdgeInsetsMake(GYKIT_GENERAL_H_MARGIN * 2, GYKIT_GENERAL_H_MARGIN * 2, GYKIT_GENERAL_H_MARGIN * 2, GYKIT_GENERAL_H_MARGIN * 2);
+    return UIEdgeInsetsMake(0, GYKIT_GENERAL_H_MARGIN * 2, GYKIT_GENERAL_H_MARGIN * 2, GYKIT_GENERAL_H_MARGIN * 2);
 }
 
 - (CGFloat)waterlayout_collectionView:(UICollectionView *)collectionView

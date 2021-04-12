@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 多个分区时，设置sectionInsets.top不起作用。可通过优化columnHeightArray来实现。
+ 多个分区时，设置不同的column会出现问题。可通过优化columnHeightArray来实现。
+ */
+
 @class GYWaterFlowLayout;
 NS_ASSUME_NONNULL_BEGIN
 
