@@ -56,7 +56,6 @@
     [super viewContentInsetDidChanged];
     UIEdgeInsets inset = UIEdgeInsetsZero;
     inset.top += self.navigationBar.gy_height;
-    inset.bottom += self.safeAreaInsets.bottom;
     inset = GYJoinEdgeInsets(inset, self.contentInsetsFromParent);
     self.collectionView.contentInset = inset;
     [self.collectionView.gy_refreshHeader updateContentInsets:inset];

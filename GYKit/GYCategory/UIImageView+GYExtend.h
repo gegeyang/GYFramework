@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
       normalPlaceholderImage:(UIImage *)normalPlaceholderImage
       failedPlaceholderImage:(UIImage *)failedPlaceholderImage
        emptyPlaceholderImage:(UIImage *)emptyPlaceholderImage
-                  completion:(void(^)(UIImage *))completion;
+                  completion:(void(^ __nullable)(UIImage *))completion;
 
 @end
 

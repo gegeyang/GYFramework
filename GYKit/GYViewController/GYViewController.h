@@ -31,15 +31,14 @@ typedef NS_OPTIONS(NSInteger, GYAutoAdjust) {
 - (void)forceRefresh:(BOOL)ignoreIsRefresh;
 - (void)switchToParams:(NSDictionary *)params;
 - (void)viewContentInsetDidChanged NS_REQUIRES_SUPER;
+- (void)onApplicationWillResignActive:(NSNotificationCenter *)notify;
+- (void)onApplicationDidBecomeActive:(NSNotification *)notify;
 
 @end
 
 @interface GYViewController(GYAnimatedTransitioningExtend)
 
 - (GYVCPushAnimationMode)preferredPushAnimationMode; // Defaults to GYVCPushNormalMode
-
-- (void)onApplicationWillResignActive:(NSNotificationCenter *)notify;
-- (void)onApplicationDidBecomeActive:(NSNotification *)notify;
 
 @end
 
