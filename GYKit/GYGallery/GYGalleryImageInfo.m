@@ -11,6 +11,8 @@
 @interface GYGalleryImageInfo ()
 
 @property (nonatomic, copy) NSString *galleryImageUrl;
+@property (nonatomic, assign) CGFloat imageWidth;
+@property (nonatomic, assign) CGFloat imageHeight;
 
 @end
 
@@ -26,11 +28,21 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     if (self = [super init]) {
         _galleryImageUrl = [dict gy_stringValue:@"cover"];
+        _imageWidth = [[dict gy_stringValue:@"width"] floatValue];
+        _imageHeight = [[dict gy_stringValue:@"height"] floatValue];
     }
     return self;
 }
 
 #pragma mark - GYGalleryItemObject
+- (CGFloat)galleryImageRadio {
+    if (_imageWidth == 0.0 | _imageHeight == 0.0) {
+        return 1;
+    } else {
+        return _imageHeight / _imageWidth;
+    }
+}
+
 - (GYGalleryItemType)galleryItemType {
     return GYGalleryItemTypeUrl;
 }

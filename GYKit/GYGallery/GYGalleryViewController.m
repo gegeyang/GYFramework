@@ -12,13 +12,14 @@
 
 static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCollectionCellReuseIdentifier";
 
-@interface GYGalleryViewController ()
+@interface GYGalleryViewController () <UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSArray *imageList;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIView *viewNavigationBar;
 @property (nonatomic, strong) UILabel *pageNumberLabel;
 @property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
 @end
 
@@ -61,6 +62,11 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
     [self.collectionView scrollToItemAtIndexPath:self.selectedIndexPath
                                 atScrollPosition:UICollectionViewScrollPositionNone
                                         animated:NO];
+    //
+    self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onDoubleTap:)];
+    self.doubleTap.numberOfTapsRequired = 2;
+    self.doubleTap.delegate = self;
+    [self.view addGestureRecognizer:self.doubleTap];
     [self updateTitleInfo];
 }
 
@@ -74,6 +80,11 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
 #pragma mark - implementaction
 - (void)onClickBack:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)onDoubleTap:(UITapGestureRecognizer *)gesture {
+    GYGalleryCollectionCell *cell = (GYGalleryCollectionCell *)[self.collectionView cellForItemAtIndexPath:self.selectedIndexPath];
+    [cell doubleTapOnPoint:[gesture locationInView:cell]];
 }
 
 #pragma mark - UIScrollViewDelegate

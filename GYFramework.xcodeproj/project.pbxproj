@@ -55,6 +55,9 @@
 		47173C1725E4FA52002F9758 /* GYMineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1625E4FA52002F9758 /* GYMineInfo.m */; };
 		47173C1E25E4FCBC002F9758 /* NSString+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */; };
 		47173C2725E4FCE0002F9758 /* NSDictionary+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */; };
+		4723EDC6262587B900164C20 /* GYWaterGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDC5262587B900164C20 /* GYWaterGalleryController.m */; };
+		4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */; };
+		4723EDD52625883000164C20 /* GYWaterGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDD42625883000164C20 /* GYWaterGalleryCell.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
 		4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -292,6 +295,12 @@
 		47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GYExtend.m"; sourceTree = "<group>"; };
 		47173C2525E4FCE0002F9758 /* NSDictionary+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+GYExtend.h"; sourceTree = "<group>"; };
 		47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+GYExtend.m"; sourceTree = "<group>"; };
+		4723EDC4262587B900164C20 /* GYWaterGalleryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterGalleryController.h; sourceTree = "<group>"; };
+		4723EDC5262587B900164C20 /* GYWaterGalleryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryController.m; sourceTree = "<group>"; };
+		4723EDCD262587D100164C20 /* GYWaterGalleryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterGalleryModel.h; sourceTree = "<group>"; };
+		4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryModel.m; sourceTree = "<group>"; };
+		4723EDD32625883000164C20 /* GYWaterGalleryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterGalleryCell.h; sourceTree = "<group>"; };
+		4723EDD42625883000164C20 /* GYWaterGalleryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryCell.m; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4743D9692578C1950084B971 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4743D98D2578CD780084B971 /* UIButton+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYExtend.h"; sourceTree = "<group>"; };
@@ -831,6 +840,19 @@
 			path = CollectionList;
 			sourceTree = "<group>";
 		};
+		4723EDC32625878E00164C20 /* WaterList+Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				4723EDC4262587B900164C20 /* GYWaterGalleryController.h */,
+				4723EDC5262587B900164C20 /* GYWaterGalleryController.m */,
+				4723EDD32625883000164C20 /* GYWaterGalleryCell.h */,
+				4723EDD42625883000164C20 /* GYWaterGalleryCell.m */,
+				4723EDCD262587D100164C20 /* GYWaterGalleryModel.h */,
+				4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */,
+			);
+			path = "WaterList+Gallery";
+			sourceTree = "<group>";
+		};
 		4743D9952578D04A0084B971 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -1112,6 +1134,7 @@
 		47AC6A2425E49D4800C1E9C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4723EDC32625878E00164C20 /* WaterList+Gallery */,
 				4757A14F262052B3005A0AA8 /* WaterList */,
 				47B933C325E6482D00C942E5 /* ScrollPageView */,
 				47173C0325E4F11D002F9758 /* CollectionList */,
@@ -1459,6 +1482,7 @@
 				3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */,
 				47AC202A2624345500FEBCCD /* SDImageCache.m in Sources */,
 				4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */,
+				4723EDD52625883000164C20 /* GYWaterGalleryCell.m in Sources */,
 				47173C1E25E4FCBC002F9758 /* NSString+GYExtend.m in Sources */,
 				47AC20352624345500FEBCCD /* SDWebImageImageIOCoder.m in Sources */,
 				4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */,
@@ -1481,6 +1505,7 @@
 				3AACFA3420F2FBCA009E9125 /* GYBorderView.m in Sources */,
 				4743D9B52578D04A0084B971 /* MASConstraintMaker.m in Sources */,
 				47173C1725E4FA52002F9758 /* GYMineInfo.m in Sources */,
+				4723EDC6262587B900164C20 /* GYWaterGalleryController.m in Sources */,
 				3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */,
 				3A98A8512148F4F900B958B8 /* GYLoadStatusObject.m in Sources */,
 				47AC201A2624345500FEBCCD /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -1495,6 +1520,7 @@
 				4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				3AE67C6120F5F41E004E2746 /* GYCollectionViewController.m in Sources */,
 				47808FB02609D5E4003C4787 /* NSObject+GYAlertExtend.m in Sources */,
+				4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */,
 				47AC20202624345500FEBCCD /* FLAnimatedImageView.m in Sources */,
 				3AACFA2520F0F0B7009E9125 /* GYTabbarItemInfo.m in Sources */,
 				47AC20312624345500FEBCCD /* UIImage+MemoryCacheCost.m in Sources */,
@@ -1702,7 +1728,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
 				INFOPLIST_FILE = GYFramework/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1725,7 +1751,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
 				INFOPLIST_FILE = GYFramework/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

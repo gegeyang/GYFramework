@@ -68,7 +68,8 @@
     //item宽高
     const CGFloat itemWidth = (collectionWidth - sectionEdgeInsets.left - sectionEdgeInsets.right - (colunmCount - 1) * coulumInteritemSpacing) / colunmCount;
     const CGFloat itemHeight = [self.flowLayoutDelegate waterlayout_collectionView:self.collectionView
-                                                                            layout:self heightForItem:itemWidth
+                                                                            layout:self
+                                                                     heightForItem:itemWidth
                                                                        atIndexPath:indexPath];
     
     // 找出最短的那一列

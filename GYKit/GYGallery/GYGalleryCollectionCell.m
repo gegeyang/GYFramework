@@ -45,7 +45,7 @@
             break;
         case GYGalleryItemTypeUrl: {
             id<GYGalleryUrlObject> urlObject = (id)itemObject;
-            UIImage *placeImage = nil;
+            UIImage *placeImage = [UIImage imageNamed:@"common_image_normal"];
             UIImage *failedImage = [UIImage imageNamed:@"common_image_failure"];
             UIImage *cachedImage = [UIImageView sd_cachedImageForURLString:urlObject.galleryBigUrlString] ? : [UIImageView sd_cachedImageForURLString:urlObject.gallerySmallUrlString];
             if (cachedImage) {
@@ -77,6 +77,9 @@
     }
 }
 
+- (void)doubleTapOnPoint:(CGPoint)aPoint {
+    [self.scrollView doubleTapOnPoint:[self convertPoint:aPoint toView:self.scrollView]];
+}
 
 #pragma mark - getter and setter
 - (UIImageView *)currentImageview {

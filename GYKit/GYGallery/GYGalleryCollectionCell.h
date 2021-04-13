@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GYGalleryCollectionCell : UICollectionViewCell
 
 - (void)updateCellInfo:(id<GYGalleryItemObject>)itemObject;
+- (void)doubleTapOnPoint:(CGPoint)aPoint;
 
 @end
 
