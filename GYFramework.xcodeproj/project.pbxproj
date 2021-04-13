@@ -58,6 +58,7 @@
 		4723EDC6262587B900164C20 /* GYWaterGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDC5262587B900164C20 /* GYWaterGalleryController.m */; };
 		4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */; };
 		4723EDD52625883000164C20 /* GYWaterGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDD42625883000164C20 /* GYWaterGalleryCell.m */; };
+		4723EDDE2625944700164C20 /* GYCollectionViewController+GalleryExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
 		4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -301,6 +302,8 @@
 		4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryModel.m; sourceTree = "<group>"; };
 		4723EDD32625883000164C20 /* GYWaterGalleryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterGalleryCell.h; sourceTree = "<group>"; };
 		4723EDD42625883000164C20 /* GYWaterGalleryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryCell.m; sourceTree = "<group>"; };
+		4723EDDC2625944700164C20 /* GYCollectionViewController+GalleryExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYCollectionViewController+GalleryExtend.h"; sourceTree = "<group>"; };
+		4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GYCollectionViewController+GalleryExtend.m"; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4743D9692578C1950084B971 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4743D98D2578CD780084B971 /* UIButton+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYExtend.h"; sourceTree = "<group>"; };
@@ -1028,6 +1031,8 @@
 				47A6020B2624279B00093DC2 /* GYGalleryItemObject.h */,
 				47AC204126243B5500FEBCCD /* GYGalleryImageInfo.h */,
 				47AC204226243B5500FEBCCD /* GYGalleryImageInfo.m */,
+				4723EDDC2625944700164C20 /* GYCollectionViewController+GalleryExtend.h */,
+				4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */,
 			);
 			path = GYGallery;
 			sourceTree = "<group>";
@@ -1488,6 +1493,7 @@
 				4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */,
 				4757A15B26205332005A0AA8 /* GYWaterListCell.m in Sources */,
 				47AC20242624345500FEBCCD /* SDWebImageCoderHelper.m in Sources */,
+				4723EDDE2625944700164C20 /* GYCollectionViewController+GalleryExtend.m in Sources */,
 				47A6020426241D0900093DC2 /* GYGalleryViewController.m in Sources */,
 				47AC201E2624345500FEBCCD /* FLAnimatedImageView+WebCache.m in Sources */,
 				47AC20272624345500FEBCCD /* SDWebImageCoder.m in Sources */,

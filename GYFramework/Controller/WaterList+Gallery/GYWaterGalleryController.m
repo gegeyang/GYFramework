@@ -12,6 +12,7 @@
 #import "GYWaterGalleryCell.h"
 #import "GYWaterFlowLayout.h"
 #import "GYGalleryItemObject.h"
+#import "GYCollectionViewController+GalleryExtend.h"
 
 static NSString *const kGYWaterGalleryCellReuseIdentifier = @"kGYWaterGalleryCellReuseIdentifier";
 
@@ -55,6 +56,11 @@ static NSString *const kGYWaterGalleryCellReuseIdentifier = @"kGYWaterGalleryCel
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self gy_gallery_beginGallery:self.dataModel.arrFetchResult
+            indexPathInCollection:indexPath];
+}
+
 #pragma mark - GYWaterFlowLayoutDelegate
 - (NSInteger)waterlayout_collectionView:(UICollectionView *)collectionView
                                  layout:(GYWaterFlowLayout *)collectionViewLayout
@@ -79,13 +85,13 @@ static NSString *const kGYWaterGalleryCellReuseIdentifier = @"kGYWaterGalleryCel
 - (CGFloat)waterlayout_collectionView:(UICollectionView *)collectionView
                                layout:(GYWaterFlowLayout *)collectionViewLayout
   minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return GYKIT_GENERAL_SPACING2;
+    return GYKIT_GENERAL_H_MARGIN;
 }
 
 - (CGFloat)waterlayout_collectionView:(UICollectionView *)collectionView
                                layout:(GYWaterFlowLayout *)collectionViewLayout
     minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return GYKIT_GENERAL_SPACING2;
+    return GYKIT_GENERAL_H_MARGIN;
 }
 
 #pragma makr - getter and setter

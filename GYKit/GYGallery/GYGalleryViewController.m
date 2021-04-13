@@ -62,11 +62,12 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
     [self.collectionView scrollToItemAtIndexPath:self.selectedIndexPath
                                 atScrollPosition:UICollectionViewScrollPositionNone
                                         animated:NO];
-    //
+    //手势相关
     self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onDoubleTap:)];
     self.doubleTap.numberOfTapsRequired = 2;
     self.doubleTap.delegate = self;
     [self.view addGestureRecognizer:self.doubleTap];
+
     [self updateTitleInfo];
 }
 

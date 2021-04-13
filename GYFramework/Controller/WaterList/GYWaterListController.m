@@ -58,7 +58,7 @@ static NSString *const kGYWaterListCellReuseIdentifier = @"kGYWaterListCellReuse
 - (NSInteger)waterlayout_collectionView:(UICollectionView *)collectionView
                                  layout:(GYWaterFlowLayout *)collectionViewLayout
        numberOfColumnsForSectionAtIndex:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (CGFloat)waterlayout_collectionView:(UICollectionView *)collectionView
