@@ -7,6 +7,8 @@
 //
 
 #import "GYViewControllerTransition.h"
+#import "GYGalleryAnimationDelegate.h"
+#import "GYCoordinatingMediator.h"
 
 @interface GYViewControllerTransition ()
 
@@ -58,6 +60,82 @@
     }];
 }
 
+- (void)doGalleryPushAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    GYViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    GYViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    NSAssert([toVC conformsToProtocol:@protocol(GYGalleryAnimationDelegate)], @"!!!!%@ must conformsToProtocol GYGalleryAnimationDelegate", toVC);
+    id<GYGalleryAnimationDelegate> animationDelegate = (id)toVC;
+    UIView *collectionView = [toVC valueForKeyPath:@"collectionView"];
+    UIImage *galleryImage = animationDelegate.galleryImage;
+    if (!galleryImage) {
+        galleryImage = [UIImage imageNamed:@"common_image_normal"];
+    }
+    const CGRect fromRect = [animationDelegate galleryConvertFrameToView:fromVC.view];
+    UIImageView *tempView = [[UIImageView alloc] init];
+    tempView.image = galleryImage;
+    
+    const CGSize boundsSize = toVC.view.bounds.size;
+    CGSize imageSize = galleryImage ? galleryImage.size : boundsSize;
+    //获取图片与目标控制器的最大缩放比
+    CGFloat rate = MAX(imageSize.width / boundsSize.width, imageSize.height / boundsSize.height);
+    CGRect rcTarget;
+    rcTarget.size.width = roundf(imageSize.width / rate);
+    rcTarget.size.height = roundf(imageSize.height / rate);
+    rcTarget.origin.x = roundf((boundsSize.width - rcTarget.size.width) / 2);
+    rcTarget.origin.y = roundf((boundsSize.height - rcTarget.size.height) / 2);
+    tempView.frame = CGRectIsNull(fromRect) ? rcTarget : fromRect;
+    
+    toVC.view.alpha = 0;
+    collectionView.hidden = YES;
+    [containerView addSubview:toVC.view];
+    [containerView addSubview:tempView];
+    //开始动画
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                     animations:^{
+        tempView.frame = rcTarget;
+        toVC.view.alpha = 1;
+    } completion:^(BOOL finished) {
+        collectionView.hidden = NO;
+        [tempView removeFromSuperview];
+        //如果动画过渡取消了就标记不完成，否则才完成，这里可以直接写YES，如果有手势过渡才需要判断，必须标记，否则系统不会中动画完成的部署，会出现无法交互之类的bug
+        [transitionContext completeTransition:YES];
+    }];
+}
+
+- (void)doGalleryPopAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
+    UIView *containerView = [transitionContext containerView];
+    GYViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    GYViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    NSAssert([fromVC conformsToProtocol:@protocol(GYGalleryAnimationDelegate)], @"!!!!%@ must conformsToProtocol GYGalleryAnimationDelegate", fromVC);
+    id<GYGalleryAnimationDelegate> animationDelegate = (id)fromVC;
+    UIView *collectionView = [fromVC valueForKeyPath:@"collectionView"];
+    
+    UIImageView *tempView = [[UIImageView alloc] initWithImage:animationDelegate.galleryImage];
+    tempView.contentMode = UIViewContentModeScaleAspectFill;
+    tempView.frame = animationDelegate.galleryImageViewFrameToWindow;
+    collectionView.hidden = YES;
+    UIView *tempToView = [toVC.view snapshotViewAfterScreenUpdates:NO];
+    [containerView insertSubview:tempToView atIndex:0];
+    [containerView insertSubview:toVC.view atIndex:0];
+    [containerView addSubview:tempView];
+    
+    CGRect toFrame = [animationDelegate galleryConvertFrameToView:[GYCoordinatingMediator shareInstance].tabbarViewController.view];
+    if (CGRectIsNull(toFrame)) {
+        toFrame = tempView.frame;
+    }
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                     animations:^{
+        tempView.frame = toFrame;
+        fromVC.view.alpha = 0;
+    } completion:^(BOOL finished) {
+        //由于加入了手势必须判断
+        [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
+        [tempView removeFromSuperview];
+        [tempToView removeFromSuperview];
+    }];
+}
+
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
     return 0.3;
@@ -70,6 +148,12 @@
             break;
         case GYVCPop:
             [self doPopAnimation:transitionContext];
+            break;
+        case GYVCGalleryPush:
+            [self doGalleryPushAnimation:transitionContext];
+            break;
+        case GYVCGalleryPop:
+            [self doGalleryPopAnimation:transitionContext];
             break;
         default:
             break;

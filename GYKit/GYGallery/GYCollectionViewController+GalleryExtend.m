@@ -10,6 +10,14 @@
 #import "GYGalleryViewController.h"
 #import <objc/runtime.h>
 
+@implementation UIView(GalleryExtend)
+
+- (CGRect)imageFrameAtIndex:(NSInteger)index {
+    return self.bounds;
+}
+
+@end
+
 @implementation GYCollectionViewController (GalleryExtend)
 
 static char kGalleryInCollection;
@@ -30,7 +38,27 @@ static char kGalleryInCollection;
     GYGalleryViewController *galleryVC = [[GYGalleryViewController alloc] initWithImageList:dataList];
     galleryVC.selectedIndexPath = [NSIndexPath indexPathForRow:indexPathInCollection.row
                                                      inSection:0];
+    galleryVC.delegate = self;
+    galleryVC.needExecuteAnimation = YES;
     [self.navigationController pushViewController:galleryVC animated:YES];
+}
+
+#pragma mark - GYGalleryViewControllerDelegate
+- (void)galleryViewController:(GYGalleryViewController *)galleryViewController
+              moveToIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+- (CGRect)galleryViewController:(GYGalleryViewController *)galleryViewController
+             convertFrameToView:(UIView *)view
+                    atIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:self.galleryIndexPathInCollection];
+    if (!cell) {
+        return CGRectNull;
+    }
+    CGRect frame = [cell imageFrameAtIndex:indexPath.row];
+    return [cell convertRect:frame
+                      toView:view];
 }
 
 @end

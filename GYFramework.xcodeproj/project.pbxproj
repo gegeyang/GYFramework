@@ -304,6 +304,7 @@
 		4723EDD42625883000164C20 /* GYWaterGalleryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryCell.m; sourceTree = "<group>"; };
 		4723EDDC2625944700164C20 /* GYCollectionViewController+GalleryExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYCollectionViewController+GalleryExtend.h"; sourceTree = "<group>"; };
 		4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GYCollectionViewController+GalleryExtend.m"; sourceTree = "<group>"; };
+		4723EDE22625B78B00164C20 /* GYGalleryAnimationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryAnimationDelegate.h; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4743D9692578C1950084B971 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4743D98D2578CD780084B971 /* UIButton+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYExtend.h"; sourceTree = "<group>"; };
@@ -503,6 +504,7 @@
 		47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineScrollPageRootController.m; sourceTree = "<group>"; };
 		47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYSegmentSliderBar.h; sourceTree = "<group>"; };
 		47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYSegmentSliderBar.m; sourceTree = "<group>"; };
+		47E5EA9D26297CF7001B18A3 /* GYGalleryViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryViewControllerDelegate.h; sourceTree = "<group>"; };
 		47F0DFA0260B2466005DFD5D /* GYVideoPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYVideoPreviewController.h; sourceTree = "<group>"; };
 		47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYVideoPreviewController.m; sourceTree = "<group>"; };
 		47F0DFA6260B27F1005DFD5D /* GYVideoAssertWriteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYVideoAssertWriteManager.h; sourceTree = "<group>"; };
@@ -1033,6 +1035,8 @@
 				47AC204226243B5500FEBCCD /* GYGalleryImageInfo.m */,
 				4723EDDC2625944700164C20 /* GYCollectionViewController+GalleryExtend.h */,
 				4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */,
+				4723EDE22625B78B00164C20 /* GYGalleryAnimationDelegate.h */,
+				47E5EA9D26297CF7001B18A3 /* GYGalleryViewControllerDelegate.h */,
 			);
 			path = GYGallery;
 			sourceTree = "<group>";

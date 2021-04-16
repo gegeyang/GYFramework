@@ -9,13 +9,16 @@
 #import "GYCollectionViewController.h"
 #import "GYGalleryItemObject.h"
 
+@protocol GYGalleryAnimationDelegate, GYGalleryViewControllerDelegate;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GYGalleryViewController : GYCollectionViewController
+@interface GYGalleryViewController : GYCollectionViewController <GYGalleryAnimationDelegate>
 
 - (instancetype)initWithImageList:(NSArray<id<GYGalleryItemObject>>*)imageList;
 
+@property (nonatomic, assign) BOOL needExecuteAnimation;
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+@property (nonatomic, weak) id<GYGalleryViewControllerDelegate> delegate;
 
 @end
 

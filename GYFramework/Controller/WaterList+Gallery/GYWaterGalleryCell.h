@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GYWaterGalleryCell : UICollectionViewCell
 
 - (void)updateCellInfo:(id<GYGalleryUrlObject>)itemInfo;
+- (CGRect)imageFrameAtIndex:(NSInteger)index;
 
 @end
 

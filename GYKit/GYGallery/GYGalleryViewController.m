@@ -9,6 +9,8 @@
 #import "GYGalleryViewController.h"
 #import "NSArray+GYListViewDataSource.h"
 #import "GYGalleryCollectionCell.h"
+#import "UIImageView+WebCache.h"
+#import "GYGalleryViewControllerDelegate.h"
 
 static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCollectionCellReuseIdentifier";
 
@@ -78,8 +80,14 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
     }];
 }
 
+- (GYVCPushAnimationMode)preferredPushAnimationMode {
+    return _needExecuteAnimation ? GYVCPushGalleryMode : GYVCPushNormalMode;
+}
+
 #pragma mark - implementaction
 - (void)onClickBack:(UIButton *)sender {
+    [self.delegate galleryViewController:self
+                         moveToIndexPath:self.selectedIndexPath];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -141,6 +149,52 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return collectionView.bounds.size;
+}
+
+#pragma mark - GYGalleryAnimationDelegate
+- (UIImage *)galleryImage {
+    id<GYGalleryImageObject> itemObject = [self.dataSource itemInfoAtIndexPath:self.selectedIndexPath];
+    if (!itemObject) {
+        return nil;
+    }
+    UIImage *cellImage = nil;
+    switch (itemObject.galleryItemType) {
+        case GYGalleryItemTypeVideo: {
+            id<GYGalleryVideoObject> videoObject = (id)itemObject;
+            if ([videoObject.galleryVideoUrl.scheme isEqualToString:@"file"]) {
+                cellImage = [UIImage imageWithContentsOfFile:videoObject.galleryVideoCover];
+            } else if(videoObject.galleryVideoCover.length > 0){
+                cellImage = [UIImageView sd_cachedImageForURLString:videoObject.galleryVideoCover];
+            } else {
+                cellImage = [UIImage imageNamed:@"common_image_normal"];
+            }
+        }
+            break;
+        default: {
+            id<GYGalleryUrlObject> urlObject = (id<GYGalleryUrlObject>)itemObject;
+            cellImage = [UIImageView sd_cachedImageForURLString:urlObject.galleryBigUrlString] ? : [UIImageView sd_cachedImageForURLString:urlObject.gallerySmallUrlString];
+            if (!cellImage) {
+                cellImage = [UIImage imageNamed:@"common_image_normal"];
+            }
+        }
+            break;
+    }
+    return cellImage;
+}
+
+- (CGRect)galleryImageViewFrameToWindow {
+    GYGalleryCollectionCell *galleryCell = (GYGalleryCollectionCell *)[self.collectionView cellForItemAtIndexPath:self.selectedIndexPath];
+    return [[UIApplication sharedApplication].keyWindow convertRect:galleryCell.imageViewFrame
+                                                           fromView:galleryCell];
+}
+
+- (CGRect)galleryConvertFrameToView:(UIView *)toView {
+    if (!self.delegate) {
+        return CGRectNull;
+    }
+    return [self.delegate galleryViewController:self
+                             convertFrameToView:toView
+                                    atIndexPath:self.selectedIndexPath];
 }
 
 #pragma mark - getter and setter

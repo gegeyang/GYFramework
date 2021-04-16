@@ -96,4 +96,9 @@
     return _scrollView;
 }
 
+- (CGRect)imageViewFrame {
+    return [self convertRect:self.scrollView.imageView.frame
+                    fromView:self.scrollView];
+}
+
 @end

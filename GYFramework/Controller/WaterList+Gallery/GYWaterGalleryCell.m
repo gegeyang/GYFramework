@@ -36,6 +36,12 @@
                                      completion:nil];
 }
 
+- (CGRect)imageFrameAtIndex:(NSInteger)index {
+    return [self convertRect:self.imageView.frame
+                    fromView:self.imageView];
+}
+
+
 #pragma mark - getter and setter
 - (UIImageView *)imageView {
     if (!_imageView) {

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GYGalleryCollectionCell : UICollectionViewCell
 
+@property (nonatomic, readonly) CGRect imageViewFrame;
 - (void)updateCellInfo:(id<GYGalleryItemObject>)itemObject;
 - (void)doubleTapOnPoint:(CGPoint)aPoint;
 

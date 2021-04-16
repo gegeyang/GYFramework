@@ -85,7 +85,7 @@
             break;
         case UINavigationControllerOperationPop:
             if ([fromVC isKindOfClass:[GYViewController class]]) {
-                return [self popAnimationForVC:(GYViewController *)toVC];
+                return [self popAnimationForVC:(GYViewController *)fromVC];
             }
             break;
         default:
