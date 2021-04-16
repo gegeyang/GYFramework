@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GYCollectionViewController (GalleryExtend) <GYGalleryViewControllerDelegate>
 
-@property (nonatomic, strong) NSIndexPath *galleryIndexPathInCollection;
-
 - (void)gy_gallery_beginGallery:(NSArray *)dataList
           indexPathInCollection:(NSIndexPath *)indexPathInCollection;
 

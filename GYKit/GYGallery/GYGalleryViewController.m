@@ -86,8 +86,6 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
 
 #pragma mark - implementaction
 - (void)onClickBack:(UIButton *)sender {
-    [self.delegate galleryViewController:self
-                         moveToIndexPath:self.selectedIndexPath];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

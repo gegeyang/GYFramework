@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @class GYGalleryViewController;
 @protocol GYGalleryViewControllerDelegate <NSObject>
 
-- (void)galleryViewController:(GYGalleryViewController *)galleryViewController
-              moveToIndexPath:(NSIndexPath *)indexPath;
 - (CGRect)galleryViewController:(GYGalleryViewController *)galleryViewController
              convertFrameToView:(UIView *)view
                     atIndexPath:(NSIndexPath *)indexPath;
