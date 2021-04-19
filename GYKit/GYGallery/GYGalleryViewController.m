@@ -22,7 +22,8 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
 @property (nonatomic, strong) UILabel *pageNumberLabel;
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
-
+@property (nonatomic, strong) UIPanGestureRecognizer *panGesture;
+ 
 @end
 
 @implementation GYGalleryViewController
@@ -69,6 +70,11 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
     self.doubleTap.numberOfTapsRequired = 2;
     self.doubleTap.delegate = self;
     [self.view addGestureRecognizer:self.doubleTap];
+    
+    //返回手势
+    _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPan:)];
+    _panGesture.delegate = self;
+    [self.view addGestureRecognizer:_panGesture];
 
     [self updateTitleInfo];
 }
@@ -92,6 +98,41 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
 - (void)onDoubleTap:(UITapGestureRecognizer *)gesture {
     GYGalleryCollectionCell *cell = (GYGalleryCollectionCell *)[self.collectionView cellForItemAtIndexPath:self.selectedIndexPath];
     [cell doubleTapOnPoint:[gesture locationInView:cell]];
+}
+
+- (void)onPan:(UIPanGestureRecognizer *)panGesture {
+    CGPoint point = [panGesture translationInView:self.view];
+    CGPoint velocity = [panGesture velocityInView:self.view];
+    GYGalleryBaseCell *baseCell = (GYGalleryBaseCell *)[self.collectionView cellForItemAtIndexPath:self.selectedIndexPath];
+    switch (panGesture.state) {
+        case UIGestureRecognizerStateBegan: {
+            self.viewNavigationBar.hidden = YES;
+        }
+            break;
+        case UIGestureRecognizerStateChanged: {
+            double percent = MAX(1 - fabs(point.y) / self.collectionView.gy_height, 0);
+            double s = MAX(percent, 0.5);
+            CGAffineTransform translation = CGAffineTransformMakeTranslation(point.x, point.y);
+            CGAffineTransform scale = CGAffineTransformMakeScale(s, s);
+            [baseCell updateTransform:CGAffineTransformConcat(translation, scale)];
+            NSLog(@"----(%@)----%@----", @(point.y), @(percent));
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled: {
+            if (fabs(point.y) > 200 || fabs(velocity.y) > 500) {
+                [self onClickBack:nil];
+            } else {
+                self.viewNavigationBar.hidden = NO;
+                [UIView animateWithDuration:0.3 animations:^{
+                    [baseCell updateTransform:CGAffineTransformIdentity];
+                }];
+            }
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -224,10 +265,11 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
         [_backButton addTarget:self
                         action:@selector(onClickBack:)
               forControlEvents:UIControlEventTouchUpInside];
+        _backButton.hidden = _needExecuteAnimation;
         [_viewNavigationBar addSubview:_backButton];
         
         [_pageNumberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(self.viewNavigationBar.mas_bottom);
+            make.centerY.mas_equalTo(self.backButton.mas_centerY);
             make.centerX.mas_equalTo(self.viewNavigationBar.mas_centerX);
         }];
         [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {

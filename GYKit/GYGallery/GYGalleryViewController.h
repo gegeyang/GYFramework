@@ -8,6 +8,7 @@
 
 #import "GYCollectionViewController.h"
 #import "GYGalleryItemObject.h"
+#import "GYGalleryAnimationDelegate.h"
 
 @protocol GYGalleryAnimationDelegate, GYGalleryViewControllerDelegate;
 NS_ASSUME_NONNULL_BEGIN

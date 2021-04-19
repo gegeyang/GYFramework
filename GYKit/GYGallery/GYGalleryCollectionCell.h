@@ -6,12 +6,12 @@
 //  Copyright © 2021 GeYang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GYGalleryBaseCell.h"
 #import "GYGalleryItemObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GYGalleryCollectionCell : UICollectionViewCell
+@interface GYGalleryCollectionCell : GYGalleryBaseCell
 
 @property (nonatomic, readonly) CGRect imageViewFrame;
 - (void)updateCellInfo:(id<GYGalleryItemObject>)itemObject;

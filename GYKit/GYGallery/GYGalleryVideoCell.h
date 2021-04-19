@@ -6,11 +6,11 @@
 //  Copyright © 2021 GeYang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GYGalleryBaseCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GYGalleryVideoCell : UICollectionViewCell
+@interface GYGalleryVideoCell : GYGalleryBaseCell
 
 @end
 

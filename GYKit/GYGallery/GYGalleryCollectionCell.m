@@ -32,6 +32,10 @@
 }
 
 #pragma mark - implementaction
+- (void)updateTransform:(CGAffineTransform)transform {
+    self.scrollView.transform = transform;
+}
+
 - (void)updateCellInfo:(id<GYGalleryItemObject>)itemObject {
     NSAssert([itemObject conformsToProtocol:@protocol(GYGalleryItemObject)], @"not realize GYGalleryItemObject...");
     switch (itemObject.galleryItemType) {

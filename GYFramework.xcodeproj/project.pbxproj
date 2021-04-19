@@ -59,6 +59,7 @@
 		4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */; };
 		4723EDD52625883000164C20 /* GYWaterGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDD42625883000164C20 /* GYWaterGalleryCell.m */; };
 		4723EDDE2625944700164C20 /* GYCollectionViewController+GalleryExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */; };
+		47407C42262DA3C900C2E2BA /* GYGalleryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
 		4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -305,6 +306,8 @@
 		4723EDDC2625944700164C20 /* GYCollectionViewController+GalleryExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYCollectionViewController+GalleryExtend.h"; sourceTree = "<group>"; };
 		4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GYCollectionViewController+GalleryExtend.m"; sourceTree = "<group>"; };
 		4723EDE22625B78B00164C20 /* GYGalleryAnimationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryAnimationDelegate.h; sourceTree = "<group>"; };
+		47407C40262DA3C900C2E2BA /* GYGalleryBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryBaseCell.h; sourceTree = "<group>"; };
+		47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYGalleryBaseCell.m; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		4743D9692578C1950084B971 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		4743D98D2578CD780084B971 /* UIButton+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYExtend.h"; sourceTree = "<group>"; };
@@ -1026,6 +1029,8 @@
 			children = (
 				47A6020226241D0900093DC2 /* GYGalleryViewController.h */,
 				47A6020326241D0900093DC2 /* GYGalleryViewController.m */,
+				47407C40262DA3C900C2E2BA /* GYGalleryBaseCell.h */,
+				47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */,
 				47AC1FB5262429AA00FEBCCD /* GYGalleryCollectionCell.h */,
 				47AC1FB6262429AA00FEBCCD /* GYGalleryCollectionCell.m */,
 				47AC203B2624374A00FEBCCD /* GYGalleryVideoCell.h */,
@@ -1534,6 +1539,7 @@
 				47AC20202624345500FEBCCD /* FLAnimatedImageView.m in Sources */,
 				3AACFA2520F0F0B7009E9125 /* GYTabbarItemInfo.m in Sources */,
 				47AC20312624345500FEBCCD /* UIImage+MemoryCacheCost.m in Sources */,
+				47407C42262DA3C900C2E2BA /* GYGalleryBaseCell.m in Sources */,
 				47AC20232624345500FEBCCD /* UIImage+MultiFormat.m in Sources */,
 				47808FB62609D8A8003C4787 /* GYAlertController.m in Sources */,
 			);
