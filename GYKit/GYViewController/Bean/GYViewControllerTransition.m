@@ -95,16 +95,23 @@
     [containerView addSubview:toVC.view];
     [containerView addSubview:tempView];
     //开始动画
-    [UIView animateWithDuration:[self transitionDuration:transitionContext]
-                     animations:^{
+    [UIView animateWithDuration:0.5//动画持续时间
+                          delay:0//动画延迟执行的时间
+          usingSpringWithDamping:0.6// 弹簧的阻尼，范围0~1，数值越小震动效果越明显
+           initialSpringVelocity:0.8//弹簧的速率，数值越大初始速度越快
+                         options:UIViewAnimationOptionCurveLinear //动画的过渡效果
+                      animations:^{
+                         //执行的动画
         tempView.frame = rcTarget;
         toVC.view.alpha = 1;
-    } completion:^(BOOL finished) {
+     }
+                      completion:^(BOOL finished) {
+                         //动画执行完毕后的操作
         collectionView.hidden = NO;
         [tempView removeFromSuperview];
         //如果动画过渡取消了就标记不完成，否则才完成，这里可以直接写YES，如果有手势过渡才需要判断，必须标记，否则系统不会中动画完成的部署，会出现无法交互之类的bug
         [transitionContext completeTransition:YES];
-    }];
+     }];
 }
 
 - (void)doGalleryPopAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -113,7 +120,7 @@
     GYViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     NSAssert([fromVC conformsToProtocol:@protocol(GYGalleryAnimationDelegate)], @"!!!!%@ must conformsToProtocol GYGalleryAnimationDelegate", fromVC);
     id<GYGalleryAnimationDelegate> animationDelegate = (id)fromVC;
-    UIView *collectionView = [fromVC valueForKeyPath:@"collectionView"];
+    UIView *collectionView = [ fromVC valueForKeyPath:@"collectionView"];
     //获取当前gallery页面展示的图片
     UIImageView *tempView = [[UIImageView alloc] initWithImage:animationDelegate.galleryImage];
     tempView.contentMode = UIViewContentModeScaleAspectFill;

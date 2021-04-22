@@ -115,7 +115,6 @@ static NSString *const kGYGalleryCollectionCellReuseIdentifier = @"kGYGalleryCol
             CGAffineTransform translation = CGAffineTransformMakeTranslation(point.x, point.y);
             CGAffineTransform scale = CGAffineTransformMakeScale(s, s);
             [baseCell updateTransform:CGAffineTransformConcat(translation, scale)];
-            NSLog(@"----(%@)----%@----", @(point.y), @(percent));
         }
             break;
         case UIGestureRecognizerStateEnded:
