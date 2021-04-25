@@ -124,4 +124,17 @@
         [title drawInRect:CGRectMake(hMargin, vMargin, titleSize.width, titleSize.height) withAttributes:attributes];
     }];
 }
+
+
++ (UIImage *)gy_image_compoundImageAndView:(UIView *)view
+                                     image:(UIImage *)image {
+    const CGSize imageSize = view.gy_size;
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [image drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+    [[view layer] renderInContext:context];
+    UIImage *watermarkImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return watermarkImage;
+}
 @end

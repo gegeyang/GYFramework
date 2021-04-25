@@ -45,6 +45,12 @@ NS_ASSUME_NONNULL_BEGIN
                         radius:(CGFloat)radius
               appearanceObject:(id<GYTagAppearanceObject>)appearanceObject;
 
+/**
+ UIView + UIImage生成图片
+ */
++ (UIImage *)gy_image_compoundImageAndView:(UIView *)view
+                                     image:(UIImage *)image;
+
 @end
 
 NS_ASSUME_NONNULL_END

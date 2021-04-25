@@ -10,6 +10,7 @@
 #import "GYCoordinatingMediator.h"
 #import "GYWindow.h"
 #import "GYAppRootController.h"
+#import "GYKeyboardManager.h"
 
 @interface GYAppDelegate ()
 
@@ -20,7 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     cookieStorage.cookieAcceptPolicy = NSHTTPCookieAcceptPolicyAlways;
-    
+    //keyBoard
+    [[GYKeyboardManager defaultManager] registerApp];
     self.window = [[GYWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [GYCoordinatingMediator shareInstance].appRootController;
     [self.window makeKeyAndVisible];
