@@ -59,6 +59,152 @@
 		4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */; };
 		4723EDD52625883000164C20 /* GYWaterGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDD42625883000164C20 /* GYWaterGalleryCell.m */; };
 		4723EDDE2625944700164C20 /* GYCollectionViewController+GalleryExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */; };
+		472A8F60263547B2003FB860 /* GYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A24019620C0E26400DE9044 /* GYWindow.m */; };
+		472A8F61263547B2003FB860 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454B25E3D28D00D0050A /* MJRefreshHeader.m */; };
+		472A8F62263547B2003FB860 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454D25E3D28D00D0050A /* MJRefreshBackFooter.m */; };
+		472A8F63263547B2003FB860 /* GYTabbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA2A20F0F10F009E9125 /* GYTabbarButton.m */; };
+		472A8F64263547B2003FB860 /* GYTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1620C53420004ABC58 /* GYTabbarView.m */; };
+		472A8F65263547B2003FB860 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799459125E3D2DB00D0050A /* AFNetworkReachabilityManager.m */; };
+		472A8F66263547B2003FB860 /* GYViewControllerTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A39B90420F73CEF0004CA6A /* GYViewControllerTransition.m */; };
+		472A8F67263547B2003FB860 /* GYTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CC1260994C3003C4787 /* GYTimerTool.m */; };
+		472A8F68263547B2003FB860 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AE2578D04A0084B971 /* MASViewAttribute.m */; };
+		472A8F69263547B2003FB860 /* GYMineItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C0F25E4F194002F9758 /* GYMineItemCell.m */; };
+		472A8F6A263547B2003FB860 /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FE32624345500FEBCCD /* SDWebImageCodersManager.m */; };
+		472A8F6B263547B2003FB860 /* GYWaterListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A151262052F3005A0AA8 /* GYWaterListController.m */; };
+		472A8F6C263547B2003FB860 /* GYRefreshErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8562148FCF500B958B8 /* GYRefreshErrorView.m */; };
+		472A8F6D263547B2003FB860 /* UIImageView+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FCD262433AE00FEBCCD /* UIImageView+GYExtend.m */; };
+		472A8F6E263547B2003FB860 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20042624345500FEBCCD /* UIImageView+WebCache.m */; };
+		472A8F6F263547B2003FB860 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799455025E3D28D00D0050A /* MJRefreshComponent.m */; };
+		472A8F70263547B2003FB860 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC200E2624345500FEBCCD /* UIView+WebCache.m */; };
+		472A8F71263547B2003FB860 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FDC2624345500FEBCCD /* SDWebImageManager.m */; };
+		472A8F72263547B2003FB860 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799456D25E3D2C900D0050A /* SVRadialGradientLayer.m */; };
+		472A8F73263547B2003FB860 /* GYSandboxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47645BAB261C383A00753CA4 /* GYSandboxHelper.m */; };
+		472A8F74263547B2003FB860 /* UIView+GYFetchDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8592149018800B958B8 /* UIView+GYFetchDataView.m */; };
+		472A8F75263547B2003FB860 /* GYCustomCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CA326098CEF003C4787 /* GYCustomCameraController.m */; };
+		472A8F76263547B2003FB860 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20012624345500FEBCCD /* SDWebImageTransition.m */; };
+		472A8F77263547B2003FB860 /* GYViewController+MediaPickerExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FA32609D3DD003C4787 /* GYViewController+MediaPickerExtend.m */; };
+		472A8F78263547B2003FB860 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FE62624345500FEBCCD /* FLAnimatedImage.m */; };
+		472A8F79263547B2003FB860 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20142624345500FEBCCD /* UIButton+WebCache.m */; };
+		472A8F7A263547B2003FB860 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9A62578D04A0084B971 /* MASLayoutConstraint.m */; };
+		472A8F7B263547B2003FB860 /* GYBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA2D20F0F283009E9125 /* GYBadgeView.m */; };
+		472A8F7C263547B2003FB860 /* GYCoordinatingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A24019920C0E5D900DE9044 /* GYCoordinatingMediator.m */; };
+		472A8F7D263547B2003FB860 /* SDWebImageWebPCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20152624345500FEBCCD /* SDWebImageWebPCoder.m */; };
+		472A8F7E263547B2003FB860 /* UIView+GYHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F8D2609CEE6003C4787 /* UIView+GYHUD.m */; };
+		472A8F7F263547B2003FB860 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FEF2624345500FEBCCD /* UIImage+GIF.m */; };
+		472A8F80263547B2003FB860 /* NSArray+GYListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FB02624290C00FEBCCD /* NSArray+GYListViewDataSource.m */; };
+		472A8F81263547B2003FB860 /* UIImage+CustomCameraExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F942609D0CD003C4787 /* UIImage+CustomCameraExtend.m */; };
+		472A8F82263547B2003FB860 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A24017020C0E02D00DE9044 /* main.m */; };
+		472A8F83263547B2003FB860 /* GYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2401A620C0E8C600DE9044 /* GYViewController.m */; };
+		472A8F84263547B2003FB860 /* UIColor+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1D20C5364C004ABC58 /* UIColor+GYExtend.m */; };
+		472A8F85263547B2003FB860 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799457325E3D2C900D0050A /* SVProgressHUD.m */; };
+		472A8F86263547B2003FB860 /* GYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8462148E79F00B958B8 /* GYRefreshHeader.m */; };
+		472A8F87263547B2003FB860 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799458B25E3D2DB00D0050A /* AFURLResponseSerialization.m */; };
+		472A8F88263547B2003FB860 /* NSDictionary+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */; };
+		472A8F89263547B2003FB860 /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FE12624345500FEBCCD /* UIImage+ForceDecode.m */; };
+		472A8F8A263547B2003FB860 /* UIView+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA3020F2F732009E9125 /* UIView+GYExtend.m */; };
+		472A8F8B263547B2003FB860 /* NSDate+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47645BB1261C3DD900753CA4 /* NSDate+GYExtend.m */; };
+		472A8F8C263547B2003FB860 /* GYMineDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C0525E4F15E002F9758 /* GYMineDataModel.m */; };
+		472A8F8D263547B2003FB860 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA1C20F0EA64009E9125 /* FirstViewController.m */; };
+		472A8F8E263547B2003FB860 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC200D2624345500FEBCCD /* UIView+WebCacheOperation.m */; };
+		472A8F8F263547B2003FB860 /* GYGalleryImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC204226243B5500FEBCCD /* GYGalleryImageInfo.m */; };
+		472A8F90263547B2003FB860 /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453E25E3D28D00D0050A /* MJRefreshConfig.m */; };
+		472A8F91263547B2003FB860 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF32624345500FEBCCD /* SDWebImageCompat.m */; };
+		472A8F92263547B2003FB860 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799458C25E3D2DB00D0050A /* AFHTTPSessionManager.m */; };
+		472A8F93263547B2003FB860 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FD42624345500FEBCCD /* UIImage+WebP.m */; };
+		472A8F94263547B2003FB860 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20032624345500FEBCCD /* NSData+ImageContentType.m */; };
+		472A8F95263547B2003FB860 /* SDWebImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20072624345500FEBCCD /* SDWebImageGIFCoder.m */; };
+		472A8F96263547B2003FB860 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454725E3D28D00D0050A /* UIView+MJExtension.m */; };
+		472A8F97263547B2003FB860 /* GYVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */; };
+		472A8F98263547B2003FB860 /* GYWaterListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A16026205357005A0AA8 /* GYWaterListModel.m */; };
+		472A8F99263547B2003FB860 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799457425E3D2C900D0050A /* SVIndefiniteAnimatedView.m */; };
+		472A8F9A263547B2003FB860 /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FFC2624345500FEBCCD /* SDAnimatedImageRep.m */; };
+		472A8F9B263547B2003FB860 /* GYTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A2401AC20C0EC7800DE9044 /* GYTabbarViewController.m */; };
+		472A8F9C263547B2003FB860 /* GYCameraShootButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CB826099414003C4787 /* GYCameraShootButton.m */; };
+		472A8F9D263547B2003FB860 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FEC2624345500FEBCCD /* SDWebImageDownloader.m */; };
+		472A8F9E263547B2003FB860 /* GYCollectionViewController+GYListViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8532148FB9300B958B8 /* GYCollectionViewController+GYListViewDelegate.m */; };
+		472A8F9F263547B2003FB860 /* NSError+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A85C2149033A00B958B8 /* NSError+GYExtend.m */; };
+		472A8FA0263547B2003FB860 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20002624345500FEBCCD /* SDWebImageDownloaderOperation.m */; };
+		472A8FA1263547B2003FB860 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453D25E3D28D00D0050A /* MJRefreshConst.m */; };
+		472A8FA2263547B2003FB860 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9A42578D04A0084B971 /* MASCompositeConstraint.m */; };
+		472A8FA3263547B2003FB860 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AB2578D04A0084B971 /* MASConstraint.m */; };
+		472A8FA4263547B2003FB860 /* UIFont+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB2320C53A5E004ABC58 /* UIFont+GYExtend.m */; };
+		472A8FA5263547B2003FB860 /* GYImageZoomingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FC726242CAF00FEBCCD /* GYImageZoomingScrollView.m */; };
+		472A8FA6263547B2003FB860 /* GYSegmentSliderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */; };
+		472A8FA7263547B2003FB860 /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF92624345500FEBCCD /* NSButton+WebCache.m */; };
+		472A8FA8263547B2003FB860 /* GYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A24016220C0E02C00DE9044 /* GYAppDelegate.m */; };
+		472A8FA9263547B2003FB860 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF52624345500FEBCCD /* SDWebImagePrefetcher.m */; };
+		472A8FAA263547B2003FB860 /* GYFetchListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A84C2148F2E800B958B8 /* GYFetchListModel.m */; };
+		472A8FAB263547B2003FB860 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20062624345500FEBCCD /* NSImage+WebCache.m */; };
+		472A8FAC263547B2003FB860 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454225E3D28D00D0050A /* UIScrollView+MJExtension.m */; };
+		472A8FAD263547B2003FB860 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454925E3D28D00D0050A /* MJRefreshFooter.m */; };
+		472A8FAE263547B2003FB860 /* GYGalleryCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FB6262429AA00FEBCCD /* GYGalleryCollectionCell.m */; };
+		472A8FAF263547B2003FB860 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
+		472A8FB0263547B2003FB860 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799457025E3D2C900D0050A /* SVProgressAnimatedView.m */; };
+		472A8FB1263547B2003FB860 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9A72578D04A0084B971 /* NSArray+MASAdditions.m */; };
+		472A8FB2263547B2003FB860 /* FirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9337A25E5FFC900C942E5 /* FirstCollectionViewCell.m */; };
+		472A8FB3263547B2003FB860 /* GYWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A14A2620416B005A0AA8 /* GYWaterFlowLayout.m */; };
+		472A8FB4263547B2003FB860 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AD2578D04A0084B971 /* MASViewConstraint.m */; };
+		472A8FB5263547B2003FB860 /* GYGalleryVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC203C2624374A00FEBCCD /* GYGalleryVideoCell.m */; };
+		472A8FB6263547B2003FB860 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA1F20F0EA6F009E9125 /* SecondViewController.m */; };
+		472A8FB7263547B2003FB860 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FD52624345500FEBCCD /* MKAnnotationView+WebCache.m */; };
+		472A8FB8263547B2003FB860 /* GYVideoAssertWriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0DFA7260B27F1005DFD5D /* GYVideoAssertWriteManager.m */; };
+		472A8FB9263547B2003FB860 /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC200A2624345500FEBCCD /* SDImageCacheConfig.m */; };
+		472A8FBA263547B2003FB860 /* GYMineCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8052148B63300B958B8 /* GYMineCollectionViewController.m */; };
+		472A8FBB263547B2003FB860 /* GYHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE67C6420F5FE07004E2746 /* GYHandler.m */; };
+		472A8FBC263547B2003FB860 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FFD2624345500FEBCCD /* SDImageCache.m */; };
+		472A8FBD263547B2003FB860 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
+		472A8FBE263547B2003FB860 /* GYWaterGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDD42625883000164C20 /* GYWaterGalleryCell.m */; };
+		472A8FBF263547B2003FB860 /* NSString+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */; };
+		472A8FC0263547B2003FB860 /* SDWebImageImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20102624345500FEBCCD /* SDWebImageImageIOCoder.m */; };
+		472A8FC1263547B2003FB860 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4765849925E3AA7F00080052 /* ThirdViewController.m */; };
+		472A8FC2263547B2003FB860 /* GYWaterListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A15A26205332005A0AA8 /* GYWaterListCell.m */; };
+		472A8FC3263547B2003FB860 /* SDWebImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF22624345500FEBCCD /* SDWebImageCoderHelper.m */; };
+		472A8FC4263547B2003FB860 /* GYCollectionViewController+GalleryExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */; };
+		472A8FC5263547B2003FB860 /* GYGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A6020326241D0900093DC2 /* GYGalleryViewController.m */; };
+		472A8FC6263547B2003FB860 /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FE52624345500FEBCCD /* FLAnimatedImageView+WebCache.m */; };
+		472A8FC7263547B2003FB860 /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF82624345500FEBCCD /* SDWebImageCoder.m */; };
+		472A8FC8263547B2003FB860 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454E25E3D28D00D0050A /* MJRefreshAutoFooter.m */; };
+		472A8FC9263547B2003FB860 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9A02578D04A0084B971 /* ViewController+MASAdditions.m */; };
+		472A8FCA263547B2003FB860 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9A82578D04A0084B971 /* View+MASAdditions.m */; };
+		472A8FCB263547B2003FB860 /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FDF2624345500FEBCCD /* SDWebImageFrame.m */; };
+		472A8FCC263547B2003FB860 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		472A8FCD263547B2003FB860 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799458E25E3D2DB00D0050A /* AFURLSessionManager.m */; };
+		472A8FCE263547B2003FB860 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799458F25E3D2DB00D0050A /* AFURLRequestSerialization.m */; };
+		472A8FCF263547B2003FB860 /* GYRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8492148EC4200B958B8 /* GYRefreshFooter.m */; };
+		472A8FD0263547B2003FB860 /* GYAppRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A24019C20C0E67400DE9044 /* GYAppRootController.m */; };
+		472A8FD1263547B2003FB860 /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799454625E3D28D00D0050A /* NSBundle+MJRefresh.m */; };
+		472A8FD2263547B2003FB860 /* NSObject+GYPrivacyExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FA92609D4AF003C4787 /* NSObject+GYPrivacyExtend.m */; };
+		472A8FD3263547B2003FB860 /* GYBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA3320F2FBCA009E9125 /* GYBorderView.m */; };
+		472A8FD4263547B2003FB860 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9A52578D04A0084B971 /* MASConstraintMaker.m */; };
+		472A8FD5263547B2003FB860 /* GYMineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1625E4FA52002F9758 /* GYMineInfo.m */; };
+		472A8FD6263547B2003FB860 /* GYWaterGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDC5262587B900164C20 /* GYWaterGalleryController.m */; };
+		472A8FD7263547B2003FB860 /* GYAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A81E2148C17300B958B8 /* GYAPIClient.m */; };
+		472A8FD8263547B2003FB860 /* GYLoadStatusObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8502148F4F900B958B8 /* GYLoadStatusObject.m */; };
+		472A8FD9263547B2003FB860 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FDE2624345500FEBCCD /* UIImageView+HighlightedWebCache.m */; };
+		472A8FDA263547B2003FB860 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799459225E3D2DB00D0050A /* AFSecurityPolicy.m */; };
+		472A8FDB263547B2003FB860 /* GYCMMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808F9D2609D2A1003C4787 /* GYCMMotionManager.m */; };
+		472A8FDC263547B2003FB860 /* GYGlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB1120C52BE9004ABC58 /* GYGlobalConst.m */; };
+		472A8FDD263547B2003FB860 /* UIView+GYPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5FDB0720C52269004ABC58 /* UIView+GYPosition.m */; };
+		472A8FDE263547B2003FB860 /* UIImage+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173A2D25E4A59F002F9758 /* UIImage+GYExtend.m */; };
+		472A8FDF263547B2003FB860 /* GYScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */; };
+		472A8FE0263547B2003FB860 /* UIScrollView+GYRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A98A8432148E74C00B958B8 /* UIScrollView+GYRefresh.m */; };
+		472A8FE1263547B2003FB860 /* GYMineScrollPageRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */; };
+		472A8FE2263547B2003FB860 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9972578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		472A8FE3263547B2003FB860 /* GYCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE67C6020F5F41E004E2746 /* GYCollectionViewController.m */; };
+		472A8FE4263547B2003FB860 /* NSObject+GYAlertExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FAF2609D5E4003C4787 /* NSObject+GYAlertExtend.m */; };
+		472A8FE5263547B2003FB860 /* GYWaterGalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */; };
+		472A8FE6263547B2003FB860 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FE72624345500FEBCCD /* FLAnimatedImageView.m */; };
+		472A8FE7263547B2003FB860 /* GYTabbarItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACFA2420F0F0B7009E9125 /* GYTabbarItemInfo.m */; };
+		472A8FE8263547B2003FB860 /* UIImage+MemoryCacheCost.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC20092624345500FEBCCD /* UIImage+MemoryCacheCost.m */; };
+		472A8FE9263547B2003FB860 /* GYGalleryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */; };
+		472A8FEA263547B2003FB860 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF12624345500FEBCCD /* UIImage+MultiFormat.m */; };
+		472A8FEB263547B2003FB860 /* GYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FB52609D8A8003C4787 /* GYAlertController.m */; };
+		472A8FED263547B2003FB860 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47808CAB26098E3B003C4787 /* AVFoundation.framework */; };
+		472A8FEE263547B2003FB860 /* libPods-GYFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */; };
+		472A8FF0263547B2003FB860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016C20C0E02D00DE9044 /* LaunchScreen.storyboard */; };
+		472A8FF1263547B2003FB860 /* SVProgressHUD.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4799457125E3D2C900D0050A /* SVProgressHUD.xcassets */; };
+		472A8FF2263547B2003FB860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016A20C0E02D00DE9044 /* Assets.xcassets */; };
+		472A8FF3263547B2003FB860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016720C0E02C00DE9044 /* Main.storyboard */; };
 		47407C42262DA3C900C2E2BA /* GYGalleryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
@@ -306,6 +452,8 @@
 		4723EDDC2625944700164C20 /* GYCollectionViewController+GalleryExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYCollectionViewController+GalleryExtend.h"; sourceTree = "<group>"; };
 		4723EDDD2625944700164C20 /* GYCollectionViewController+GalleryExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GYCollectionViewController+GalleryExtend.m"; sourceTree = "<group>"; };
 		4723EDE22625B78B00164C20 /* GYGalleryAnimationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryAnimationDelegate.h; sourceTree = "<group>"; };
+		472A8FF8263547B2003FB860 /* GYFramework_Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYFramework_Beta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		472A8FF9263547B2003FB860 /* Info_Beta.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info_Beta.plist; path = /Users/yangge/Desktop/WJ/GYFramework/Info_Beta.plist; sourceTree = "<absolute>"; };
 		47407C40262DA3C900C2E2BA /* GYGalleryBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryBaseCell.h; sourceTree = "<group>"; };
 		47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYGalleryBaseCell.m; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -540,6 +688,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		472A8FEC263547B2003FB860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472A8FED263547B2003FB860 /* AVFoundation.framework in Frameworks */,
+				472A8FEE263547B2003FB860 /* libPods-GYFramework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -562,6 +719,7 @@
 				3A24015E20C0E02C00DE9044 /* GYFramework.app */,
 				3A24017620C0E02E00DE9044 /* GYFrameworkTests.xctest */,
 				3A24018120C0E02E00DE9044 /* GYFrameworkUITests.xctest */,
+				472A8FF8263547B2003FB860 /* GYFramework_Beta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -573,6 +731,7 @@
 				3A24016A20C0E02D00DE9044 /* Assets.xcassets */,
 				3A5FDB0A20C5287C004ABC58 /* GY-PrefixHeader.pch */,
 				3A24016F20C0E02D00DE9044 /* Info.plist */,
+				472A8FF9263547B2003FB860 /* Info_Beta.plist */,
 				3A24016C20C0E02D00DE9044 /* LaunchScreen.storyboard */,
 				3A24017020C0E02D00DE9044 /* main.m */,
 				3A24016720C0E02C00DE9044 /* Main.storyboard */,
@@ -1251,6 +1410,27 @@
 			productReference = 3A24018120C0E02E00DE9044 /* GYFrameworkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		472A8F5B263547B2003FB860 /* GYFramework_Beta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 472A8FF5263547B2003FB860 /* Build configuration list for PBXNativeTarget "GYFramework_Beta" */;
+			buildPhases = (
+				472A8F5C263547B2003FB860 /* ShellScript */,
+				472A8F5D263547B2003FB860 /* [CP] Check Pods Manifest.lock */,
+				472A8F5E263547B2003FB860 /* [CP-User] Run Flutter Build flutter_gyframework Script */,
+				472A8F5F263547B2003FB860 /* Sources */,
+				472A8FEC263547B2003FB860 /* Frameworks */,
+				472A8FEF263547B2003FB860 /* Resources */,
+				472A8FF4263547B2003FB860 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GYFramework_Beta;
+			productName = GYFramework;
+			productReference = 472A8FF8263547B2003FB860 /* GYFramework_Beta.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1287,6 +1467,7 @@
 			projectRoot = "";
 			targets = (
 				3A24015D20C0E02C00DE9044 /* GYFramework */,
+				472A8F5B263547B2003FB860 /* GYFramework_Beta */,
 				3A24017520C0E02E00DE9044 /* GYFrameworkTests */,
 				3A24018020C0E02E00DE9044 /* GYFrameworkUITests */,
 			);
@@ -1320,6 +1501,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		472A8FEF263547B2003FB860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472A8FF0263547B2003FB860 /* LaunchScreen.storyboard in Resources */,
+				472A8FF1263547B2003FB860 /* SVProgressHUD.xcassets in Resources */,
+				472A8FF2263547B2003FB860 /* Assets.xcassets in Resources */,
+				472A8FF3263547B2003FB860 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1338,6 +1530,78 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		472A8F5C263547B2003FB860 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
+		};
+		472A8F5D263547B2003FB860 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GYFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		472A8F5E263547B2003FB860 /* [CP-User] Run Flutter Build flutter_gyframework Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/./flutter_gyframework/.metadata",
+				"${SRCROOT}/flutter_gyframework/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/flutter_gyframework/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build flutter_gyframework Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		472A8FF4263547B2003FB860 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		476316CE25F5D248009E232B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1582,6 +1846,153 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A24018620C0E02E00DE9044 /* GYFrameworkUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		472A8F5F263547B2003FB860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472A8F60263547B2003FB860 /* GYWindow.m in Sources */,
+				472A8F61263547B2003FB860 /* MJRefreshHeader.m in Sources */,
+				472A8F62263547B2003FB860 /* MJRefreshBackFooter.m in Sources */,
+				472A8F63263547B2003FB860 /* GYTabbarButton.m in Sources */,
+				472A8F64263547B2003FB860 /* GYTabbarView.m in Sources */,
+				472A8F65263547B2003FB860 /* AFNetworkReachabilityManager.m in Sources */,
+				472A8F66263547B2003FB860 /* GYViewControllerTransition.m in Sources */,
+				472A8F67263547B2003FB860 /* GYTimerTool.m in Sources */,
+				472A8F68263547B2003FB860 /* MASViewAttribute.m in Sources */,
+				472A8F69263547B2003FB860 /* GYMineItemCell.m in Sources */,
+				472A8F6A263547B2003FB860 /* SDWebImageCodersManager.m in Sources */,
+				472A8F6B263547B2003FB860 /* GYWaterListController.m in Sources */,
+				472A8F6C263547B2003FB860 /* GYRefreshErrorView.m in Sources */,
+				472A8F6D263547B2003FB860 /* UIImageView+GYExtend.m in Sources */,
+				472A8F6E263547B2003FB860 /* UIImageView+WebCache.m in Sources */,
+				472A8F6F263547B2003FB860 /* MJRefreshComponent.m in Sources */,
+				472A8F70263547B2003FB860 /* UIView+WebCache.m in Sources */,
+				472A8F71263547B2003FB860 /* SDWebImageManager.m in Sources */,
+				472A8F72263547B2003FB860 /* SVRadialGradientLayer.m in Sources */,
+				472A8F73263547B2003FB860 /* GYSandboxHelper.m in Sources */,
+				472A8F74263547B2003FB860 /* UIView+GYFetchDataView.m in Sources */,
+				472A8F75263547B2003FB860 /* GYCustomCameraController.m in Sources */,
+				472A8F76263547B2003FB860 /* SDWebImageTransition.m in Sources */,
+				472A8F77263547B2003FB860 /* GYViewController+MediaPickerExtend.m in Sources */,
+				472A8F78263547B2003FB860 /* FLAnimatedImage.m in Sources */,
+				472A8F79263547B2003FB860 /* UIButton+WebCache.m in Sources */,
+				472A8F7A263547B2003FB860 /* MASLayoutConstraint.m in Sources */,
+				472A8F7B263547B2003FB860 /* GYBadgeView.m in Sources */,
+				472A8F7C263547B2003FB860 /* GYCoordinatingMediator.m in Sources */,
+				472A8F7D263547B2003FB860 /* SDWebImageWebPCoder.m in Sources */,
+				472A8F7E263547B2003FB860 /* UIView+GYHUD.m in Sources */,
+				472A8F7F263547B2003FB860 /* UIImage+GIF.m in Sources */,
+				472A8F80263547B2003FB860 /* NSArray+GYListViewDataSource.m in Sources */,
+				472A8F81263547B2003FB860 /* UIImage+CustomCameraExtend.m in Sources */,
+				472A8F82263547B2003FB860 /* main.m in Sources */,
+				472A8F83263547B2003FB860 /* GYViewController.m in Sources */,
+				472A8F84263547B2003FB860 /* UIColor+GYExtend.m in Sources */,
+				472A8F85263547B2003FB860 /* SVProgressHUD.m in Sources */,
+				472A8F86263547B2003FB860 /* GYRefreshHeader.m in Sources */,
+				472A8F87263547B2003FB860 /* AFURLResponseSerialization.m in Sources */,
+				472A8F88263547B2003FB860 /* NSDictionary+GYExtend.m in Sources */,
+				472A8F89263547B2003FB860 /* UIImage+ForceDecode.m in Sources */,
+				472A8F8A263547B2003FB860 /* UIView+GYExtend.m in Sources */,
+				472A8F8B263547B2003FB860 /* NSDate+GYExtend.m in Sources */,
+				472A8F8C263547B2003FB860 /* GYMineDataModel.m in Sources */,
+				472A8F8D263547B2003FB860 /* FirstViewController.m in Sources */,
+				472A8F8E263547B2003FB860 /* UIView+WebCacheOperation.m in Sources */,
+				472A8F8F263547B2003FB860 /* GYGalleryImageInfo.m in Sources */,
+				472A8F90263547B2003FB860 /* MJRefreshConfig.m in Sources */,
+				472A8F91263547B2003FB860 /* SDWebImageCompat.m in Sources */,
+				472A8F92263547B2003FB860 /* AFHTTPSessionManager.m in Sources */,
+				472A8F93263547B2003FB860 /* UIImage+WebP.m in Sources */,
+				472A8F94263547B2003FB860 /* NSData+ImageContentType.m in Sources */,
+				472A8F95263547B2003FB860 /* SDWebImageGIFCoder.m in Sources */,
+				472A8F96263547B2003FB860 /* UIView+MJExtension.m in Sources */,
+				472A8F97263547B2003FB860 /* GYVideoPreviewController.m in Sources */,
+				472A8F98263547B2003FB860 /* GYWaterListModel.m in Sources */,
+				472A8F99263547B2003FB860 /* SVIndefiniteAnimatedView.m in Sources */,
+				472A8F9A263547B2003FB860 /* SDAnimatedImageRep.m in Sources */,
+				472A8F9B263547B2003FB860 /* GYTabbarViewController.m in Sources */,
+				472A8F9C263547B2003FB860 /* GYCameraShootButton.m in Sources */,
+				472A8F9D263547B2003FB860 /* SDWebImageDownloader.m in Sources */,
+				472A8F9E263547B2003FB860 /* GYCollectionViewController+GYListViewDelegate.m in Sources */,
+				472A8F9F263547B2003FB860 /* NSError+GYExtend.m in Sources */,
+				472A8FA0263547B2003FB860 /* SDWebImageDownloaderOperation.m in Sources */,
+				472A8FA1263547B2003FB860 /* MJRefreshConst.m in Sources */,
+				472A8FA2263547B2003FB860 /* MASCompositeConstraint.m in Sources */,
+				472A8FA3263547B2003FB860 /* MASConstraint.m in Sources */,
+				472A8FA4263547B2003FB860 /* UIFont+GYExtend.m in Sources */,
+				472A8FA5263547B2003FB860 /* GYImageZoomingScrollView.m in Sources */,
+				472A8FA6263547B2003FB860 /* GYSegmentSliderBar.m in Sources */,
+				472A8FA7263547B2003FB860 /* NSButton+WebCache.m in Sources */,
+				472A8FA8263547B2003FB860 /* GYAppDelegate.m in Sources */,
+				472A8FA9263547B2003FB860 /* SDWebImagePrefetcher.m in Sources */,
+				472A8FAA263547B2003FB860 /* GYFetchListModel.m in Sources */,
+				472A8FAB263547B2003FB860 /* NSImage+WebCache.m in Sources */,
+				472A8FAC263547B2003FB860 /* UIScrollView+MJExtension.m in Sources */,
+				472A8FAD263547B2003FB860 /* MJRefreshFooter.m in Sources */,
+				472A8FAE263547B2003FB860 /* GYGalleryCollectionCell.m in Sources */,
+				472A8FAF263547B2003FB860 /* UIButton+GYExtend.m in Sources */,
+				472A8FB0263547B2003FB860 /* SVProgressAnimatedView.m in Sources */,
+				472A8FB1263547B2003FB860 /* NSArray+MASAdditions.m in Sources */,
+				472A8FB2263547B2003FB860 /* FirstCollectionViewCell.m in Sources */,
+				472A8FB3263547B2003FB860 /* GYWaterFlowLayout.m in Sources */,
+				472A8FB4263547B2003FB860 /* MASViewConstraint.m in Sources */,
+				472A8FB5263547B2003FB860 /* GYGalleryVideoCell.m in Sources */,
+				472A8FB6263547B2003FB860 /* SecondViewController.m in Sources */,
+				472A8FB7263547B2003FB860 /* MKAnnotationView+WebCache.m in Sources */,
+				472A8FB8263547B2003FB860 /* GYVideoAssertWriteManager.m in Sources */,
+				472A8FB9263547B2003FB860 /* SDImageCacheConfig.m in Sources */,
+				472A8FBA263547B2003FB860 /* GYMineCollectionViewController.m in Sources */,
+				472A8FBB263547B2003FB860 /* GYHandler.m in Sources */,
+				472A8FBC263547B2003FB860 /* SDImageCache.m in Sources */,
+				472A8FBD263547B2003FB860 /* UIScrollView+MJRefresh.m in Sources */,
+				472A8FBE263547B2003FB860 /* GYWaterGalleryCell.m in Sources */,
+				472A8FBF263547B2003FB860 /* NSString+GYExtend.m in Sources */,
+				472A8FC0263547B2003FB860 /* SDWebImageImageIOCoder.m in Sources */,
+				472A8FC1263547B2003FB860 /* ThirdViewController.m in Sources */,
+				472A8FC2263547B2003FB860 /* GYWaterListCell.m in Sources */,
+				472A8FC3263547B2003FB860 /* SDWebImageCoderHelper.m in Sources */,
+				472A8FC4263547B2003FB860 /* GYCollectionViewController+GalleryExtend.m in Sources */,
+				472A8FC5263547B2003FB860 /* GYGalleryViewController.m in Sources */,
+				472A8FC6263547B2003FB860 /* FLAnimatedImageView+WebCache.m in Sources */,
+				472A8FC7263547B2003FB860 /* SDWebImageCoder.m in Sources */,
+				472A8FC8263547B2003FB860 /* MJRefreshAutoFooter.m in Sources */,
+				472A8FC9263547B2003FB860 /* ViewController+MASAdditions.m in Sources */,
+				472A8FCA263547B2003FB860 /* View+MASAdditions.m in Sources */,
+				472A8FCB263547B2003FB860 /* SDWebImageFrame.m in Sources */,
+				472A8FCC263547B2003FB860 /* JSONKit.m in Sources */,
+				472A8FCD263547B2003FB860 /* AFURLSessionManager.m in Sources */,
+				472A8FCE263547B2003FB860 /* AFURLRequestSerialization.m in Sources */,
+				472A8FCF263547B2003FB860 /* GYRefreshFooter.m in Sources */,
+				472A8FD0263547B2003FB860 /* GYAppRootController.m in Sources */,
+				472A8FD1263547B2003FB860 /* NSBundle+MJRefresh.m in Sources */,
+				472A8FD2263547B2003FB860 /* NSObject+GYPrivacyExtend.m in Sources */,
+				472A8FD3263547B2003FB860 /* GYBorderView.m in Sources */,
+				472A8FD4263547B2003FB860 /* MASConstraintMaker.m in Sources */,
+				472A8FD5263547B2003FB860 /* GYMineInfo.m in Sources */,
+				472A8FD6263547B2003FB860 /* GYWaterGalleryController.m in Sources */,
+				472A8FD7263547B2003FB860 /* GYAPIClient.m in Sources */,
+				472A8FD8263547B2003FB860 /* GYLoadStatusObject.m in Sources */,
+				472A8FD9263547B2003FB860 /* UIImageView+HighlightedWebCache.m in Sources */,
+				472A8FDA263547B2003FB860 /* AFSecurityPolicy.m in Sources */,
+				472A8FDB263547B2003FB860 /* GYCMMotionManager.m in Sources */,
+				472A8FDC263547B2003FB860 /* GYGlobalConst.m in Sources */,
+				472A8FDD263547B2003FB860 /* UIView+GYPosition.m in Sources */,
+				472A8FDE263547B2003FB860 /* UIImage+GYExtend.m in Sources */,
+				472A8FDF263547B2003FB860 /* GYScrollPageViewController.m in Sources */,
+				472A8FE0263547B2003FB860 /* UIScrollView+GYRefresh.m in Sources */,
+				472A8FE1263547B2003FB860 /* GYMineScrollPageRootController.m in Sources */,
+				472A8FE2263547B2003FB860 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				472A8FE3263547B2003FB860 /* GYCollectionViewController.m in Sources */,
+				472A8FE4263547B2003FB860 /* NSObject+GYAlertExtend.m in Sources */,
+				472A8FE5263547B2003FB860 /* GYWaterGalleryModel.m in Sources */,
+				472A8FE6263547B2003FB860 /* FLAnimatedImageView.m in Sources */,
+				472A8FE7263547B2003FB860 /* GYTabbarItemInfo.m in Sources */,
+				472A8FE8263547B2003FB860 /* UIImage+MemoryCacheCost.m in Sources */,
+				472A8FE9263547B2003FB860 /* GYGalleryBaseCell.m in Sources */,
+				472A8FEA263547B2003FB860 /* UIImage+MultiFormat.m in Sources */,
+				472A8FEB263547B2003FB860 /* GYAlertController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1848,6 +2259,74 @@
 			};
 			name = Release;
 		};
+		472A8FF6263547B2003FB860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D59E9P2MUY;
+				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
+				INFOPLIST_FILE = Info_Beta.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=\"${PODS_ROOT}/Headers/Public/FlutterPluginRegistrant/FlutterPluginRegistrant.modulemap\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-iframework",
+					"\"${PODS_ROOT}/../flutter_gyframework/.ios/Flutter/engine\"",
+					"-iframework",
+					"\"${PODS_ROOT}/../flutter_gyframework/.ios/Flutter\"",
+					"-DBUILD_FOR_BETA",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Geyang.GYFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		472A8FF7263547B2003FB860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D59E9P2MUY;
+				ENABLE_BITCODE = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GYFramework/GY-PrefixHeader.pch";
+				INFOPLIST_FILE = Info_Beta.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=\"${PODS_ROOT}/Headers/Public/FlutterPluginRegistrant/FlutterPluginRegistrant.modulemap\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-iframework",
+					"\"${PODS_ROOT}/../flutter_gyframework/.ios/Flutter/engine\"",
+					"-iframework",
+					"\"${PODS_ROOT}/../flutter_gyframework/.ios/Flutter\"",
+					"-DBUILD_FOR_BETA",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Geyang.GYFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1883,6 +2362,15 @@
 			buildConfigurations = (
 				3A24019120C0E02E00DE9044 /* Debug */,
 				3A24019220C0E02E00DE9044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		472A8FF5263547B2003FB860 /* Build configuration list for PBXNativeTarget "GYFramework_Beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472A8FF6263547B2003FB860 /* Debug */,
+				472A8FF7263547B2003FB860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
