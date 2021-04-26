@@ -19,6 +19,7 @@
 #import "GYGalleryImageInfo.h"
 #import "GYWaterGalleryController.h"
 #import "GYGraffitiViewController.h"
+#import "GYAlbumListController.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
@@ -42,6 +43,7 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
             @"Gallery",
             @"瀑布流 + Gallery",
             @"涂鸦画板",
+            @"相册",
         ];
     }
     return self;
@@ -146,6 +148,11 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
         case 7: {
             GYGraffitiViewController *graffVC = [[GYGraffitiViewController alloc] init];
             [self.navigationController pushViewController:graffVC animated:YES];
+        }
+            break;
+        case 8: {
+            GYAlbumListController *albumVC = [[GYAlbumListController alloc] init];
+            [self.navigationController pushViewController:albumVC animated:YES];
         }
             break;
         default:

@@ -251,6 +251,10 @@
 		472A90CF26355802003FB860 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A90B326355802003FB860 /* IQKeyboardReturnKeyHandler.m */; };
 		472A90D626355818003FB860 /* GYKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A90D526355818003FB860 /* GYKeyboardManager.m */; };
 		472A90D726355818003FB860 /* GYKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A90D526355818003FB860 /* GYKeyboardManager.m */; };
+		472A90FB26355C46003FB860 /* GYAlbumInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A90FA26355C46003FB860 /* GYAlbumInfo.m */; };
+		472A90FC26355C46003FB860 /* GYAlbumInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A90FA26355C46003FB860 /* GYAlbumInfo.m */; };
+		472A910B26355C98003FB860 /* GYAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A910A26355C98003FB860 /* GYAssetManager.m */; };
+		472A910C26355C98003FB860 /* GYAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 472A910A26355C98003FB860 /* GYAssetManager.m */; };
 		47407C42262DA3C900C2E2BA /* GYGalleryBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */; };
 		4743D96F2578C22F0084B971 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9692578C1950084B971 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4743D98F2578CD780084B971 /* UIButton+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D98E2578CD780084B971 /* UIButton+GYExtend.m */; };
@@ -264,6 +268,14 @@
 		4743D9BD2578D04A0084B971 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AB2578D04A0084B971 /* MASConstraint.m */; };
 		4743D9BF2578D04A0084B971 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AD2578D04A0084B971 /* MASViewConstraint.m */; };
 		4743D9C12578D04A0084B971 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 4743D9AE2578D04A0084B971 /* MASViewAttribute.m */; };
+		474D731A263665FB000719B1 /* GYAlbumItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D7319263665FB000719B1 /* GYAlbumItemCell.m */; };
+		474D731B263665FB000719B1 /* GYAlbumItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D7319263665FB000719B1 /* GYAlbumItemCell.m */; };
+		474D732626368A0C000719B1 /* GYCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D732526368A0C000719B1 /* GYCachingImageManager.m */; };
+		474D732726368A0C000719B1 /* GYCachingImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D732526368A0C000719B1 /* GYCachingImageManager.m */; };
+		474D73742636A20E000719B1 /* GYAlbumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D73732636A20E000719B1 /* GYAlbumListController.m */; };
+		474D73752636A20E000719B1 /* GYAlbumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D73732636A20E000719B1 /* GYAlbumListController.m */; };
+		474D737C2636A3FD000719B1 /* GYAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D737B2636A3FD000719B1 /* GYAlbumModel.m */; };
+		474D737D2636A3FD000719B1 /* GYAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 474D737B2636A3FD000719B1 /* GYAlbumModel.m */; };
 		4757A14B2620416B005A0AA8 /* GYWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A14A2620416B005A0AA8 /* GYWaterFlowLayout.m */; };
 		4757A152262052F3005A0AA8 /* GYWaterListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A151262052F3005A0AA8 /* GYWaterListController.m */; };
 		4757A15B26205332005A0AA8 /* GYWaterListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4757A15A26205332005A0AA8 /* GYWaterListCell.m */; };
@@ -547,6 +559,10 @@
 		472A90B326355802003FB860 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
 		472A90D426355818003FB860 /* GYKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYKeyboardManager.h; sourceTree = "<group>"; };
 		472A90D526355818003FB860 /* GYKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYKeyboardManager.m; sourceTree = "<group>"; };
+		472A90F926355C46003FB860 /* GYAlbumInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlbumInfo.h; sourceTree = "<group>"; };
+		472A90FA26355C46003FB860 /* GYAlbumInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlbumInfo.m; sourceTree = "<group>"; };
+		472A910926355C98003FB860 /* GYAssetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAssetManager.h; sourceTree = "<group>"; };
+		472A910A26355C98003FB860 /* GYAssetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAssetManager.m; sourceTree = "<group>"; };
 		47407C40262DA3C900C2E2BA /* GYGalleryBaseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryBaseCell.h; sourceTree = "<group>"; };
 		47407C41262DA3C900C2E2BA /* GYGalleryBaseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYGalleryBaseCell.m; sourceTree = "<group>"; };
 		4743D9682578C1950084B971 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -578,6 +594,14 @@
 		4743D9AC2578D04A0084B971 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		4743D9AD2578D04A0084B971 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		4743D9AE2578D04A0084B971 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		474D7318263665FB000719B1 /* GYAlbumItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlbumItemCell.h; sourceTree = "<group>"; };
+		474D7319263665FB000719B1 /* GYAlbumItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlbumItemCell.m; sourceTree = "<group>"; };
+		474D732426368A0C000719B1 /* GYCachingImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYCachingImageManager.h; sourceTree = "<group>"; };
+		474D732526368A0C000719B1 /* GYCachingImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCachingImageManager.m; sourceTree = "<group>"; };
+		474D73722636A20E000719B1 /* GYAlbumListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlbumListController.h; sourceTree = "<group>"; };
+		474D73732636A20E000719B1 /* GYAlbumListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlbumListController.m; sourceTree = "<group>"; };
+		474D737A2636A3FD000719B1 /* GYAlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlbumModel.h; sourceTree = "<group>"; };
+		474D737B2636A3FD000719B1 /* GYAlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlbumModel.m; sourceTree = "<group>"; };
 		4757A1492620416B005A0AA8 /* GYWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterFlowLayout.h; sourceTree = "<group>"; };
 		4757A14A2620416B005A0AA8 /* GYWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterFlowLayout.m; sourceTree = "<group>"; };
 		4757A150262052F3005A0AA8 /* GYWaterListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterListController.h; sourceTree = "<group>"; };
@@ -853,6 +877,7 @@
 		3A24019320C0E06800DE9044 /* GYKit */ = {
 			isa = PBXGroup;
 			children = (
+				472A90EB26355BDD003FB860 /* GYPicker */,
 				47A6020126241CD800093DC2 /* GYGallery */,
 				47808CA126098CC3003C4787 /* GYCustomCamera */,
 				47173A3525E4AB86002F9758 /* BeanObject */,
@@ -1214,6 +1239,33 @@
 				472A90B226355802003FB860 /* IQUIView+Hierarchy.h */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		472A90EB26355BDD003FB860 /* GYPicker */ = {
+			isa = PBXGroup;
+			children = (
+				472A90F826355C25003FB860 /* AlbumList */,
+				472A910926355C98003FB860 /* GYAssetManager.h */,
+				472A910A26355C98003FB860 /* GYAssetManager.m */,
+				474D732426368A0C000719B1 /* GYCachingImageManager.h */,
+				474D732526368A0C000719B1 /* GYCachingImageManager.m */,
+			);
+			path = GYPicker;
+			sourceTree = "<group>";
+		};
+		472A90F826355C25003FB860 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				472A90F926355C46003FB860 /* GYAlbumInfo.h */,
+				472A90FA26355C46003FB860 /* GYAlbumInfo.m */,
+				474D7318263665FB000719B1 /* GYAlbumItemCell.h */,
+				474D7319263665FB000719B1 /* GYAlbumItemCell.m */,
+				474D73722636A20E000719B1 /* GYAlbumListController.h */,
+				474D73732636A20E000719B1 /* GYAlbumListController.m */,
+				474D737A2636A3FD000719B1 /* GYAlbumModel.h */,
+				474D737B2636A3FD000719B1 /* GYAlbumModel.m */,
+			);
+			path = AlbumList;
 			sourceTree = "<group>";
 		};
 		4743D9952578D04A0084B971 /* Masonry */ = {
@@ -1867,6 +1919,7 @@
 				3A24019720C0E26400DE9044 /* GYWindow.m in Sources */,
 				4799456225E3D28D00D0050A /* MJRefreshHeader.m in Sources */,
 				4799456425E3D28D00D0050A /* MJRefreshBackFooter.m in Sources */,
+				474D737C2636A3FD000719B1 /* GYAlbumModel.m in Sources */,
 				472A90C826355802003FB860 /* IQUIScrollView+Additions.m in Sources */,
 				3AACFA2B20F0F10F009E9125 /* GYTabbarButton.m in Sources */,
 				3A5FDB1720C53420004ABC58 /* GYTabbarView.m in Sources */,
@@ -1915,6 +1968,7 @@
 				47AC201C2624345500FEBCCD /* UIImage+ForceDecode.m in Sources */,
 				3AACFA3120F2F732009E9125 /* UIView+GYExtend.m in Sources */,
 				47645BB2261C3DD900753CA4 /* NSDate+GYExtend.m in Sources */,
+				474D731A263665FB000719B1 /* GYAlbumItemCell.m in Sources */,
 				47173C0625E4F15E002F9758 /* GYMineDataModel.m in Sources */,
 				3AACFA1D20F0EA64009E9125 /* FirstViewController.m in Sources */,
 				47AC20332624345500FEBCCD /* UIView+WebCacheOperation.m in Sources */,
@@ -1922,6 +1976,7 @@
 				4799455825E3D28D00D0050A /* MJRefreshConfig.m in Sources */,
 				472A902126354E98003FB860 /* GYDrawBoardTextInfo.m in Sources */,
 				47AC20252624345500FEBCCD /* SDWebImageCompat.m in Sources */,
+				474D732626368A0C000719B1 /* GYCachingImageManager.m in Sources */,
 				4799459825E3D2DB00D0050A /* AFHTTPSessionManager.m in Sources */,
 				47AC20172624345500FEBCCD /* UIImage+WebP.m in Sources */,
 				47AC202D2624345500FEBCCD /* NSData+ImageContentType.m in Sources */,
@@ -1960,6 +2015,7 @@
 				47B9337B25E5FFC900C942E5 /* FirstCollectionViewCell.m in Sources */,
 				4757A14B2620416B005A0AA8 /* GYWaterFlowLayout.m in Sources */,
 				4743D9BF2578D04A0084B971 /* MASViewConstraint.m in Sources */,
+				472A90FB26355C46003FB860 /* GYAlbumInfo.m in Sources */,
 				47AC203D2624374A00FEBCCD /* GYGalleryVideoCell.m in Sources */,
 				3AACFA2020F0EA6F009E9125 /* SecondViewController.m in Sources */,
 				47AC20182624345500FEBCCD /* MKAnnotationView+WebCache.m in Sources */,
@@ -2013,10 +2069,12 @@
 				3A5FDB1220C52BE9004ABC58 /* GYGlobalConst.m in Sources */,
 				3A5FDB0820C52269004ABC58 /* UIView+GYPosition.m in Sources */,
 				47173A3D25E4ABE6002F9758 /* UIImage+GYExtend.m in Sources */,
+				474D73742636A20E000719B1 /* GYAlbumListController.m in Sources */,
 				47B933BC25E63D4600C942E5 /* GYScrollPageViewController.m in Sources */,
 				3A98A8442148E74C00B958B8 /* UIScrollView+GYRefresh.m in Sources */,
 				47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */,
 				4743D9AF2578D04A0084B971 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				472A910B26355C98003FB860 /* GYAssetManager.m in Sources */,
 				3AE67C6120F5F41E004E2746 /* GYCollectionViewController.m in Sources */,
 				47808FB02609D5E4003C4787 /* NSObject+GYAlertExtend.m in Sources */,
 				4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */,
@@ -2076,6 +2134,7 @@
 				472A8F60263547B2003FB860 /* GYWindow.m in Sources */,
 				472A8F61263547B2003FB860 /* MJRefreshHeader.m in Sources */,
 				472A8F62263547B2003FB860 /* MJRefreshBackFooter.m in Sources */,
+				474D737D2636A3FD000719B1 /* GYAlbumModel.m in Sources */,
 				472A90C926355802003FB860 /* IQUIScrollView+Additions.m in Sources */,
 				472A8F63263547B2003FB860 /* GYTabbarButton.m in Sources */,
 				472A8F64263547B2003FB860 /* GYTabbarView.m in Sources */,
@@ -2124,6 +2183,7 @@
 				472A8F89263547B2003FB860 /* UIImage+ForceDecode.m in Sources */,
 				472A8F8A263547B2003FB860 /* UIView+GYExtend.m in Sources */,
 				472A8F8B263547B2003FB860 /* NSDate+GYExtend.m in Sources */,
+				474D731B263665FB000719B1 /* GYAlbumItemCell.m in Sources */,
 				472A8F8C263547B2003FB860 /* GYMineDataModel.m in Sources */,
 				472A8F8D263547B2003FB860 /* FirstViewController.m in Sources */,
 				472A8F8E263547B2003FB860 /* UIView+WebCacheOperation.m in Sources */,
@@ -2131,6 +2191,7 @@
 				472A8F90263547B2003FB860 /* MJRefreshConfig.m in Sources */,
 				472A902226354E98003FB860 /* GYDrawBoardTextInfo.m in Sources */,
 				472A8F91263547B2003FB860 /* SDWebImageCompat.m in Sources */,
+				474D732726368A0C000719B1 /* GYCachingImageManager.m in Sources */,
 				472A8F92263547B2003FB860 /* AFHTTPSessionManager.m in Sources */,
 				472A8F93263547B2003FB860 /* UIImage+WebP.m in Sources */,
 				472A8F94263547B2003FB860 /* NSData+ImageContentType.m in Sources */,
@@ -2169,6 +2230,7 @@
 				472A8FB2263547B2003FB860 /* FirstCollectionViewCell.m in Sources */,
 				472A8FB3263547B2003FB860 /* GYWaterFlowLayout.m in Sources */,
 				472A8FB4263547B2003FB860 /* MASViewConstraint.m in Sources */,
+				472A90FC26355C46003FB860 /* GYAlbumInfo.m in Sources */,
 				472A8FB5263547B2003FB860 /* GYGalleryVideoCell.m in Sources */,
 				472A8FB6263547B2003FB860 /* SecondViewController.m in Sources */,
 				472A8FB7263547B2003FB860 /* MKAnnotationView+WebCache.m in Sources */,
@@ -2222,10 +2284,12 @@
 				472A8FDC263547B2003FB860 /* GYGlobalConst.m in Sources */,
 				472A8FDD263547B2003FB860 /* UIView+GYPosition.m in Sources */,
 				472A8FDE263547B2003FB860 /* UIImage+GYExtend.m in Sources */,
+				474D73752636A20E000719B1 /* GYAlbumListController.m in Sources */,
 				472A8FDF263547B2003FB860 /* GYScrollPageViewController.m in Sources */,
 				472A8FE0263547B2003FB860 /* UIScrollView+GYRefresh.m in Sources */,
 				472A8FE1263547B2003FB860 /* GYMineScrollPageRootController.m in Sources */,
 				472A8FE2263547B2003FB860 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				472A910C26355C98003FB860 /* GYAssetManager.m in Sources */,
 				472A8FE3263547B2003FB860 /* GYCollectionViewController.m in Sources */,
 				472A8FE4263547B2003FB860 /* NSObject+GYAlertExtend.m in Sources */,
 				472A8FE5263547B2003FB860 /* GYWaterGalleryModel.m in Sources */,
