@@ -11,12 +11,14 @@
 #import "GYWaterListModel.h"
 #import "GYCollectionViewController+GYListViewDelegate.h"
 #import "GYWaterFlowLayout.h"
+#import "GYThread.h"
 
 static NSString *const kGYWaterListCellReuseIdentifier = @"kGYWaterListCellReuseIdentifier";
 
 @interface GYWaterListController () <GYWaterFlowLayoutDelegate>
 
 @property (nonatomic, strong) GYWaterListModel *dataModel;
+@property (nonatomic, strong) GYThread *thread;
 
 @end
 
@@ -38,9 +40,21 @@ static NSString *const kGYWaterListCellReuseIdentifier = @"kGYWaterListCellReuse
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = self.dataModel;
+    self.thread = [[GYThread alloc] init];
     [self.collectionView registerClass:[GYWaterListCell class]
             forCellWithReuseIdentifier:kGYWaterListCellReuseIdentifier];
     [self gy_refresh_addDefaultRefreshHeader];
+    
+    [self.thread executeTask:^{
+        for (NSInteger index = 0; index < 10; index++) {
+            NSLog(@"%@ --- %@", @(index), [NSThread currentThread]);
+            [NSThread sleepForTimeInterval:1];
+        }
+    }];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.thread stopTask];
 }
 
 #pragma mark - GYWaterFlowLayoutDelegate

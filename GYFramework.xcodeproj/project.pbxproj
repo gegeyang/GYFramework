@@ -283,6 +283,8 @@
 		47645BAC261C383A00753CA4 /* GYSandboxHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 47645BAB261C383A00753CA4 /* GYSandboxHelper.m */; };
 		47645BB2261C3DD900753CA4 /* NSDate+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47645BB1261C3DD900753CA4 /* NSDate+GYExtend.m */; };
 		4765849A25E3AA7F00080052 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4765849925E3AA7F00080052 /* ThirdViewController.m */; };
+		476D62782668C07E00A6EA8F /* GYThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 476D62762668C07E00A6EA8F /* GYThread.m */; };
+		476D62792668C07E00A6EA8F /* GYThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 476D62762668C07E00A6EA8F /* GYThread.m */; };
 		47808CA426098CEF003C4787 /* GYCustomCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CA326098CEF003C4787 /* GYCustomCameraController.m */; };
 		47808CAC26098E3B003C4787 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47808CAB26098E3B003C4787 /* AVFoundation.framework */; };
 		47808CB926099414003C4787 /* GYCameraShootButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808CB826099414003C4787 /* GYCameraShootButton.m */; };
@@ -616,6 +618,8 @@
 		47645BB1261C3DD900753CA4 /* NSDate+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GYExtend.m"; sourceTree = "<group>"; };
 		4765849825E3AA7F00080052 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		4765849925E3AA7F00080052 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		476D62762668C07E00A6EA8F /* GYThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYThread.m; sourceTree = "<group>"; };
+		476D62772668C07E00A6EA8F /* GYThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYThread.h; sourceTree = "<group>"; };
 		47808CA226098CEF003C4787 /* GYCustomCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYCustomCameraController.h; sourceTree = "<group>"; };
 		47808CA326098CEF003C4787 /* GYCustomCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYCustomCameraController.m; sourceTree = "<group>"; };
 		47808CAB26098E3B003C4787 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1068,6 +1072,8 @@
 		3AE67C6220F5FDDF004E2746 /* GYHandler */ = {
 			isa = PBXGroup;
 			children = (
+				476D62772668C07E00A6EA8F /* GYThread.h */,
+				476D62762668C07E00A6EA8F /* GYThread.m */,
 				3AE67C6320F5FE07004E2746 /* GYHandler.h */,
 				3AE67C6420F5FE07004E2746 /* GYHandler.m */,
 				47808CC0260994C3003C4787 /* GYTimerTool.h */,
@@ -2058,6 +2064,7 @@
 				472A90B426355802003FB860 /* IQTextView.m in Sources */,
 				472A901F26354E98003FB860 /* GYDrawBoardView.m in Sources */,
 				472A901D26354E98003FB860 /* GYDrawBoardLineInfo.m in Sources */,
+				476D62782668C07E00A6EA8F /* GYThread.m in Sources */,
 				4723EDC6262587B900164C20 /* GYWaterGalleryController.m in Sources */,
 				3A98A81F2148C17300B958B8 /* GYAPIClient.m in Sources */,
 				3A98A8512148F4F900B958B8 /* GYLoadStatusObject.m in Sources */,
@@ -2273,6 +2280,7 @@
 				472A90B526355802003FB860 /* IQTextView.m in Sources */,
 				472A902026354E98003FB860 /* GYDrawBoardView.m in Sources */,
 				472A901E26354E98003FB860 /* GYDrawBoardLineInfo.m in Sources */,
+				476D62792668C07E00A6EA8F /* GYThread.m in Sources */,
 				472A8FD6263547B2003FB860 /* GYWaterGalleryController.m in Sources */,
 				472A8FD7263547B2003FB860 /* GYAPIClient.m in Sources */,
 				472A8FD8263547B2003FB860 /* GYLoadStatusObject.m in Sources */,
