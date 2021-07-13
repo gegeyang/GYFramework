@@ -55,6 +55,7 @@
 		47173C1725E4FA52002F9758 /* GYMineInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1625E4FA52002F9758 /* GYMineInfo.m */; };
 		47173C1E25E4FCBC002F9758 /* NSString+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */; };
 		47173C2725E4FCE0002F9758 /* NSDictionary+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */; };
+		47199AA3266F907600683307 /* GYTestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47199AA2266F907600683307 /* GYTestInfo.m */; };
 		4723EDC6262587B900164C20 /* GYWaterGalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDC5262587B900164C20 /* GYWaterGalleryController.m */; };
 		4723EDCF262587D100164C20 /* GYWaterGalleryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDCE262587D100164C20 /* GYWaterGalleryModel.m */; };
 		4723EDD52625883000164C20 /* GYWaterGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4723EDD42625883000164C20 /* GYWaterGalleryCell.m */; };
@@ -200,7 +201,6 @@
 		472A8FEA263547B2003FB860 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AC1FF12624345500FEBCCD /* UIImage+MultiFormat.m */; };
 		472A8FEB263547B2003FB860 /* GYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FB52609D8A8003C4787 /* GYAlertController.m */; };
 		472A8FED263547B2003FB860 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47808CAB26098E3B003C4787 /* AVFoundation.framework */; };
-		472A8FEE263547B2003FB860 /* libPods-GYFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */; };
 		472A8FF0263547B2003FB860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016C20C0E02D00DE9044 /* LaunchScreen.storyboard */; };
 		472A8FF1263547B2003FB860 /* SVProgressHUD.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4799457125E3D2C900D0050A /* SVProgressHUD.xcassets */; };
 		472A8FF2263547B2003FB860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A24016A20C0E02D00DE9044 /* Assets.xcassets */; };
@@ -407,6 +407,7 @@
 
 /* Begin PBXFileReference section */
 		00CD3971C7E554A3F424C1A5 /* libPods-GYFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GYFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB1F67F0D260767A28DD53B /* Pods-GYFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.debug.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		3A24015E20C0E02C00DE9044 /* GYFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A24016120C0E02C00DE9044 /* GYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAppDelegate.h; sourceTree = "<group>"; };
 		3A24016220C0E02C00DE9044 /* GYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAppDelegate.m; sourceTree = "<group>"; };
@@ -503,6 +504,8 @@
 		47173C1D25E4FCBC002F9758 /* NSString+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GYExtend.m"; sourceTree = "<group>"; };
 		47173C2525E4FCE0002F9758 /* NSDictionary+GYExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+GYExtend.h"; sourceTree = "<group>"; };
 		47173C2625E4FCE0002F9758 /* NSDictionary+GYExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+GYExtend.m"; sourceTree = "<group>"; };
+		47199AA1266F907600683307 /* GYTestInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYTestInfo.h; sourceTree = "<group>"; };
+		47199AA2266F907600683307 /* GYTestInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYTestInfo.m; sourceTree = "<group>"; };
 		4723EDC4262587B900164C20 /* GYWaterGalleryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterGalleryController.h; sourceTree = "<group>"; };
 		4723EDC5262587B900164C20 /* GYWaterGalleryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterGalleryController.m; sourceTree = "<group>"; };
 		4723EDCD262587D100164C20 /* GYWaterGalleryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterGalleryModel.h; sourceTree = "<group>"; };
@@ -781,8 +784,7 @@
 		47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYVideoPreviewController.m; sourceTree = "<group>"; };
 		47F0DFA6260B27F1005DFD5D /* GYVideoAssertWriteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYVideoAssertWriteManager.h; sourceTree = "<group>"; };
 		47F0DFA7260B27F1005DFD5D /* GYVideoAssertWriteManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYVideoAssertWriteManager.m; sourceTree = "<group>"; };
-		66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.release.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.release.xcconfig"; sourceTree = "<group>"; };
-		A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.debug.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		6C94B8C170E7BCBAED86ADB7 /* Pods-GYFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYFramework.release.xcconfig"; path = "Target Support Files/Pods-GYFramework/Pods-GYFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -814,7 +816,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				472A8FED263547B2003FB860 /* AVFoundation.framework in Frameworks */,
-				472A8FEE263547B2003FB860 /* libPods-GYFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,8 +1088,8 @@
 		462ADB00B03D80CB0FEE2289 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */,
-				66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */,
+				1CB1F67F0D260767A28DD53B /* Pods-GYFramework.debug.xcconfig */,
+				6C94B8C170E7BCBAED86ADB7 /* Pods-GYFramework.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1567,6 +1568,8 @@
 				47173C0325E4F11D002F9758 /* CollectionList */,
 				3AACFA1B20F0EA64009E9125 /* FirstViewController.h */,
 				3AACFA1C20F0EA64009E9125 /* FirstViewController.m */,
+				47199AA1266F907600683307 /* GYTestInfo.h */,
+				47199AA2266F907600683307 /* GYTestInfo.m */,
 				47B9337925E5FFC900C942E5 /* FirstCollectionViewCell.h */,
 				47B9337A25E5FFC900C942E5 /* FirstCollectionViewCell.m */,
 				3AACFA1E20F0EA6F009E9125 /* SecondViewController.h */,
@@ -1611,8 +1614,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A24018A20C0E02E00DE9044 /* Build configuration list for PBXNativeTarget "GYFramework" */;
 			buildPhases = (
-				476316CE25F5D248009E232B /* ShellScript */,
 				B934F291B03B49A5D72A4C6C /* [CP] Check Pods Manifest.lock */,
+				476316CE25F5D248009E232B /* ShellScript */,
 				40725D1B01BF48C5BC0673BC /* [CP-User] Run Flutter Build flutter_gyframework Script */,
 				3A24015A20C0E02C00DE9044 /* Sources */,
 				3A24015B20C0E02C00DE9044 /* Frameworks */,
@@ -1669,12 +1672,9 @@
 			buildConfigurationList = 472A8FF5263547B2003FB860 /* Build configuration list for PBXNativeTarget "GYFramework_Beta" */;
 			buildPhases = (
 				472A8F5C263547B2003FB860 /* ShellScript */,
-				472A8F5D263547B2003FB860 /* [CP] Check Pods Manifest.lock */,
-				472A8F5E263547B2003FB860 /* [CP-User] Run Flutter Build flutter_gyframework Script */,
 				472A8F5F263547B2003FB860 /* Sources */,
 				472A8FEC263547B2003FB860 /* Frameworks */,
 				472A8FEF263547B2003FB860 /* Resources */,
-				472A8FF4263547B2003FB860 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1691,7 +1691,7 @@
 		3A24015620C0E02C00DE9044 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = GeYang;
 				TargetAttributes = {
 					3A24015D20C0E02C00DE9044 = {
@@ -1776,16 +1776,10 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/./flutter_gyframework/.metadata",
-				"${SRCROOT}/flutter_gyframework/.ios/Flutter/App.framework/App",
-				"${SRCROOT}/flutter_gyframework/.ios/Flutter/engine/Flutter.framework/Flutter",
-				"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh",
-			);
 			name = "[CP-User] Run Flutter Build flutter_gyframework Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		472A8F5C263547B2003FB860 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1803,61 +1797,6 @@
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
-		};
-		472A8F5D263547B2003FB860 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GYFramework-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		472A8F5E263547B2003FB860 /* [CP-User] Run Flutter Build flutter_gyframework Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/./flutter_gyframework/.metadata",
-				"${SRCROOT}/flutter_gyframework/.ios/Flutter/App.framework/App",
-				"${SRCROOT}/flutter_gyframework/.ios/Flutter/engine/Flutter.framework/Flutter",
-				"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh",
-			);
-			name = "[CP-User] Run Flutter Build flutter_gyframework Script";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
-		};
-		472A8FF4263547B2003FB860 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GYFramework/Pods-GYFramework-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		476316CE25F5D248009E232B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2027,6 +1966,7 @@
 				47AC20182624345500FEBCCD /* MKAnnotationView+WebCache.m in Sources */,
 				47F0DFA8260B27F1005DFD5D /* GYVideoAssertWriteManager.m in Sources */,
 				47AC20322624345500FEBCCD /* SDImageCacheConfig.m in Sources */,
+				47199AA3266F907600683307 /* GYTestInfo.m in Sources */,
 				3A98A8062148B63300B958B8 /* GYMineCollectionViewController.m in Sources */,
 				3AE67C6520F5FE07004E2746 /* GYHandler.m in Sources */,
 				47AC202A2624345500FEBCCD /* SDImageCache.m in Sources */,
@@ -2397,7 +2337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2450,7 +2390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2459,7 +2399,7 @@
 		};
 		3A24018B20C0E02E00DE9044 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */;
+			baseConfigurationReference = 1CB1F67F0D260767A28DD53B /* Pods-GYFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -2482,7 +2422,7 @@
 		};
 		3A24018C20C0E02E00DE9044 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */;
+			baseConfigurationReference = 6C94B8C170E7BCBAED86ADB7 /* Pods-GYFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -2575,7 +2515,6 @@
 		};
 		472A8FF6263547B2003FB860 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7D8B554FAD8785BFECB7A22 /* Pods-GYFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -2609,7 +2548,6 @@
 		};
 		472A8FF7263547B2003FB860 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66114582BA92EFE54F24F164 /* Pods-GYFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
