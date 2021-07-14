@@ -20,6 +20,8 @@
 #import "GYWaterGalleryController.h"
 #import "GYGraffitiViewController.h"
 #import "GYAlbumListController.h"
+#import "GYAlgorithmInfo.h"
+#import "GYFramework-Swift.h"
 
 static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellReuseIdentifier";
 
@@ -59,6 +61,8 @@ static NSString *kUICollectionViewCellReuseIdentifier = @"kUICollectionViewCellR
     [self.collectionView registerClass:[FirstCollectionViewCell class]
             forCellWithReuseIdentifier:kUICollectionViewCellReuseIdentifier];
     [self.collectionView reloadData];
+//    GYAlgorithmInfo *info = [[GYAlgorithmInfo alloc] init];
+    GYSwiftAlgorithmInfo *info2 = [[GYSwiftAlgorithmInfo alloc] init];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {

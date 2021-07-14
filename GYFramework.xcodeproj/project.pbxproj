@@ -384,6 +384,10 @@
 		47B933BC25E63D4600C942E5 /* GYScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933BB25E63D4600C942E5 /* GYScrollPageViewController.m */; };
 		47B933C625E6484B00C942E5 /* GYMineScrollPageRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */; };
 		47B933CF25E6506C00C942E5 /* GYSegmentSliderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */; };
+		47C264DD269EB35000BADC05 /* GYAlgorithmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C264DC269EB35000BADC05 /* GYAlgorithmInfo.m */; };
+		47C264DE269EB35000BADC05 /* GYAlgorithmInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C264DC269EB35000BADC05 /* GYAlgorithmInfo.m */; };
+		47C264E5269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C264E4269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift */; };
+		47C264E6269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C264E4269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift */; };
 		47F0DFA2260B2466005DFD5D /* GYVideoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */; };
 		47F0DFA8260B27F1005DFD5D /* GYVideoAssertWriteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F0DFA7260B27F1005DFD5D /* GYVideoAssertWriteManager.m */; };
 /* End PBXBuildFile section */
@@ -779,6 +783,11 @@
 		47B933C525E6484B00C942E5 /* GYMineScrollPageRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYMineScrollPageRootController.m; sourceTree = "<group>"; };
 		47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYSegmentSliderBar.h; sourceTree = "<group>"; };
 		47B933CE25E6506C00C942E5 /* GYSegmentSliderBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYSegmentSliderBar.m; sourceTree = "<group>"; };
+		47C264DB269EB35000BADC05 /* GYAlgorithmInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlgorithmInfo.h; sourceTree = "<group>"; };
+		47C264DC269EB35000BADC05 /* GYAlgorithmInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlgorithmInfo.m; sourceTree = "<group>"; };
+		47C264DF269EBBD900BADC05 /* GYFramework-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYFramework-Bridging-Header.h"; sourceTree = "<group>"; };
+		47C264E0269EBBD900BADC05 /* GYFramework_Beta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GYFramework_Beta-Bridging-Header.h"; sourceTree = "<group>"; };
+		47C264E4269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYSwiftAlgorithmInfo.swift; sourceTree = "<group>"; };
 		47E5EA9D26297CF7001B18A3 /* GYGalleryViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYGalleryViewControllerDelegate.h; sourceTree = "<group>"; };
 		47F0DFA0260B2466005DFD5D /* GYVideoPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYVideoPreviewController.h; sourceTree = "<group>"; };
 		47F0DFA1260B2466005DFD5D /* GYVideoPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYVideoPreviewController.m; sourceTree = "<group>"; };
@@ -1570,12 +1579,17 @@
 				3AACFA1C20F0EA64009E9125 /* FirstViewController.m */,
 				47199AA1266F907600683307 /* GYTestInfo.h */,
 				47199AA2266F907600683307 /* GYTestInfo.m */,
+				47C264DB269EB35000BADC05 /* GYAlgorithmInfo.h */,
+				47C264DC269EB35000BADC05 /* GYAlgorithmInfo.m */,
+				47C264E4269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift */,
 				47B9337925E5FFC900C942E5 /* FirstCollectionViewCell.h */,
 				47B9337A25E5FFC900C942E5 /* FirstCollectionViewCell.m */,
 				3AACFA1E20F0EA6F009E9125 /* SecondViewController.h */,
 				3AACFA1F20F0EA6F009E9125 /* SecondViewController.m */,
 				4765849825E3AA7F00080052 /* ThirdViewController.h */,
 				4765849925E3AA7F00080052 /* ThirdViewController.m */,
+				47C264DF269EBBD900BADC05 /* GYFramework-Bridging-Header.h */,
+				47C264E0269EBBD900BADC05 /* GYFramework_Beta-Bridging-Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1696,6 +1710,7 @@
 				TargetAttributes = {
 					3A24015D20C0E02C00DE9044 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1250;
 					};
 					3A24017520C0E02E00DE9044 = {
 						CreatedOnToolsVersion = 9.3;
@@ -1704,6 +1719,9 @@
 					3A24018020C0E02E00DE9044 = {
 						CreatedOnToolsVersion = 9.3;
 						TestTargetID = 3A24015D20C0E02C00DE9044;
+					};
+					472A8F5B263547B2003FB860 = {
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -1894,6 +1912,7 @@
 				47AC201F2624345500FEBCCD /* FLAnimatedImage.m in Sources */,
 				47AC20362624345500FEBCCD /* UIButton+WebCache.m in Sources */,
 				4743D9B72578D04A0084B971 /* MASLayoutConstraint.m in Sources */,
+				47C264DD269EB35000BADC05 /* GYAlgorithmInfo.m in Sources */,
 				3AACFA2E20F0F283009E9125 /* GYBadgeView.m in Sources */,
 				3A24019A20C0E5D900DE9044 /* GYCoordinatingMediator.m in Sources */,
 				47AC20372624345500FEBCCD /* SDWebImageWebPCoder.m in Sources */,
@@ -1905,6 +1924,7 @@
 				3A24017120C0E02D00DE9044 /* main.m in Sources */,
 				3A2401A720C0E8C600DE9044 /* GYViewController.m in Sources */,
 				472A90BA26355802003FB860 /* IQBarButtonItem.m in Sources */,
+				47C264E5269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift in Sources */,
 				3A5FDB1E20C5364C004ABC58 /* UIColor+GYExtend.m in Sources */,
 				4799457D25E3D2C900D0050A /* SVProgressHUD.m in Sources */,
 				3A98A8472148E79F00B958B8 /* GYRefreshHeader.m in Sources */,
@@ -2084,6 +2104,7 @@
 				474D737D2636A3FD000719B1 /* GYAlbumModel.m in Sources */,
 				472A90C926355802003FB860 /* IQUIScrollView+Additions.m in Sources */,
 				472A8F63263547B2003FB860 /* GYTabbarButton.m in Sources */,
+				47C264E6269EBC1000BADC05 /* GYSwiftAlgorithmInfo.swift in Sources */,
 				472A8F64263547B2003FB860 /* GYTabbarView.m in Sources */,
 				472A8F65263547B2003FB860 /* AFNetworkReachabilityManager.m in Sources */,
 				472A8F66263547B2003FB860 /* GYViewControllerTransition.m in Sources */,
@@ -2221,6 +2242,7 @@
 				472A902026354E98003FB860 /* GYDrawBoardView.m in Sources */,
 				472A901E26354E98003FB860 /* GYDrawBoardLineInfo.m in Sources */,
 				476D62792668C07E00A6EA8F /* GYThread.m in Sources */,
+				47C264DE269EB35000BADC05 /* GYAlgorithmInfo.m in Sources */,
 				472A8FD6263547B2003FB860 /* GYWaterGalleryController.m in Sources */,
 				472A8FD7263547B2003FB860 /* GYAPIClient.m in Sources */,
 				472A8FD8263547B2003FB860 /* GYLoadStatusObject.m in Sources */,
@@ -2402,7 +2424,9 @@
 			baseConfigurationReference = 1CB1F67F0D260767A28DD53B /* Pods-GYFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D59E9P2MUY;
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -2416,6 +2440,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Geyang.GYFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GYFramework/Controller/GYFramework-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2425,7 +2452,9 @@
 			baseConfigurationReference = 6C94B8C170E7BCBAED86ADB7 /* Pods-GYFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D59E9P2MUY;
 				ENABLE_BITCODE = NO;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -2439,6 +2468,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Geyang.GYFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GYFramework/Controller/GYFramework-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2446,6 +2477,7 @@
 		3A24018E20C0E02E00DE9044 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GYFrameworkTests/Info.plist;
@@ -2464,6 +2496,7 @@
 		3A24018F20C0E02E00DE9044 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GYFrameworkTests/Info.plist;
@@ -2482,6 +2515,7 @@
 		3A24019120C0E02E00DE9044 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GYFrameworkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2499,6 +2533,7 @@
 		3A24019220C0E02E00DE9044 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GYFrameworkUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2517,6 +2552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D59E9P2MUY;
 				ENABLE_BITCODE = NO;
@@ -2542,6 +2578,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Geyang.GYFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GYFramework/Controller/GYFramework_Beta-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2550,6 +2589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D59E9P2MUY;
 				ENABLE_BITCODE = NO;
@@ -2575,6 +2615,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Geyang.GYFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GYFramework/Controller/GYFramework_Beta-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
