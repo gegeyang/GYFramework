@@ -296,6 +296,8 @@
 		47808FAA2609D4AF003C4787 /* NSObject+GYPrivacyExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FA92609D4AF003C4787 /* NSObject+GYPrivacyExtend.m */; };
 		47808FB02609D5E4003C4787 /* NSObject+GYAlertExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FAF2609D5E4003C4787 /* NSObject+GYAlertExtend.m */; };
 		47808FB62609D8A8003C4787 /* GYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47808FB52609D8A8003C4787 /* GYAlertController.m */; };
+		478AB03026A038A50093AD79 /* GYAsyncLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 478AB02F26A038A50093AD79 /* GYAsyncLabel.m */; };
+		478AB03126A038A50093AD79 /* GYAsyncLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 478AB02F26A038A50093AD79 /* GYAsyncLabel.m */; };
 		4799455325E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455425E3D28D00D0050A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */; };
 		4799455525E3D28D00D0050A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4799453D25E3D28D00D0050A /* MJRefreshConst.m */; };
@@ -648,6 +650,8 @@
 		47808FAF2609D5E4003C4787 /* NSObject+GYAlertExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GYAlertExtend.m"; sourceTree = "<group>"; };
 		47808FB42609D8A8003C4787 /* GYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAlertController.h; sourceTree = "<group>"; };
 		47808FB52609D8A8003C4787 /* GYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAlertController.m; sourceTree = "<group>"; };
+		478AB02E26A038A50093AD79 /* GYAsyncLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYAsyncLabel.h; sourceTree = "<group>"; };
+		478AB02F26A038A50093AD79 /* GYAsyncLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYAsyncLabel.m; sourceTree = "<group>"; };
 		4799453C25E3D28D00D0050A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		4799453D25E3D28D00D0050A /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
 		4799453E25E3D28D00D0050A /* MJRefreshConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConfig.m; sourceTree = "<group>"; };
@@ -1049,6 +1053,8 @@
 				472A905826354FA0003FB860 /* GYTextView.m */,
 				472A9079263552E2003FB860 /* GYTextField.h */,
 				472A907A263552E2003FB860 /* GYTextField.m */,
+				478AB02E26A038A50093AD79 /* GYAsyncLabel.h */,
+				478AB02F26A038A50093AD79 /* GYAsyncLabel.m */,
 				472A908526355313003FB860 /* GYCountEditView.h */,
 				472A908626355313003FB860 /* GYCountEditView.m */,
 				47B933CD25E6506C00C942E5 /* GYSegmentSliderBar.h */,
@@ -1797,7 +1803,7 @@
 			name = "[CP-User] Run Flutter Build flutter_gyframework Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_gyframework/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build\n";
 		};
 		472A8F5C263547B2003FB860 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1879,10 +1885,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C264DD269EB35000BADC05 /* GYAlgorithmInfo.m in Sources */,
+				474D737C2636A3FD000719B1 /* GYAlbumModel.m in Sources */,
 				3A24019720C0E26400DE9044 /* GYWindow.m in Sources */,
 				4799456225E3D28D00D0050A /* MJRefreshHeader.m in Sources */,
 				4799456425E3D28D00D0050A /* MJRefreshBackFooter.m in Sources */,
-				474D737C2636A3FD000719B1 /* GYAlbumModel.m in Sources */,
 				472A90C826355802003FB860 /* IQUIScrollView+Additions.m in Sources */,
 				3AACFA2B20F0F10F009E9125 /* GYTabbarButton.m in Sources */,
 				3A5FDB1720C53420004ABC58 /* GYTabbarView.m in Sources */,
@@ -1912,7 +1919,6 @@
 				47AC201F2624345500FEBCCD /* FLAnimatedImage.m in Sources */,
 				47AC20362624345500FEBCCD /* UIButton+WebCache.m in Sources */,
 				4743D9B72578D04A0084B971 /* MASLayoutConstraint.m in Sources */,
-				47C264DD269EB35000BADC05 /* GYAlgorithmInfo.m in Sources */,
 				3AACFA2E20F0F283009E9125 /* GYBadgeView.m in Sources */,
 				3A24019A20C0E5D900DE9044 /* GYCoordinatingMediator.m in Sources */,
 				47AC20372624345500FEBCCD /* SDWebImageWebPCoder.m in Sources */,
@@ -1999,6 +2005,7 @@
 				4757A15B26205332005A0AA8 /* GYWaterListCell.m in Sources */,
 				47AC20242624345500FEBCCD /* SDWebImageCoderHelper.m in Sources */,
 				4723EDDE2625944700164C20 /* GYCollectionViewController+GalleryExtend.m in Sources */,
+				478AB03026A038A50093AD79 /* GYAsyncLabel.m in Sources */,
 				47A6020426241D0900093DC2 /* GYGalleryViewController.m in Sources */,
 				47AC201E2624345500FEBCCD /* FLAnimatedImageView+WebCache.m in Sources */,
 				47AC20272624345500FEBCCD /* SDWebImageCoder.m in Sources */,
@@ -2129,6 +2136,7 @@
 				472A90CD26355802003FB860 /* IQUIViewController+Additions.m in Sources */,
 				472A908826355313003FB860 /* GYCountEditView.m in Sources */,
 				472A8F77263547B2003FB860 /* GYViewController+MediaPickerExtend.m in Sources */,
+				478AB03126A038A50093AD79 /* GYAsyncLabel.m in Sources */,
 				472A8F78263547B2003FB860 /* FLAnimatedImage.m in Sources */,
 				472A8F79263547B2003FB860 /* UIButton+WebCache.m in Sources */,
 				472A8F7A263547B2003FB860 /* MASLayoutConstraint.m in Sources */,

@@ -19,7 +19,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         _isRepeat = YES;
-        _timeInterval = 1;
+        _timeInterval = 1000;
     }
     return self;
 }
@@ -38,6 +38,8 @@
                                             selector:@selector(timeToolDistance)
                                             userInfo:nil
                                              repeats:self.isRepeat];
+    
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     if (fire) {
         //开始
         [_timer fire];
